@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-$steps: 25;
+$steps: 50;
 
 @font-face {
   font-family: "SQ";
-  src: url("./fonts/Square Space.ttf");
+  src: url("./fonts/Square-Space.ttf");
 }
 
 body {

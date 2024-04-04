@@ -428,19 +428,16 @@
   0% {
     font-weight: 100;
     color: #fff;
-    filter: blur(3px);
   }
 
   20% {
     font-weight: 500;
     color: #fff;
-    filter: blur(0);
   }
 
   50% {
     font-weight: 300;
-    color: #fff;
-    filter: blur(2px);
+    color: #fff
   }
 
   60% {
@@ -452,7 +449,6 @@
   90% {
     font-weight: 500;
     color: #fff;
-    filter: blur(6px);
   }
 }
 
