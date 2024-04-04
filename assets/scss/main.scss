@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$steps: 25;
+
+@font-face {
+  font-family: "SQ";
+  src: url("~/assets/fonts/Square Space.ttf");
+}
+
+body {
+  @apply bg-black text-white min-h-screen;
+  font-family: "SQ";
+}
+
+.glitch-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glitch-title {
+  outline: none;
+  font-size: 10vw;
+  text-align: center;
+  min-height: 10vw;
+  max-width: 80vw;
+  min-width: 10vw;
+  
+  &,
+  * {
+    animation: cray 6s infinite steps($steps);
+    display: inline-block;
+  }
+}
+
+@keyframes cray {
+  @for $i from 1 to $steps {
+    $per: 100% / $steps * $i;
+    $weight: (
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700
+    );
+    $style: (
+      normal,
+      italic,
+      normal,
+      normal,
+    );
+    $decor: (
+      none,
+      none,
+      line-through,
+      underline,
+      none,
+      none,
+      none
+    );
+    $trans: (
+      none,
+      none,
+      uppercase,
+      lowercase,
+      capitalize,
+      none,
+      none,
+      lowercase,
+      none,
+      none,
+      capitalize
+    );
+
+    $arrayW: random(7);
+    $arrayS: random(4);
+    $arrayD: random(7);
+    $arrayT: random(11);
+
+    #{$per} {
+      font-weight: nth($weight, $arrayW);
+      font-style: nth($style, $arrayS);
+      text-decoration: nth($decor, $arrayD);
+      text-transform: nth($trans, $arrayT);
+    }
+  }
+}
