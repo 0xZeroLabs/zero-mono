@@ -21,6 +21,6 @@ export default {
       slow: "9s",
     },
   },
-  plugins: [require("@designbycode/tailwindcss-text-glitch"),],
-  extend: {}
-}
+  plugins: [require("@designbycode/tailwindcss-text-glitch")],
+  extend: {},
+};

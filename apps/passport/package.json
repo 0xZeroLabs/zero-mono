@@ -10,8 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.8",
+    "drizzle-zod": "^0.5.1",
     "nuxt": "^3.11.2",
+    "pg": "^8.11.5",
+    "uuid": "^9.0.1",
+    "viem": "^2.9.16",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "zod": "^3.22.4"
   }
 }

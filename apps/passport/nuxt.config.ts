@@ -1,11 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
-  css: ['~/assets/scss/main.scss'],
+  modules: ["@nuxtjs/tailwindcss"],
+  css: ["~/assets/scss/main.scss"],
   devtools: { enabled: true },
   devServer: {
-    port: 3001
-  }
-})
+    port: 3001,
+  },
+});
