@@ -1,0 +1,21 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "main": "nuxt.mjs",
+  "scripts": {
+  },
+  "devDependencies": {
+    "nuxt": "^3.11.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "@csstools/postcss-sass": "^5.1.1",
+    "@nuxtjs/style-resources": "^1.2.2",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "tailwindcss": "^3.4.3"
+  }
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$steps: 50;
+
+@font-face {
+  font-family: "SQ";
+  src: url("./fonts/Square-Space.ttf");
+}
+
+@font-face {
+  font-family: "Italiana";
+  src: url("./fonts/Italiana-Regular.ttf");
+}
+
+body {
+  @apply bg-black text-white min-h-screen;
+  font-family: "Italiana";
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
