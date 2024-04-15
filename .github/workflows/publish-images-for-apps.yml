@@ -1,4 +1,4 @@
-name: Publish Landing Page to DockerHub and Koyeb
+name: Publish Apps to DockerHub and Koyeb
 
 on:
   push:
