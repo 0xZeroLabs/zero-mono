@@ -5,7 +5,7 @@ import {
   pgTable,
   varchar,
   serial,
-  primaryKey
+  primaryKey,
 } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 
@@ -22,33 +22,43 @@ export const user = pgTable("user", {
 });
 
 export const userRelations = relations(user, ({ many }) => ({
-  followers: many(userToFollowers, { relationName: 'followers' }),
-  following: many(userToFollowers, { relationName: 'following' }),
+  followers: many(userToFollowers, { relationName: "followers" }),
+  following: many(userToFollowers, { relationName: "following" }),
   // posts: many(post, {
   //   relationName: "posts"
   // }),
 }));
 
-export const userToFollowers = pgTable('user_to_followers', {
-  followingAddress: text('following_address').references(() => user.address).notNull(),
-  followerAddress: text('follower_address').references(() => user.address).notNull(),
-}, (t) => ({
-  pk: primaryKey({ columns: [t.followingAddress, t.followerAddress] }),
-}),
+export const userToFollowers = pgTable(
+  "user_to_followers",
+  {
+    followingAddress: text("following_address")
+      .references(() => user.address)
+      .notNull(),
+    followerAddress: text("follower_address")
+      .references(() => user.address)
+      .notNull(),
+  },
+  (t) => ({
+    pk: primaryKey({ columns: [t.followingAddress, t.followerAddress] }),
+  }),
 );
 
-export const userToFollowersRelations = relations(userToFollowers, ({ one }) => ({
-  following: one(user, {
-    fields: [userToFollowers.followingAddress],
-    references: [user.address],
-    relationName: "following"
+export const userToFollowersRelations = relations(
+  userToFollowers,
+  ({ one }) => ({
+    following: one(user, {
+      fields: [userToFollowers.followingAddress],
+      references: [user.address],
+      relationName: "following",
+    }),
+    follower: one(user, {
+      fields: [userToFollowers.followerAddress],
+      references: [user.address],
+      relationName: "follower",
+    }),
   }),
-  follower: one(user, {
-    fields: [userToFollowers.followerAddress],
-    references: [user.address],
-    relationName: "follower"
-  }),
-}));
+);
 
 // export const post = pgTable("post", {
 //   id: serial("id").primaryKey(),
@@ -65,5 +75,4 @@ export const userToFollowersRelations = relations(userToFollowers, ({ one }) => 
 //   likes: many(user)
 // }));
 
-export const insertUserSchema = createInsertSchema(user, {
-});
+export const insertUserSchema = createInsertSchema(user, {});
