@@ -19,6 +19,13 @@ jobs:
                 docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
                 docker push lordewan/0xzero-landing:latest
               working-directory: ./apps/landing
+            - name: Install and configure the Koyeb CLI
+              uses: koyeb-community/install-koyeb-cli@v2
+              with:
+                api_token: "${{ secrets.KOYEB_TOKEN }}"
+                github_token: "${{ secrets.GITHUB_TOKEN }}"
+            - name: Deploy to Koyeb
+              run: koyeb service redeploy mid-dorey/landing
 
     publish_passport:
         runs-on: ubuntu-latest
@@ -34,3 +41,10 @@ jobs:
                 docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
                 docker push lordewan/0xzero-passport:latest
               working-directory: ./apps/passport
+            - name: Install and configure the Koyeb CLI
+              uses: koyeb-community/install-koyeb-cli@v2
+              with:
+                api_token: "${{ secrets.KOYEB_TOKEN }}"
+                github_token: "${{ secrets.GITHUB_TOKEN }}"
+            - name: Deploy to Koyeb
+              run: koyeb service redeploy passport/passport
