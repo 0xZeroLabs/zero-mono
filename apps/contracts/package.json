@@ -1,0 +1,9 @@
+{
+  "name": "@repo/contracts",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "truffle": "^5.11.5"
+  }
+}
