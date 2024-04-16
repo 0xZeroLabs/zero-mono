@@ -1,9 +1,8 @@
 # Zero Monorepo
-## Powered by Turborepo
-
+[![Publish Apps to DockerHub and Koyeb](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+A Turborepo which includes the following packages/apps:
 
 ### Apps and Packages
 
