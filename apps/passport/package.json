@@ -26,6 +26,7 @@
     "@csstools/postcss-sass": "^5.1.1",
     "@nuxtjs/style-resources": "^1.2.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/pg": "^8.11.5",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "sass": "^1.75.0",
