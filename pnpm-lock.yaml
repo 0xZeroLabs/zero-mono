@@ -61,11 +61,11 @@ importers:
         specifier: ^8.4.38
         version: 8.4.38
       sass:
-        specifier: ^1.72.0
+        specifier: ^1.75.0
         version: 1.75.0
       sass-loader:
-        specifier: ^14.1.1
-        version: 14.2.0(sass@1.75.0)
+        specifier: ^14.2.1
+        version: 14.2.1(sass@1.75.0)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
@@ -3780,7 +3780,7 @@ packages:
       colorette: 2.0.20
       consola: 3.2.3
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       pathe: 1.1.2
       perfect-debounce: 1.0.0
     transitivePeerDependencies:
@@ -3820,7 +3820,7 @@ packages:
       '@unocss/rule-utils': 0.59.3
       css-tree: 2.3.1
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       postcss: 8.4.38
 
   /@unocss/preset-attributify@0.59.3:
@@ -3884,7 +3884,7 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       '@unocss/core': 0.59.3
-      magic-string: 0.30.9
+      magic-string: 0.30.10
 
   /@unocss/scope@0.59.3:
     resolution: {integrity: sha512-YHEtKLsgSNKzES8yiqef9qFJU1sXEGEUPKyw/Jt9WNIhNyDHJuJsPNhlkR6I3VTViu7jFknbK2dnLLHkp+LdNQ==}
@@ -3935,7 +3935,7 @@ packages:
       '@unocss/transformer-directives': 0.59.3
       chokidar: 3.6.0
       fast-glob: 3.3.2
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       vite: 5.2.8(sass@1.75.0)
     transitivePeerDependencies:
       - rollup
@@ -9579,6 +9579,11 @@ packages:
     dependencies:
       magic-string: 0.30.9
 
+  /magic-string@0.30.10:
+    resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+
   /magic-string@0.30.9:
     resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}
     engines: {node: '>=12'}
@@ -12392,6 +12397,31 @@ packages:
 
   /sass-loader@14.2.0(sass@1.75.0):
     resolution: {integrity: sha512-jxmjDXD9OYNDb2bp9JvopdE6QjecQY9beTWik/6sEHrsMxyo90Gyc471A4NUz60NLs4WsAh6yVtIvhLwEZcXeg==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      neo-async: 2.6.2
+      sass: 1.75.0
+    dev: true
+
+  /sass-loader@14.2.1(sass@1.75.0):
+    resolution: {integrity: sha512-G0VcnMYU18a4N7VoNDegg2OuMjYtxnqzQWARVWCIVSZwJeiL9kg8QMsuIZOplsJgTzZLF6jGxI3AClj8I9nRdQ==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
