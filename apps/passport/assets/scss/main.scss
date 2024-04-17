@@ -10,13 +10,18 @@ $steps: 50;
 }
 
 @font-face {
+  font-family: "Geist";
+  src: url("./fonts/GeistVF.woff");
+}
+
+@font-face {
   font-family: "Italiana";
   src: url("./fonts/Italiana-Regular.ttf");
 }
 
 body {
   @apply bg-black text-white min-h-screen;
-  font-family: "Italiana";
+  font-family: "Geist";
 }
 
 .wrapper {

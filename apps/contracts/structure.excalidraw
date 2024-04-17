@@ -1,12 +1,13 @@
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "source": "https://excalidraw.com",
   "elements": [
     {
       "type": "rectangle",
-      "version": 1054,
-      "versionNonce": 1633082903,
+      "version": 1055,
+      "versionNonce": 1339998420,
+      "index": "a0",
       "isDeleted": false,
       "id": "gbufA3O58HSAPAhNtxMtl",
       "fillStyle": "solid",
@@ -33,14 +34,15 @@
           "id": "Ur5farPDWLa_kCtk7xcRR"
         }
       ],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false
     },
     {
       "type": "text",
-      "version": 580,
-      "versionNonce": 715059929,
+      "version": 581,
+      "versionNonce": 856254060,
+      "index": "a1",
       "isDeleted": false,
       "id": "Ur5farPDWLa_kCtk7xcRR",
       "fillStyle": "solid",
@@ -60,7 +62,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -70,13 +72,13 @@
       "verticalAlign": "middle",
       "containerId": "gbufA3O58HSAPAhNtxMtl",
       "originalText": "User",
-      "lineHeight": 1.25,
-      "baseline": 21
+      "lineHeight": 1.25
     },
     {
       "type": "line",
-      "version": 825,
-      "versionNonce": 153158455,
+      "version": 826,
+      "versionNonce": 1769440852,
+      "index": "a2",
       "isDeleted": false,
       "id": "jzmN_6B7bSknp3J5LBbil",
       "fillStyle": "solid",
@@ -98,7 +100,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -119,8 +121,9 @@
     },
     {
       "type": "line",
-      "version": 803,
-      "versionNonce": 1473064889,
+      "version": 804,
+      "versionNonce": 812234988,
+      "index": "a3",
       "isDeleted": false,
       "id": "0oly5RygdkQODwKoe4JxJ",
       "fillStyle": "solid",
@@ -142,7 +145,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -163,8 +166,9 @@
     },
     {
       "type": "line",
-      "version": 523,
-      "versionNonce": 984187991,
+      "version": 524,
+      "versionNonce": 786144212,
+      "index": "a4",
       "isDeleted": false,
       "id": "DrXNPlZl_i8ZYNjovhhUV",
       "fillStyle": "solid",
@@ -186,7 +190,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -207,8 +211,9 @@
     },
     {
       "type": "line",
-      "version": 926,
-      "versionNonce": 1105252505,
+      "version": 927,
+      "versionNonce": 1931197292,
+      "index": "a5",
       "isDeleted": false,
       "id": "Bca1u6syEfk2SpmITLZRW",
       "fillStyle": "solid",
@@ -230,7 +235,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020466,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -251,8 +256,9 @@
     },
     {
       "type": "line",
-      "version": 1001,
-      "versionNonce": 1707401591,
+      "version": 1002,
+      "versionNonce": 706806100,
+      "index": "a6",
       "isDeleted": false,
       "id": "wcG-2NI8ACkCGKRmZrKtf",
       "fillStyle": "solid",
@@ -274,7 +280,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -295,8 +301,9 @@
     },
     {
       "type": "rectangle",
-      "version": 857,
-      "versionNonce": 1854756217,
+      "version": 858,
+      "versionNonce": 1164537324,
+      "index": "a7",
       "isDeleted": false,
       "id": "zUOiRVRfXhZC_brbrII9I",
       "fillStyle": "solid",
@@ -323,14 +330,15 @@
           "id": "lVIScJuDaVmhlI0EOcw2b"
         }
       ],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false
     },
     {
       "type": "text",
-      "version": 732,
-      "versionNonce": 196582039,
+      "version": 733,
+      "versionNonce": 849196756,
+      "index": "a8",
       "isDeleted": false,
       "id": "lVIScJuDaVmhlI0EOcw2b",
       "fillStyle": "solid",
@@ -350,7 +358,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -360,13 +368,13 @@
       "verticalAlign": "middle",
       "containerId": "zUOiRVRfXhZC_brbrII9I",
       "originalText": "kyc data",
-      "lineHeight": 1.25,
-      "baseline": 21
+      "lineHeight": 1.25
     },
     {
       "type": "rectangle",
-      "version": 583,
-      "versionNonce": 1628847705,
+      "version": 584,
+      "versionNonce": 408735852,
+      "index": "a9",
       "isDeleted": false,
       "id": "sOaBDVC7xZW5lZkMeAsBV",
       "fillStyle": "solid",
@@ -393,14 +401,15 @@
           "id": "Mu0h_2y3Wde0G-IJIz-60"
         }
       ],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false
     },
     {
       "type": "text",
-      "version": 535,
-      "versionNonce": 288763831,
+      "version": 536,
+      "versionNonce": 1156037716,
+      "index": "aA",
       "isDeleted": false,
       "id": "Mu0h_2y3Wde0G-IJIz-60",
       "fillStyle": "solid",
@@ -420,7 +429,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -430,13 +439,13 @@
       "verticalAlign": "middle",
       "containerId": "sOaBDVC7xZW5lZkMeAsBV",
       "originalText": "wallet",
-      "lineHeight": 1.25,
-      "baseline": 21
+      "lineHeight": 1.25
     },
     {
       "type": "rectangle",
-      "version": 982,
-      "versionNonce": 1750010681,
+      "version": 983,
+      "versionNonce": 733995756,
+      "index": "aB",
       "isDeleted": false,
       "id": "xvOs896eSTCW9CkVDXm6B",
       "fillStyle": "solid",
@@ -463,14 +472,15 @@
           "id": "cQqH5P9cJ6HrQiSgbHMcR"
         }
       ],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false
     },
     {
       "type": "text",
-      "version": 878,
-      "versionNonce": 1348804823,
+      "version": 879,
+      "versionNonce": 1523913172,
+      "index": "aC",
       "isDeleted": false,
       "id": "cQqH5P9cJ6HrQiSgbHMcR",
       "fillStyle": "solid",
@@ -490,7 +500,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713048020467,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -500,13 +510,13 @@
       "verticalAlign": "middle",
       "containerId": "xvOs896eSTCW9CkVDXm6B",
       "originalText": "status",
-      "lineHeight": 1.25,
-      "baseline": 21
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 91,
-      "versionNonce": 974589202,
+      "version": 92,
+      "versionNonce": 907847020,
+      "index": "aD",
       "isDeleted": false,
       "id": "WMqIPYGiC6kRjqsFeDYo8",
       "fillStyle": "solid",
@@ -526,7 +536,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905235,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -536,13 +546,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "wallet - wallet address",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 86,
-      "versionNonce": 1618576654,
+      "version": 87,
+      "versionNonce": 1132181332,
+      "index": "aE",
       "isDeleted": false,
       "id": "5QvvDnsZBZCipA9AsnX2Z",
       "fillStyle": "solid",
@@ -562,7 +572,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905237,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -572,13 +582,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "kyc data - encrypted",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 124,
-      "versionNonce": 563583698,
+      "version": 125,
+      "versionNonce": 213719020,
+      "index": "aF",
       "isDeleted": false,
       "id": "QYfDkGVeQ_9n1lWiKSrb7",
       "fillStyle": "solid",
@@ -598,7 +608,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905239,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -608,13 +618,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "status\n    - pending\n    - verified\n    - rejected\n    - blacklisted",
-      "lineHeight": 1.25,
-      "baseline": 118
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 574,
-      "versionNonce": 425833294,
+      "version": 575,
+      "versionNonce": 2066853076,
+      "index": "aG",
       "isDeleted": false,
       "id": "Hllcin4svDJzP51YlkkKe",
       "fillStyle": "solid",
@@ -634,7 +644,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905242,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -644,13 +654,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Stand Outs",
-      "lineHeight": 1.25,
-      "baseline": 25
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 684,
-      "versionNonce": 1832939666,
+      "version": 685,
+      "versionNonce": 1269512812,
+      "index": "aH",
       "isDeleted": false,
       "id": "3blgk3BJBwcjUDM-u4aAw",
       "fillStyle": "solid",
@@ -670,7 +680,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905243,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -680,13 +690,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "- onchain storage \n- wallet powered encryption\n- blacklist",
-      "lineHeight": 1.25,
-      "baseline": 68
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 132,
-      "versionNonce": 1504319886,
+      "version": 133,
+      "versionNonce": 59568724,
+      "index": "aI",
       "isDeleted": false,
       "id": "4a2Dnu5QA4Fxqgk_KDbk3",
       "fillStyle": "solid",
@@ -706,7 +716,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905245,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -716,13 +726,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Current Leading Solutions",
-      "lineHeight": 1.25,
-      "baseline": 25
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 129,
-      "versionNonce": 13143634,
+      "version": 168,
+      "versionNonce": 1873616468,
+      "index": "aJ",
       "isDeleted": false,
       "id": "XYkDJ4oik7B1ulPKSdW75",
       "fillStyle": "solid",
@@ -732,33 +742,33 @@
       "opacity": 100,
       "angle": 0,
       "x": 417,
-      "y": 141,
+      "y": 142.07540711194878,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 183.63983154296875,
-      "height": 50,
+      "width": 229.4597930908203,
+      "height": 75,
       "seed": 1742671188,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905246,
+      "updated": 1713358956756,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "- Galxe Passport\n- Gitcoin Passport",
+      "text": "- Coinbase Attestation\n- Galxe Passport\n- Gitcoin Passport",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "- Galxe Passport\n- Gitcoin Passport",
-      "lineHeight": 1.25,
-      "baseline": 43
+      "originalText": "- Coinbase Attestation\n- Galxe Passport\n- Gitcoin Passport",
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 45,
-      "versionNonce": 948680654,
+      "version": 46,
+      "versionNonce": 996378580,
+      "index": "aK",
       "isDeleted": false,
       "id": "vtSUarAUgplQzeFFjobt2",
       "fillStyle": "solid",
@@ -778,7 +788,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905248,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -788,13 +798,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Technology",
-      "lineHeight": 1.25,
-      "baseline": 25
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 214,
-      "versionNonce": 822539282,
+      "version": 215,
+      "versionNonce": 1146654572,
+      "index": "aL",
       "isDeleted": false,
       "id": "07NPyp6qnI6ZmrbLJJlRk",
       "fillStyle": "solid",
@@ -814,7 +824,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905250,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -824,13 +834,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "- Solidity\n- Nuxt\n- Typescript\n- Viem\n- Postgres\n- Subgraph\n    - The Graph\n    - Subsquid\n- Chainlink",
-      "lineHeight": 1.25,
-      "baseline": 218
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 103,
-      "versionNonce": 2115997198,
+      "version": 169,
+      "versionNonce": 116917100,
+      "index": "aM",
       "isDeleted": false,
       "id": "2C9q68Aya4te4rL23ICQ7",
       "fillStyle": "solid",
@@ -839,8 +849,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -1099.6447714192427,
-      "y": 175.23685531481885,
+      "x": -1108.6447714192427,
+      "y": 327.23685531481885,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
       "width": 323.1358642578125,
@@ -850,7 +860,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905254,
+      "updated": 1713357747988,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -860,13 +870,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "0xZero Passport\nDeFi KYC Protocol",
-      "lineHeight": 1.25,
-      "baseline": 77
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 175,
-      "versionNonce": 535994834,
+      "version": 176,
+      "versionNonce": 2146157036,
+      "index": "aN",
       "isDeleted": false,
       "id": "kPMp0NYlde3g5XfNNkeJD",
       "fillStyle": "solid",
@@ -886,7 +896,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905255,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -896,13 +906,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Attestation",
-      "lineHeight": 1.25,
-      "baseline": 25
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 474,
-      "versionNonce": 123640910,
+      "version": 475,
+      "versionNonce": 387621588,
+      "index": "aO",
       "isDeleted": false,
       "id": "1e4bKDB5CWsqbAOY4tRzL",
       "fillStyle": "solid",
@@ -922,7 +932,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905257,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -932,13 +942,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Proof is sent to be verified through user's Merkle tree with attested information.\nMerkle trees will also be used to verify the user address. The tree hash will be stored in the kyc data\nfield",
-      "lineHeight": 1.25,
-      "baseline": 68
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 112,
-      "versionNonce": 413308818,
+      "version": 113,
+      "versionNonce": 2004132972,
+      "index": "aP",
       "isDeleted": false,
       "id": "737JMjfTpd-zQwdbNDQ1E",
       "fillStyle": "solid",
@@ -967,7 +977,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1713291905258,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -977,13 +987,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Passport",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 248,
-      "versionNonce": 706863758,
+      "version": 249,
+      "versionNonce": 1659316308,
+      "index": "aQ",
       "isDeleted": false,
       "id": "KvWQxkcQ0fFYnhmmk5Bgh",
       "fillStyle": "solid",
@@ -1008,7 +1018,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1713291905259,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1018,13 +1028,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "User",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "arrow",
-      "version": 539,
-      "versionNonce": 1386807993,
+      "version": 540,
+      "versionNonce": 12400364,
+      "index": "aR",
       "isDeleted": false,
       "id": "utXlGU78rYnspl0PeFYK2",
       "fillStyle": "solid",
@@ -1046,7 +1056,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048057520,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1075,8 +1085,9 @@
     },
     {
       "type": "text",
-      "version": 73,
-      "versionNonce": 1800262994,
+      "version": 74,
+      "versionNonce": 1577516500,
+      "index": "aS",
       "isDeleted": false,
       "id": "qsZQlrzsUMYq27z56vjtZ",
       "fillStyle": "solid",
@@ -1101,7 +1112,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1713291905259,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1111,13 +1122,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Merkle Hash",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 97,
-      "versionNonce": 421683406,
+      "version": 98,
+      "versionNonce": 676297068,
+      "index": "aT",
       "isDeleted": false,
       "id": "1uDpd0vNHOZPmyUk752ui",
       "fillStyle": "solid",
@@ -1146,7 +1157,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1713291905260,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1156,13 +1167,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Solvency",
-      "lineHeight": 1.25,
-      "baseline": 18
+      "lineHeight": 1.25
     },
     {
       "type": "arrow",
-      "version": 49,
-      "versionNonce": 1746542009,
+      "version": 50,
+      "versionNonce": 1636836180,
+      "index": "aU",
       "isDeleted": false,
       "id": "AlLv5ayDC1rxfihf-hLdt",
       "fillStyle": "solid",
@@ -1184,7 +1195,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020468,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1213,8 +1224,9 @@
     },
     {
       "type": "arrow",
-      "version": 236,
-      "versionNonce": 1416263255,
+      "version": 237,
+      "versionNonce": 1500867564,
+      "index": "aV",
       "isDeleted": false,
       "id": "gdBh0PPJWhUK5V-kiqpeN",
       "fillStyle": "solid",
@@ -1236,7 +1248,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713048020468,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1265,8 +1277,9 @@
     },
     {
       "type": "text",
-      "version": 54,
-      "versionNonce": 1229675282,
+      "version": 55,
+      "versionNonce": 869832916,
+      "index": "aW",
       "isDeleted": false,
       "id": "P1O1PzpqoTnMKkV1ywFDt",
       "fillStyle": "solid",
@@ -1286,7 +1299,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905261,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -1296,13 +1309,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Solvency",
-      "lineHeight": 1.25,
-      "baseline": 25
+      "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 161,
-      "versionNonce": 1207506702,
+      "version": 162,
+      "versionNonce": 104402540,
+      "index": "aX",
       "isDeleted": false,
       "id": "UXEE7YRydm0BO-sVlzfas",
       "fillStyle": "solid",
@@ -1322,7 +1335,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713291905262,
+      "updated": 1713357734077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1332,8 +1345,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Proof of funds. Uses real life and \non-chain use of funds to give a solvency \nscore",
-      "lineHeight": 1.25,
-      "baseline": 68
+      "lineHeight": 1.25
     }
   ],
   "appState": {

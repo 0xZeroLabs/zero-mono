@@ -29,6 +29,9 @@ importers:
       nuxt:
         specifier: ^3.11.1
         version: 3.11.2(@unocss/reset@0.59.3)(drizzle-orm@0.30.8)(floating-vue@5.2.2)(sass@1.75.0)(unocss@0.59.3)(vite@5.2.8)
+      primevue:
+        specifier: ^3.51.0
+        version: 3.51.0(vue@3.4.21)
       vue:
         specifier: ^3.4.21
         version: 3.4.21
@@ -45,9 +48,15 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.11.4
         version: 6.11.4
+      '@repo/passport':
+        specifier: workspace:^
+        version: link:../passport
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
+      nuxt-primevue:
+        specifier: ^0.3.1
+        version: 0.3.1(vue@3.4.21)
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
@@ -9703,6 +9712,7 @@ packages:
   /mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
+    requiresBuild: true
 
   /mimic-fn@3.1.0:
     resolution: {integrity: sha512-Ysbi9uYW9hFyfrThdDEQuykN4Ey6BuwPD2kpI5ES/nFTDn/98yxYNLZJcgUAKPT/mcrLLKaGzJR9YVxJrIdASQ==}
@@ -10371,6 +10381,17 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+
+  /nuxt-primevue@0.3.1(vue@3.4.21):
+    resolution: {integrity: sha512-wTFvUbniEhntFamnRP4znMqU9a4lYr7eXvA7FW5nGX51YCV3nJzXZlCML4l6kEL0pyJsSV4DTb0Qo61nZnn9JQ==}
+    dependencies:
+      '@nuxt/kit': 3.11.2
+      primevue: 3.49.1(vue@3.4.21)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
+    dev: true
 
   /nuxt@3.11.2(@unocss/reset@0.59.3)(drizzle-orm@0.30.8)(floating-vue@5.2.2)(sass@1.75.0)(unocss@0.59.3)(vite@5.2.8):
     resolution: {integrity: sha512-Be1d4oyFo60pdF+diBolYDcfNemoMYM3R8PDjhnGrs/w3xJoDH1YMUVWHXXY8WhSmYZI7dyBehx/6kTfGFliVA==}
@@ -11731,6 +11752,22 @@ packages:
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
+
+  /primevue@3.49.1(vue@3.4.21):
+    resolution: {integrity: sha512-OmUTqbKbPB63Zqf7uA49cipDi+Qh+/13AYJPwgvsVsI4QmAKIkeibBwkOgj1CNIFlopfF79YmyBshFUAPqlw9A==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.4.21
+    dev: true
+
+  /primevue@3.51.0(vue@3.4.21):
+    resolution: {integrity: sha512-BdMveidLSr0fNJ5+mxuke8mMCHyiXwvfDP4iwPr6R98rl3E0Wcm1u4/RKVrL7o0Iq606SXyhPQL3LGyAfXngcA==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.4.21
+    dev: false
 
   /proc-log@3.0.0:
     resolution: {integrity: sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==}

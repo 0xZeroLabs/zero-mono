@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "nuxt": "^3.11.1",
+    "primevue": "^3.51.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
@@ -18,7 +19,9 @@
     "@csstools/postcss-sass": "^5.1.1",
     "@nuxtjs/style-resources": "^1.2.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@repo/passport": "workspace:^",
     "autoprefixer": "^10.4.19",
+    "nuxt-primevue": "^0.3.1",
     "postcss": "^8.4.38",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
