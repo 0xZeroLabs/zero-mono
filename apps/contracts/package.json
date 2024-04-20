@@ -1,9 +1,7 @@
 {
   "name": "@repo/contracts",
-  "private": true,
-  "type": "module",
-  "scripts": {},
   "devDependencies": {
-    "truffle": "^5.11.5"
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.3"
   }
 }
