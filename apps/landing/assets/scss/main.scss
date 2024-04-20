@@ -14,9 +14,15 @@ $steps: 50;
   src: url("./fonts/Italiana-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./fonts/SpaceGrotesk[wght].woff2");
+}
+
 body {
   @apply bg-black text-white min-h-screen;
-  font-family: "Italiana";
+  font-family: "Space Grotesk";
+  font-feature-settings: "zero", /*"frac",*/ "salt", "case";
 }
 
 .wrapper {
