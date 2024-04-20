@@ -10,8 +10,9 @@ A Turborepo which includes the following packages/apps:
 
 ### Apps and Packages
 
-- `landing`: a [Nuxt.js](https://nuxt.com/) app
-- `passport`: another [Nuxt.js](https://nuxt.com/) app
+- `@repo/landing`: a [Nuxt.js](https://nuxt.com/) app
+- `@repo/passport`: another [Nuxt.js](https://nuxt.com/) app
+- `@repo/contracts`: a [Solidity](https://soliditylang.org/) and [Hardhat](https://hardhat.org) project
 - `@repo/ui`: a stub Vue component library shared by both the applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 
