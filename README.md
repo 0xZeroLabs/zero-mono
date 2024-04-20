@@ -12,7 +12,7 @@ A Turborepo which includes the following packages/apps:
 
 - `@repo/landing`: a [Nuxt.js](https://nuxt.com/) app
 - `@repo/passport`: another [Nuxt.js](https://nuxt.com/) app
-- `@repo/contracts`: a [Solidity](https://soliditylang.org/) and [Truffle](archive.trufflesuite.com), we'll be migrating to hardhat
+- `@repo/contracts`: a [Solidity](https://soliditylang.org/) and [Hardhat](https://hardhat.org) project
 - `@repo/ui`: a stub Vue component library shared by both the applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 
