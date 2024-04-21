@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt"],
+  modules: ["@vite-pwa/nuxt", "@nuxtjs/tailwindcss"],
   css: ["~/assets/scss/main.scss"],
   devtools: { enabled: true },
   devServer: {
@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       name: "Zero ID - Passport",
       short_name: "Zero ID",
       description: "The omni-identity protocol.",
-      theme_color: "#000",
+      theme_color: "#000000",
       icons: [
         {
           src: "icon.png",
