@@ -12,6 +12,8 @@ export default defineNuxtConfig({
       short_name: "Zero ID",
       description: "The omni-identity protocol.",
       theme_color: "#000000",
+      background_color: "#000000",
+      display: "standalone",
       icons: [
         {
           src: "icon.png",
@@ -21,7 +23,14 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: "/"
+      navigateFallback: "/",
+      globPatterns: ['**/*.{js,css,html,json,svg,webp}'],
+      runtimeCaching: [
+        {
+          urlPattern: '/',
+          handler: 'NetworkFirst',
+        }
+      ]
     },
     devOptions: {
       enabled: false,
