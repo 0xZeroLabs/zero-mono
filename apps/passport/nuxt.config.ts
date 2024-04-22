@@ -8,8 +8,8 @@ export default defineNuxtConfig({
   },
   pwa: {
     manifest: {
-      name: "Zero ID - Passport",
-      short_name: "Zero ID",
+      name: "ZERO",
+      short_name: "ZERO",
       description: "The omni-identity protocol.",
       theme_color: "#000000",
       background_color: "#000000",
