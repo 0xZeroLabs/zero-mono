@@ -6,7 +6,8 @@ pragma solidity ^0.8.13;
  * co-authored whitepaper at:
  * https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763
  *
- * I propose for a rename to Non-Transferable Tokens NTT's
+ * Edited to include created and updated timestamps
+ * 
  */
 
 contract SBT {
@@ -23,13 +24,12 @@ contract SBT {
     
     struct Soul {
         string identity;
+        uint created;
+        uint updated;
         // add issuer specific fields below
         uint256 score;
         string data;
         VerificationStatus status;
-
-        uint created;
-        uint updated;
     }
 
     mapping (address => Soul) private souls;

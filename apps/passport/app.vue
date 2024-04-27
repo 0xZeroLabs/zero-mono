@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <NuxtPwaAssets />
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
+
+<style>
+/* @import url("~/assets/css/glitch.css"); */
+</style>
