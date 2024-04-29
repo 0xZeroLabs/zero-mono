@@ -48,6 +48,11 @@ export default defineNuxtConfig({
       type: "module"
     },
   },
+  app: {
+    head: {
+      title: 'Zero ID - Passport'
+    }
+  },
   colorMode: {
     preference: 'dark',
     globalName: '__NUXT_COLOR_MODE__',
