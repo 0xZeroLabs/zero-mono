@@ -1,5 +1,5 @@
 {
-  "name": "@repo/passport",
+  "name": "@repo/app",
   "private": true,
   "type": "module",
   "scripts": {

@@ -50,7 +50,6 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Zero ID - Passport'
     }
   },
   colorMode: {

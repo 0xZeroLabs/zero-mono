@@ -1,7 +1,7 @@
 <template>
-  <Tabs default-value="account" class="w-[400px]">
-    <Navigation />
-  </Tabs>
+  <head>
+    <title>ZERO</title>
+  </head>
 </template>
 
 <script lang="ts" setup>
