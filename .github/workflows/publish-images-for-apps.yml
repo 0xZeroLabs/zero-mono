@@ -47,4 +47,4 @@ jobs:
                 api_token: "${{ secrets.KOYEB_TOKEN }}"
                 github_token: "${{ secrets.GITHUB_TOKEN }}"
             - name: Deploy to Koyeb
-              run: koyeb service redeploy passport/app
+              run: koyeb service redeploy passport/passport
