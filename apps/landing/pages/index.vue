@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen">
     <head>
-      <title>Zero Labs - Unlocking real-world value for DeFi</title>
+      <title>ZΞRO Labs - Unlocking real-world value for DeFi</title>
     </head>
     <div class="wrapper">
       <div class="w-[88.89%] mb-12 md:mb-16">
