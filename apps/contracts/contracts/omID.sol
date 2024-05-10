@@ -26,11 +26,11 @@ contract PassportParser is Ownable {
 
     struct ID {
         uint id;
-        uint created;
-        uint updated;
         address wallet;
         string data;
         VerificationStatus status;
+        uint created;
+        uint updated;
     }
 
     mapping(address => ID) public ids;

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
 /**
  * An experiment in Soul Bound Tokens (SBT's) following Vitalik's
  * co-authored whitepaper at:
@@ -10,36 +12,30 @@ pragma solidity ^0.8.13;
  * 
  */
 
-contract SBT {
+contract omPassport is ERC721 {
     enum VerificationStatus {
         Pending,
         Verified,
         Rejected,
         Blacklisted
     }
-
-    struct ID {
-        uint id;
-    }
     
     struct Soul {
         string identity;
-        uint created;
-        uint updated;
         // add issuer specific fields below
         uint256 score;
         string data;
         VerificationStatus status;
+        uint created;
+        uint updated;
     }
 
     mapping (address => Soul) private souls;
     mapping (address => mapping (address => Soul)) soulProfiles;
     mapping (address => address[]) private profiles;
 
-    string public name;
-    string public ticker;
     address public operator;
-    bytes32 private zeroHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+    bytes32 private zeroHash = 0xdeb78a77b39c8f844bffc2b279b9a1c8e231e7b54c4bfa85bfa082bfe98bfa4a;
     
     event Mint(address _soul);
     event Burn(address _soul);
@@ -47,9 +43,7 @@ contract SBT {
     event SetProfile(address _profiler, address _soul);
     event RemoveProfile(address _profiler, address _soul);
 
-    constructor(string memory _name, string memory _ticker) {
-      name = _name;
-      ticker = _ticker;
+    constructor() ERC721("OmniPassport", 'omPASS') {
       operator = msg.sender;
     }
 
@@ -59,6 +53,7 @@ contract SBT {
         souls[_soul] = _soulData;
         souls[_soul].status = VerificationStatus.Pending;
         souls[_soul].created = block.timestamp;
+        _mint(_soul, 1);
         emit Mint(_soul);
     }
 
@@ -69,6 +64,7 @@ contract SBT {
             address profiler = profiles[_soul][i];
             delete soulProfiles[profiler][_soul];
         }
+        _burn(1);
         emit Burn(_soul);
     }
 
