@@ -1,21 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-abstract contract Ownable {
-    address public owner;
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-    constructor() {
-        owner = msg.sender;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can call this function");
-        _;
-    }
-}
-
-contract PassportParser is Ownable {
-    constructor() public {}
+abstract contract PassportParser is Ownable {
+    constructor() {}
 
     enum VerificationStatus {
         Pending,

@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 /**
  * An experiment in Soul Bound Tokens (SBT's) following Vitalik's
@@ -9,68 +10,108 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
  * https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763
  *
  * Edited to include created and updated timestamps
- * 
+ * Based around ERC721 standards
  */
 
-contract omPassport is ERC721 {
+contract omPassport is ERC721, ERC721URIStorage {
+    uint256 private _tokenIdCounter;
+
     enum VerificationStatus {
-        Pending,
         Verified,
-        Rejected,
+        PendingAppeal,
         Blacklisted
     }
-    
+
     struct Soul {
+        // contains zkHash
         string identity;
         // add issuer specific fields below
         uint256 score;
-        string data;
         VerificationStatus status;
-        uint created;
-        uint updated;
+        uint256 created;
+        uint256 updated;
     }
 
-    mapping (address => Soul) private souls;
-    mapping (address => mapping (address => Soul)) soulProfiles;
-    mapping (address => address[]) private profiles;
+    mapping(address => Soul) private souls;
+    mapping(address => mapping(address => Soul)) soulProfiles;
+    mapping(address => address[]) private profiles;
 
     address public operator;
-    bytes32 private zeroHash = 0xdeb78a77b39c8f844bffc2b279b9a1c8e231e7b54c4bfa85bfa082bfe98bfa4a;
-    
+    bytes32 private zeroHash =
+        0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+    bytes4 private constant ERC4906_INTERFACE_ID = bytes4(0x49064906);
+
     event Mint(address _soul);
     event Burn(address _soul);
     event Update(address _soul);
     event SetProfile(address _profiler, address _soul);
     event RemoveProfile(address _profiler, address _soul);
 
-    constructor() ERC721("OmniPassport", 'omPASS') {
-      operator = msg.sender;
+    constructor() ERC721("OmniPassport", "omPASS") {
+        operator = msg.sender;
+    }
+
+    function _update(
+        address to,
+        uint256 tokenId,
+        address auth
+    ) internal override returns (address) {
+        address from = _ownerOf(tokenId);
+        require(from == address(0), "Token not transferable");
+        super._update(to, tokenId, auth);
+        return from;
     }
 
     function mint(address _soul, Soul memory _soulData) external {
-        require(keccak256(bytes(souls[_soul].identity)) == zeroHash, "Soul already exists");
+        require(
+            keccak256(bytes(souls[_soul].identity)) == zeroHash,
+            "Soul already exists"
+        );
         require(msg.sender == operator, "Only operator can mint new souls");
         souls[_soul] = _soulData;
-        souls[_soul].status = VerificationStatus.Pending;
+        souls[_soul].status = VerificationStatus.Verified;
         souls[_soul].created = block.timestamp;
-        _mint(_soul, 1);
+        _tokenIdCounter += 1;
+        _mint(_soul, _tokenIdCounter);
         emit Mint(_soul);
     }
 
     function burn(address _soul) external {
-        require(msg.sender == _soul || msg.sender == operator, "Only users and issuers have rights to delete their data");
+        require(
+            msg.sender == _soul || msg.sender == operator,
+            "Only users and issuers have rights to delete their data"
+        );
         delete souls[_soul];
-        for (uint i=0; i<profiles[_soul].length; i++) {
+        for (uint256 i = 0; i < profiles[_soul].length; i++) {
             address profiler = profiles[_soul][i];
             delete soulProfiles[profiler][_soul];
         }
         _burn(1);
+        super._burn(1);
         emit Burn(_soul);
+    }
+
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view virtual override(ERC721, ERC721URIStorage) returns (bool) {
+        return
+            interfaceId == ERC4906_INTERFACE_ID ||
+            super.supportsInterface(interfaceId);
+    }
+
+    function tokenURI(
+        uint256 tokenId
+    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        tokenId = 1;
+        return super.tokenURI(tokenId);
     }
 
     function update(address _soul, Soul memory _soulData) external {
         require(msg.sender == operator, "Only operator can update soul data");
-        require(keccak256(bytes(souls[_soul].identity)) != zeroHash, "Soul does not exist");
+        require(
+            keccak256(bytes(souls[_soul].identity)) != zeroHash,
+            "Soul does not exist"
+        );
         souls[_soul] = _soulData;
         souls[_soul].updated = block.timestamp;
         emit Update(_soul);
@@ -94,22 +135,36 @@ contract omPassport is ERC721 {
      * By default they can only store data on addresses that have been minted
      */
     function setProfile(address _soul, Soul memory _soulData) external {
-        require(keccak256(bytes(souls[_soul].identity)) != zeroHash, "Cannot create a profile for a soul that has not been minted");
+        require(
+            keccak256(bytes(souls[_soul].identity)) != zeroHash,
+            "Cannot create a profile for a soul that has not been minted"
+        );
         soulProfiles[msg.sender][_soul] = _soulData;
         profiles[_soul].push(msg.sender);
         emit SetProfile(msg.sender, _soul);
     }
 
-    function getProfile(address _profiler, address _soul) external view returns (Soul memory) {
+    function getProfile(
+        address _profiler,
+        address _soul
+    ) external view returns (Soul memory) {
         return soulProfiles[_profiler][_soul];
     }
 
-    function listProfiles(address _soul) external view returns (address[] memory) {
+    function listProfiles(
+        address _soul
+    ) external view returns (address[] memory) {
         return profiles[_soul];
     }
 
-    function hasProfile(address _profiler, address _soul) public view returns (bool) {
-        if (keccak256(bytes(soulProfiles[_profiler][_soul].identity)) == zeroHash) {
+    function hasProfile(
+        address _profiler,
+        address _soul
+    ) public view returns (bool) {
+        if (
+            keccak256(bytes(soulProfiles[_profiler][_soul].identity)) ==
+            zeroHash
+        ) {
             return false;
         } else {
             return true;
@@ -117,7 +172,10 @@ contract omPassport is ERC721 {
     }
 
     function removeProfile(address _profiler, address _soul) external {
-        require(msg.sender == _soul, "Only users have rights to delete their profile data");
+        require(
+            msg.sender == _soul,
+            "Only users have rights to delete their profile data"
+        );
         require(hasProfile(_profiler, _soul), "Profile does not exist");
         delete soulProfiles[_profiler][msg.sender];
         emit RemoveProfile(_profiler, _soul);
