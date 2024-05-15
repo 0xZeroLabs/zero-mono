@@ -12,6 +12,7 @@
     "hardhat": "^2.22.3"
   },
   "dependencies": {
+    "@hyperlane-xyz/core": "^3.11.1",
     "@openzeppelin/contracts": "^5.0.2",
     "dotenv": "^16.4.5",
     "env": "^0.0.2"
