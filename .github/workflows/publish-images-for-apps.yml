@@ -3,6 +3,9 @@ name: Publish Apps to DockerHub and Koyeb
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches:
+    - main
 
 jobs:
     publish_landing:

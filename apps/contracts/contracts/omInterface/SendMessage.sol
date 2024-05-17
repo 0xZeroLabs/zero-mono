@@ -19,7 +19,7 @@ contract omSend is Ownable {
     }
 
     function _mint(string calldata _address) external payable {
-        require(msg.value >= 0.0001 ether, "Insufficient Funding");
+        require(msg.value >= 0.001 ether, "Insufficient Funding");
         uint32 destination = 97;
         bytes memory _message = bytes(_address);
 
@@ -28,7 +28,7 @@ contract omSend is Ownable {
     }
 
     function _burn() external payable {
-        require(msg.value >= 0.0001 ether, "Insufficient Funding");
+        require(msg.value >= 0.001 ether, "Insufficient Funding");
         // send action
     }
 }

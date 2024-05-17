@@ -21,12 +21,12 @@ contract omReceive {
      */
 
     function _mint() public payable {
-        require (msg.value >= 0.0001 ether, "Insufficient Funding");
+        require (msg.value >= 0.001 ether, "Insufficient Funding");
         omPass.mint();
     }
 
     function _burn() public payable {
-        require (msg.value >= 0.0001 ether, "Insufficient Funding");
+        require (msg.value >= 0.001 ether, "Insufficient Funding");
         omPass.burn();
     }
 }
