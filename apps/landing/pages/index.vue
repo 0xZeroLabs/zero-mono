@@ -9,9 +9,12 @@
       class="w-full h-screen flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
       <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal Zk Identity and Financial Passport</h1>
       <p class="font-normal text-[20px] text-center">Simplifying DeFi and Web3 with Omnichain Identity and Trust</p>
-      <button class="bg-[#1e1e1e] w-[168px] h-[57px] border-[0.2px] border-[#fff]">
-        <span class="text-white font-SpaceGrotesk font-bold text-[20px]">Launch app</span>
-      </button>
+      <div>
+        <button class="bg-[#1e1e1e] w-[168px] h-[48px] border-[0.2px] border-[#fff] m-3">
+          <span class="text-white font-SpaceGrotesk font-bold text-[20px] capitalize">Launch app</span>
+        </button>
+        <a href="https://docs.0xzero.org/developers/zero-sdk" class="text-white font-SpaceGrotesk font-bold text-[20px] capitalize hover:underline m-3">Build with ZERO</a>
+      </div>
       <img src="@/assets/angel.svg" alt="angel"
         class="w-[320px] 2xl:w-[380px] absolute md:-bottom-[0px] 2xl:-bottom-[0px] -left-[94px] hidden md:block" :draggable="false">
     </div>

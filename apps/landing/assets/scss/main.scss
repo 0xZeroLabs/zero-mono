@@ -99,4 +99,18 @@
     justify-content: center;
     text-align: center;
   }
+  button {
+    @apply relative;
+    span {
+      @apply text-white font-SpaceGrotesk font-bold text-[20px] z-10 relative;
+    }
+  }
+  button::before {
+    content: "";
+    @apply bg-[#1e1e1e] absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  button:after {
+    content: "";
+    @apply bg-[#1e1e1e] absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
 }
