@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-[#111111]/60 w-full flex justify-center items-center h-[80px]">
+    <div class="bg-[#111111]/0 w-full flex justify-center items-center h-[80px]">
         <div class="h-[80px] z-[999] flex flex-row justify-between items-center px-5 md:px-10 w-[97%] text-white fixed">
             <!-- bg transitions in on-scroll -->
             <a href="/"><img src="@/assets/logo1.svg" /></a>
 
-            <ul class="bg-[#111111]/80 hidden md:flex flex-row justify-evenly items-center gap-2 font-SpaceGrotesk font-light capitalize text-[20px] w-[512px] h-[40px] rounded-md border">
+            <ul class="bg-[#111111]/80 backdrop-blur-sm hidden md:flex flex-row justify-evenly items-center gap-2 font-SpaceGrotesk font-light capitalize text-md w-[512px] h-[40px] rounded-md border">
                 <li><a href="/#">Ecosystem</a></li>
                 <li><a href="/#">Solutions</a></li>
                 <li><a href="/#">Token</a></li>
