@@ -1,12 +1,12 @@
 <template>
-  <div class="h-full">
+  <div class="min-h-full">
 
     <head>
       <title>ZΞRO Labs - Unlocking real-world value for DeFi</title>
     </head>
     <!-- Hero -->
     <div
-      class="min-w-full min-h-[100vh] flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
+      class="min-w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
       <div class="max-w-[1536px]">
         <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal zk-Identity and Financial Passport</h1>
         <h2 class="font-normal text-[20px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust</h2>
@@ -18,8 +18,9 @@
         </div>
       </div>
       <img src="@/assets/angel.svg" alt="angel"
-        class="w-[320px] 2xl:w-[380px] absolute md:-bottom-[0px] 2xl:-bottom-[0px] -left-[94px] hidden md:block" :draggable="false">
+        class="w-[320px] 2xl:w-[380px] absolute md:bottom-[100px] 2xl:bottom-[100px] -left-[94px] hidden md:block" :draggable="false">
     </div>
+    <Sponsors />
     <!-- About -->
     <div
       class="w-full h-screen flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">

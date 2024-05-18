@@ -113,4 +113,7 @@
     content: "";
     @apply bg-[#1e1e1e]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
+  .nav-link:hover {
+    @apply text-gray-600;
+  }
 }

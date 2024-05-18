@@ -1,15 +1,15 @@
 <template>
-    <div class="bg-[#111111]/0 w-full flex justify-center items-center h-[80px] fixed top-0">
+    <div class="bg-[#111111]/0 w-full flex justify-center items-center fixed top-0 border-[#111111]/80 border-b z-20">
         <div class="h-[80px] z-[999] flex flex-row justify-between items-center px-5 md:px-10 w-[97%] md:max-w-[1536px] text-white">
             <!-- bg transitions in on-scroll -->
             <a href="/"><img src="@/assets/logo1.svg" /></a>
 
             <ul class="bg-[#111111]/80 backdrop-blur-sm hidden md:flex flex-row justify-evenly items-center gap-2 font-SpaceGrotesk font-light capitalize text-md w-[512px] h-[40px] rounded-md border">
-                <li><a href="/#">Ecosystem</a></li>
-                <li><a href="/#">Solutions</a></li>
-                <li><a href="/#">Token</a></li>
-                <li><a href="/#">About</a></li>
-                <li><a href="/#">Contact</a></li>
+                <li><a href="/#" class="nav-link">Ecosystem</a></li>
+                <li><a href="/#" class="nav-link">Solutions</a></li>
+                <li><a href="/#" class="nav-link">Token</a></li>
+                <li><a href="/#" class="nav-link">About</a></li>
+                <li><a href="/#" class="nav-link">Contact</a></li>
             </ul>
 
             <div>
