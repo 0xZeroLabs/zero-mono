@@ -9,7 +9,7 @@
       class="min-w-full min-h-[100vh] flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
       <div class="max-w-[1536px]">
         <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal zk-Identity and Financial Passport</h1>
-        <h2 class="font-normal text-[20px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust to Make Decentralized Finance More Accessible</h2>
+        <h2 class="font-normal text-[20px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust</h2>
         <div class="w-full flex justify-center items-center">
           <button class="bg-[#1e1e1e] w-[168px] h-[48px] border-[0.2px] border-[#fff] m-3">
             <span class="">Launch app</span>
