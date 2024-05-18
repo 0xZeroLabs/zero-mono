@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-[#111111]/0 w-full flex justify-center items-center h-[80px]">
-        <div class="h-[80px] z-[999] flex flex-row justify-between items-center px-5 md:px-10 w-[97%] text-white fixed">
+    <div class="bg-[#111111]/0 w-full flex justify-center items-center h-[80px] fixed top-0">
+        <div class="h-[80px] z-[999] flex flex-row justify-between items-center px-5 md:px-10 w-[97%] md:max-w-[1536px] text-white">
             <!-- bg transitions in on-scroll -->
             <a href="/"><img src="@/assets/logo1.svg" /></a>
 
