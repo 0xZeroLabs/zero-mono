@@ -9,7 +9,7 @@
       class="min-w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
       <div class="max-w-[1536px]">
         <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal zk-Identity and Financial Passport</h1>
-        <h2 class="font-normal text-[20px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust</h2>
+        <h2 class="font-normal text-[19px] md:text-[24px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust</h2>
         <div class="w-full flex justify-center items-center">
           <button class="bg-[#1e1e1e] w-[168px] h-[48px] border-[0.2px] border-[#fff] m-3">
             <span class="">Launch app</span>
@@ -23,9 +23,9 @@
     <Sponsors />
     <!-- About -->
     <div
-      class="w-full h-screen flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">
-      <h1 class="font-Italiana font-bold text-[70px]">About <span class="underline">Zero</span></h1>
-      <p class="font-SpaceGrotesk font-normal text-[25px] text-center">At Zero, we believe in a future where you have
+      class="w-full h-[calc(60vh)] flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">
+      <h1 class="font-Italiana font-bold text-[70px] uppercase">About <span class="underline">ZERO</span></h1>
+      <p class="font-SpaceGrotesk font-normal text-[25px] text-center max-w-[1536px]">At ZERO, we believe in a future where you have
         complete control over your digital identity and can navigate the
         DeFi and Web3 world with confidence. We achieve this through a suite of core functionalities designed to
         streamline identity management and empower you financially.</p>
@@ -36,7 +36,7 @@
     <!-- Solutions -->
     <div
       class="w-full pb-16 pt-20 flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 px-10 overflow-x-hidden bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
-      <h1 class="font-bold text-[70px]">Zero Solutions</h1>
+      <h1 class="font-bold text-[70px]">ZERO Solutions</h1>
       <div
         class="flex 2xl:flex-row 2xl:flex-wrap flex-col gap-10 2xl:justify-between justify-center items-center h-full relative">
         <div

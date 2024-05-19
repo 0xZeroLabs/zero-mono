@@ -100,18 +100,18 @@
     text-align: center;
   }
   button {
-    @apply relative;
+    @apply relative bg-[#1c1c1c];
     span {
       @apply text-white font-SpaceGrotesk font-bold text-lg z-10 relative;
     }
   }
   button::before {
     content: "";
-    @apply bg-[#1e1e1e]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+    @apply bg-[#1c1c1c]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
   }
   button:after {
     content: "";
-    @apply bg-[#1e1e1e]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+    @apply bg-[#1c1c1c]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
   .nav-link:hover {
     @apply text-gray-600;
