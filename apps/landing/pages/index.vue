@@ -1,46 +1,62 @@
+<script setup lang="ts">
+let value = ref("Launch app");
+const use = () => {
+  value.value = "Coming Soon"
+  setTimeout(() => {
+    value.value = "Launch app"
+  }, 3000)
+}
+</script>
 <template>
   <div class="min-h-full">
 
-    <head>
+    <Head>
       <title>ZΞRO Labs - Unlocking real-world value for DeFi</title>
-    </head>
+    </Head>
     <!-- Hero -->
     <div
       class="min-w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
       <div class="max-w-[1536px]">
-        <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal zk-Identity and Financial Passport</h1>
-        <h2 class="font-normal text-[19px] md:text-[24px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain Identity and Trust</h2>
+        <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">Your Universal zk-Identity and Financial
+          Passport</h1>
+        <h2 class="font-normal text-[19px] md:text-[24px] text-center mb-8">Simplifying DeFi and Web3 with Omnichain
+          Identity and Trust</h2>
         <div class="w-full flex justify-center items-center">
-          <button class="bg-[#1e1e1e] w-[168px] h-[48px] border-[0.2px] border-[#fff] m-3">
-            <span class="">Launch app</span>
+          <button @click="use" class="bg-[#1e1e1e] w-[168px] h-[48px] border-[0.2px] border-[#fff] m-3">
+            <span class="">{{ value }}</span>
           </button>
-          <a href="https://docs.0xzero.org/developers/zero-sdk" class="text-white font-SpaceGrotesk font-bold text-lg capitalize hover:underline m-3">Build with ZERO</a>
+          <a href="https://docs.0xzero.org/developers/zero-sdk"
+            class="text-white font-SpaceGrotesk font-bold text-lg capitalize hover:underline m-3">Build with ZERO</a>
         </div>
       </div>
       <img src="@/assets/angel.svg" alt="angel"
-        class="w-[320px] 2xl:w-[380px] absolute md:bottom-[100px] 2xl:bottom-[100px] -left-[94px] hidden md:block" :draggable="false">
+        class="w-[320px] 2xl:w-[380px] absolute md:bottom-[100px] 2xl:bottom-[100px] -left-[94px] hidden md:block"
+        :draggable="false">
     </div>
     <Sponsors />
     <!-- About -->
     <div
-      class="w-full h-[calc(60vh)] flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">
-      <h1 class="font-Italiana font-bold text-[70px] uppercase">About <span class="underline">ZERO</span></h1>
-      <p class="font-SpaceGrotesk font-normal text-[25px] text-center max-w-[1536px]">At ZERO, we believe in a future where you have
+      class="w-full md:h-[calc(50vh)] flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">
+      <h1 class="font-Italiana font-bold text-[70px] uppercase text-center">About <span class="underline">ZERO</span>
+      </h1>
+      <p class="font-SpaceGrotesk font-normal text-[25px] text-center max-w-[1536px]">At ZERO, we believe in a future
+        where you have
         complete control over your digital identity and can navigate the
         DeFi and Web3 world with confidence. We achieve this through a suite of core functionalities designed to
         streamline identity management and empower you financially.</p>
-      <img src="@/assets/Zero-coin.png" alt="Zero-coin"
-        class="w-[320px] 2xl:w-[420px] absolute md:-bottom-[120px] 2xl:-bottom-[80px] right-[10px] hidden md:block" :draggable="false">
+      <!-- <img src="@/assets/Zero-coin.png" alt="Zero-coin"
+        class="w-[320px] 2xl:w-[420px] absolute md:-bottom-[120px] 2xl:-bottom-[80px] right-[10px] hidden md:block"
+        :draggable="false"> -->
 
     </div>
     <!-- Solutions -->
-    <div
+    <div id="solutions"
       class="w-full pb-16 pt-20 flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 px-10 overflow-x-hidden bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
-      <h1 class="font-bold text-[70px]">ZERO Solutions</h1>
+      <h1 class="font-bold text-[70px] text-center">ZERO Solutions</h1>
       <div
         class="flex 2xl:flex-row 2xl:flex-wrap flex-col gap-10 2xl:justify-between justify-center items-center h-full relative">
         <div
-          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[499px] text-start px-10 bg-white/40 border border-white md:[clip-path:_polygon(0_0,_100%_0%,_100%_100%,_20%_100%,_0_81.27%);]">
+          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[499px] text-start px-10 bg-white/40 border border-white">
           <h1 class="font-bold text-[40px] md:text-[70px]">omID</h1>
           <p class="font-normal text-[18px]">Imagine a world where you can prove you're eligible for something without
             revealing every detail of your personal information. With Zero's zk-powered identities, also known as omIDs,
@@ -51,7 +67,7 @@
 
         </div>
         <div
-          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[499px] text-start px-10 bg-white/40 border border-white md:[clip-path:_polygon(0_0,_100%_0%,_100%_100%,_20%_100%,_0_81.27%);]">
+          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[499px] text-start px-10 bg-white/40 border border-white">
           <h1 class="font-bold text-[40px] md:text-[70px]">omPassport</h1>
           <p class="font-normal text-[18px]">Powered by Hyperlane, we bring you omPassports, a SBT (Soulbound Token)
             solution. This innovative solution allows you to choose a single passport that works flawlessly across all
@@ -64,7 +80,7 @@
 
         </div>
         <div
-          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[530px] text-start px-10 bg-white/40 border border-white md:[clip-path:_polygon(0_0,_100%_0%,_100%_100%,_20%_100%,_0_81.27%);]">
+          class="w-[300px] md:w-[643px] h-full pb-16 md:pb-0 md:h-[530px] text-start px-10 bg-white/40 border border-white">
           <h1 class="font-bold text-[40px] md:text-[70px]">Aggregated Verifications</h1>
           <p class="font-normal text-[18px]">We leverage aggregated data across multiple supported blockchains and
             wallets to deliver a comprehensive solvency index score. This score provides a clear picture of financial
@@ -77,8 +93,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-// const colorMode = useColorMode();
-// console.log(colorMode)
-</script>
