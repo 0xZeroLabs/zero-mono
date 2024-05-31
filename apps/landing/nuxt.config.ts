@@ -14,4 +14,4 @@ export default defineNuxtConfig({
     classSuffix: "",
     storageKey: "nuxt-color-mode",
   },
-});
+})
