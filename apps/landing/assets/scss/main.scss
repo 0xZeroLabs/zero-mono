@@ -147,9 +147,6 @@
   .partners:hover .partner-slide {
     animation-play-state: paused;
   }
-  img.logo {
-    @apply grayscale-[40%] hover:grayscale-0;
-  }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
