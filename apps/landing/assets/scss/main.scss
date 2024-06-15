@@ -128,9 +128,8 @@
   }
   .partners:before,
   .partners:after {
-    @apply w-32 md:w-64;
+    @apply w-32 md:w-64 h-24;
     position: absolute;
-    height: 176px;
     content: "";
     z-index: 10;
   }
@@ -142,7 +141,21 @@
     @apply bg-gradient-to-r from-[rgba(8,8,8,0)] via-[rgba(8,8,8,0.5)] to-[rgba(8,8,8,1)];
     right: 0;
   }
+  .partners:hover {
+    @apply cursor-pointer;
+  }
   .partners:hover .partner-slide {
     animation-play-state: paused;
+  }
+  img.logo {
+    @apply grayscale-[40%] hover:grayscale-0;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
