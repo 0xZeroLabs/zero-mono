@@ -2,7 +2,7 @@
     <div class="bg-[#000] h-[80px] z-[999] flex flex-col pb-5 md:pb-0 md:flex-row justify-between items-center px-10 w-full text-white">
         <img src="@/assets/logo1.svg" />
         <div>
-            <h1>© 2024 Zero Labs. All Rights Reserved</h1>
+            <h1>Copyright © 2024 · ZERO Labs. All Rights Reserved</h1>
         </div>
         <div class="flex flex-row justify-between gap-5 items-center text-white">
             <a href="http://" target="_blank" rel="noopener noreferrer">

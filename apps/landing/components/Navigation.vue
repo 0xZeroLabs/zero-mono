@@ -22,11 +22,11 @@
     </div>
 </template>
 <script setup lang="ts">
-let value = ref("Try Demo");
+let value = ref("Join Waitlist");
 const use = () => {
-  value.value = "Coming Soon"
+  value.value = "Not Yet"
   setTimeout(() => {
-    value.value = "Try Demo"
+    value.value = "Join Waitlist"
   }, 3000)
 }
 </script>
