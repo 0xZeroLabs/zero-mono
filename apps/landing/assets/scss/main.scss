@@ -128,17 +128,17 @@
   }
   .partners:before,
   .partners:after {
-    @apply w-32 md:w-64 h-24;
+    @apply w-12 md:w-96 h-24;
     position: absolute;
     content: "";
     z-index: 10;
   }
   .partners:before {
-    @apply bg-gradient-to-l from-[rgba(8,8,8,0)] via-[rgba(8,8,8,0.5)] to-[rgba(8,8,8,1)];
+    @apply bg-gradient-to-l from-[rgba(8,8,8,0)] via-[rgba(8,8,8,1)] to-[rgba(8,8,8,1)];
     left: 0;
   }
   .partners:after {
-    @apply bg-gradient-to-r from-[rgba(8,8,8,0)] via-[rgba(8,8,8,0.5)] to-[rgba(8,8,8,1)];
+    @apply bg-gradient-to-r from-[rgba(8,8,8,0)] via-[rgba(8,8,8,1)] to-[rgba(8,8,8,1)];
     right: 0;
   }
   .partners:hover {
