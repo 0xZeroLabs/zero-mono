@@ -155,6 +155,6 @@
     scrollbar-width: none;
   }
   .solutions-backdrop {
-    @apply backdrop-blur-sm hover:backdrop-blur-0;
+    @apply backdrop-blur-[1px] hover:backdrop-blur-0;
   }
 }
