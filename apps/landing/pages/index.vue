@@ -35,10 +35,11 @@ const use = () => {
         :draggable="false" />
     </div>
     <Sponsors />
+
     <!-- About -->
-    <div class="max-w-full flex justify-center items-center">
+    <div class="max-w-full flex justify-center items-center bg-[url('@/assets/Zero-coin.png')] bg-cover bg-center bg-no-repeat md:bg-none">
       <div
-        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full md:max-w-[40%] border-[#111111]  bg-[rgba(0,0,0,0.6)] border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           THE <span class="underline">MISSION</span>
         </h1>
@@ -56,11 +57,11 @@ const use = () => {
         :draggable="false">
     </div>
     <!-- Solutions -->
-    <div class="max-w-full flex justify-center items-center">
+    <div class="max-w-full flex justify-center items-center bg-[url('@/assets/statue-head.png')] bg-cover bg-center bg-no-repeat md:bg-none">
       <img src="@/assets/statue-head.png" alt="Zero-coin" class="w-[calc(320px)] mr-[10%] h-fit hidden md:block"
         :draggable="false">
       <div
-        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full md:max-w-[40%] border-[#111111]  bg-[rgba(0,0,0,0.6)] border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           IDENTITY
         </h1>
@@ -73,9 +74,9 @@ const use = () => {
         </p>
       </div>
     </div>
-    <div class="max-w-full flex justify-center items-center">
+    <div class="max-w-full flex justify-center items-center bg-[url('@/assets/Zero-coin.png')] bg-cover bg-center bg-no-repeat md:bg-none">
       <div
-        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full md:max-w-[40%] border-[#111111]  bg-[rgba(0,0,0,0.6)] border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           PASSPORT
         </h1>
@@ -90,11 +91,11 @@ const use = () => {
       <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[calc(320px)] ml-[10%] h-fit hidden md:block"
         :draggable="false">
     </div>
-    <div class="max-w-full flex justify-center items-center">
+    <div class="max-w-full flex justify-center items-center bg-[url('@/assets/vault.png')] bg-cover bg-center bg-no-repeat md:bg-none">
       <img src="@/assets/vault.png" alt="Zero-coin" class="w-[calc(320px)] mr-[10%] h-fit hidden md:block"
         :draggable="false">
       <div
-        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full md:max-w-[40%] border-[#111111]  bg-[rgba(0,0,0,0.6)] border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           BALANCE
         </h1>
@@ -107,9 +108,9 @@ const use = () => {
         </p>
       </div>
     </div>
-    <div class="max-w-full flex justify-center items-center">
+    <div class="max-w-full flex justify-center items-center bg-[url('@/assets/Zero-coin.png')] bg-cover bg-center bg-no-repeat md:bg-none">
       <div
-        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full md:max-w-[40%] border-[#111111]  bg-[rgba(0,0,0,0.6)] border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           SMART KEY
         </h1>
