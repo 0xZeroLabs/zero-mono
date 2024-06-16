@@ -64,21 +64,21 @@ const use = () => {
           class="w-full mb-8 flex flex-row gap-10 justify-between items-center scrollbar-hide overflow-scroll min-h-fit relative">
           <div
             class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4e584d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px]">Identity</h1>
+            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">Identity</h1>
             <p class="font-normal text-[18px] md:text-[24px]">
               Issue and verify verifiable credentials for various use cases.
             </p>
           </div>
           <div
             class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#58574d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px]">Passport</h1>
+            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">Passport</h1>
             <p class="font-normal text-[18px] md:text-[24px]">
               Manage and control your digital identity.
             </p>
           </div>
           <div
             class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4d5158] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px]">
+            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">
               Balance
             </h1>
             <p class="font-normal text-[18px] md:text-[24px]">
@@ -87,7 +87,7 @@ const use = () => {
           </div>
           <div
             class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#584d4d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px]">
+            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">
               Passkey
             </h1>
             <p class="font-normal text-[18px] md:text-[24px]">
