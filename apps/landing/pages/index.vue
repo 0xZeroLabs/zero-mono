@@ -38,7 +38,7 @@ const use = () => {
     <!-- About -->
     <div class="max-w-full flex justify-center items-center">
       <div
-        class="w-full mb-8 md:max-w-[50%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
         <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
           THE <span class="underline">MISSION</span>
         </h1>
@@ -52,50 +52,77 @@ const use = () => {
           designed to streamline identity management and empower you financially.
         </p>
       </div>
-      <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[320px] h-fit hidden md:block" :draggable="false">
+      <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[calc(320px)] ml-[10%] h-fit hidden md:block"
+        :draggable="false">
     </div>
     <!-- Solutions -->
     <div class="max-w-full flex justify-center items-center">
+      <img src="@/assets/statue-head.png" alt="Zero-coin" class="w-[calc(320px)] mr-[10%] h-fit hidden md:block"
+        :draggable="false">
       <div
-        class="w-full md:max-w-[calc(50%+320px)] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-        <h1 class="font-bold text-[40px] md:text-[70px] text-center">OUR <span class="underline">SOLUTION</span>
+        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+          IDENTITY
         </h1>
-        <div
-          class="w-full mb-8 flex flex-row gap-10 justify-between items-center scrollbar-hide overflow-scroll min-h-fit relative">
-          <div
-            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4e584d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">Identity</h1>
-            <p class="font-normal text-[18px] md:text-[24px]">
-              Issue and verify verifiable credentials for various use cases.
-            </p>
-          </div>
-          <div
-            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#58574d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">Passport</h1>
-            <p class="font-normal text-[18px] md:text-[24px]">
-              Manage and control your digital identity.
-            </p>
-          </div>
-          <div
-            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4d5158] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">
-              Balance
-            </h1>
-            <p class="font-normal text-[18px] md:text-[24px]">
-              Make seamless payments through gasless abstraction.
-            </p>
-          </div>
-          <div
-            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#584d4d] border border-white feature">
-            <h1 class="font-bold text-[40px] md:text-[70px] capitalize">
-              Passkey
-            </h1>
-            <p class="font-normal text-[18px] md:text-[24px]">
-              Secure your identity, and your funds using secure passkeys.
-            </p>
-          </div>
-        </div>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          Issue and verify zk-proof self-sovereign credentials for use anywhere.
+        </p>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          Our omIDs empowers you to verify sensitive information about
+          yourself without revealing the underlying details.
+        </p>
       </div>
+    </div>
+    <div class="max-w-full flex justify-center items-center">
+      <div
+        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+          PASSPORT
+        </h1>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          Make seamless & borderless payments through gasless abstraction.
+        </p>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          omBalance gasless abstraction removes the complexity of onchain payments, allowing you to access seamless
+          payments and subscriptions.
+        </p>
+      </div>
+      <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[calc(320px)] ml-[10%] h-fit hidden md:block"
+        :draggable="false">
+    </div>
+    <div class="max-w-full flex justify-center items-center">
+      <img src="@/assets/vault.png" alt="Zero-coin" class="w-[calc(320px)] mr-[10%] h-fit hidden md:block"
+        :draggable="false">
+      <div
+        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+          BALANCE
+        </h1>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          Make seamless & borderless payments through gasless abstraction.
+        </p>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          omBalance gasless abstraction removes the complexity of onchain payments, allowing you to access seamless
+          payments and subscriptions.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-full flex justify-center items-center">
+      <div
+        class="w-full mb-8 md:max-w-[40%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+          SMART KEY
+        </h1>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          Secure your identity, and your funds using secure passkeys.
+        </p>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          We safegaurd your identity, recovery phrases, and assets using secure encryptions with passkeys to provide
+          sovereignty & recoverability.
+        </p>
+      </div>
+      <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[calc(320px)] ml-[10%] h-fit hidden md:block"
+        :draggable="false">
     </div>
   </div>
 </template>
