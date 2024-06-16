@@ -150,9 +150,11 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .solutions-backdrop {
+    @apply backdrop-blur-sm hover:backdrop-blur-0;
   }
 }
