@@ -36,61 +36,64 @@ const use = () => {
     </div>
     <Sponsors />
     <!-- About -->
-    <div
-      class="w-full md:h-[calc(50vh)] flex flex-col justify-center items-center relative font-SpaceGrotesk text-white gap-3 px-10">
-      <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
-        Why <span class="underline">ZERO?</span>
-      </h1>
-      <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center max-w-[1536px]">
-        At ZERO, we believe in a future where you have complete control
-        over your digital identity and can navigate the DeFi and Web3 world with
-        confidence.
-      </p>
-      <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center max-w-[1536px]">
-        We achieve this through a suite of core functionalities
-        designed to streamline identity management and empower you financially.
-      </p>
-      <!-- <img src="@/assets/Zero-coin.png" alt="Zero-coin"
-        class="w-[320px] 2xl:w-[420px] absolute md:-bottom-[120px] 2xl:-bottom-[80px] right-[10px] hidden md:block"
-        :draggable="false"> -->
+    <div class="max-w-full flex justify-center items-center">
+      <div
+        class="w-full mb-8 md:max-w-[50%] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+          THE <span class="underline">MISSION</span>
+        </h1>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          At ZERO, we believe in a future where you have complete control
+          over your digital identity and can navigate the DeFi and Web3 world with
+          confidence.
+        </p>
+        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+          We achieve this through a suite of core functionalities
+          designed to streamline identity management and empower you financially.
+        </p>
+      </div>
+      <img src="@/assets/Zero-coin.png" alt="Zero-coin" class="w-[320px] h-fit hidden md:block" :draggable="false">
     </div>
     <!-- Solutions -->
-    <div id="solutions"
-      class="w-full pb-16 pt-12 flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 px-10 overflow-x-hidden bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
-      <h1 class="font-bold text-[40px] md:text-[70px] text-center">The Omnisuite</h1>
+    <div class="max-w-full flex justify-center items-center">
       <div
-        class="w-full flex flex-row gap-10 justify-between items-center scrollbar-hide overflow-scroll min-h-fit relative">
+        class="w-full md:max-w-[calc(50%+320px)] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-bold text-[40px] md:text-[70px] text-center">ZERO's <span class="underline">OMNI-SUITE</span>
+        </h1>
         <div
-          class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-white/40 border border-white feature">
-          <h1 class="font-bold text-[40px] md:text-[70px]">Identity</h1>
-          <p class="font-normal text-[18px] md:text-[24px]">
-            Issue and verify verifiable credentials for various use cases.
-          </p>
-        </div>
-        <div
-          class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-white/40 border border-white feature">
-          <h1 class="font-bold text-[40px] md:text-[70px]">Passport</h1>
-          <p class="font-normal text-[18px] md:text-[24px]">
-            Manage and control your digital identity.
-          </p>
-        </div>
-        <div
-          class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-white/40 border border-white feature">
-          <h1 class="font-bold text-[40px] md:text-[70px]">
-            Balance
-          </h1>
-          <p class="font-normal text-[18px] md:text-[24px]">
-            Make seamless payments through gasless abstraction.
-          </p>
-        </div>
-        <div
-          class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-white/40 border border-white feature">
-          <h1 class="font-bold text-[40px] md:text-[70px]">
-            Passkey
-          </h1>
-          <p class="font-normal text-[18px] md:text-[24px]">
-            Secure your identity, and your funds using secure passkeys.
-          </p>
+          class="w-full mb-8 flex flex-row gap-10 justify-between items-center scrollbar-hide overflow-scroll min-h-fit relative">
+          <div
+            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4e584d] border border-white feature">
+            <h1 class="font-bold text-[40px] md:text-[70px]">Identity</h1>
+            <p class="font-normal text-[18px] md:text-[24px]">
+              Issue and verify verifiable credentials for various use cases.
+            </p>
+          </div>
+          <div
+            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#58574d] border border-white feature">
+            <h1 class="font-bold text-[40px] md:text-[70px]">Passport</h1>
+            <p class="font-normal text-[18px] md:text-[24px]">
+              Manage and control your digital identity.
+            </p>
+          </div>
+          <div
+            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#4d5158] border border-white feature">
+            <h1 class="font-bold text-[40px] md:text-[70px]">
+              Balance
+            </h1>
+            <p class="font-normal text-[18px] md:text-[24px]">
+              Make seamless payments through gasless abstraction.
+            </p>
+          </div>
+          <div
+            class="w-[300px] md:w-[643px] pb-8 md:pb-0 min-h-[240px] text-start px-10 bg-[#584d4d] border border-white feature">
+            <h1 class="font-bold text-[40px] md:text-[70px]">
+              Passkey
+            </h1>
+            <p class="font-normal text-[18px] md:text-[24px]">
+              Secure your identity, and your funds using secure passkeys.
+            </p>
+          </div>
         </div>
       </div>
     </div>

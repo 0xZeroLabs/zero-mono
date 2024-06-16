@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#000] h-[80px] z-[999] flex flex-col pb-5 md:pb-0 md:flex-row justify-between items-center px-10 w-full text-white">
+    <div class="bg-[#000] min-h-[120px] z-[999] flex flex-col pb-5 md:pb-0 md:flex-row justify-between items-center px-10 w-full text-white">
         <img src="@/assets/logo1.svg" />
         <div class="my-2">
             <h1 class="text-center">Copyright © 2024 · All Rights Reserved</h1>
