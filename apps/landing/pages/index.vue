@@ -58,7 +58,7 @@ const use = () => {
     <div class="max-w-full flex justify-center items-center">
       <div
         class="w-full md:max-w-[calc(50%+320px)] border-[#111111] border-b md:text-left my-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-        <h1 class="font-bold text-[40px] md:text-[70px] text-center">THE <span class="underline">SOLUTION</span>
+        <h1 class="font-bold text-[40px] md:text-[70px] text-center">OUR <span class="underline">SOLUTION</span>
         </h1>
         <div
           class="w-full mb-8 flex flex-row gap-10 justify-between items-center scrollbar-hide overflow-scroll min-h-fit relative">
