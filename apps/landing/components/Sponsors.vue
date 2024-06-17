@@ -4,7 +4,7 @@
       <div>
         <h3 class="font-SpaceGrotesk text-2xl">Trusted By</h3>
       </div>
-      <div class="h-44 md:h-52 flex z-0 items-center">
+      <div class="h-40 md:h-44 flex z-0 items-center">
         <div class="h-fit partners whitespace-nowrap">
           <Items />
           <Items />
