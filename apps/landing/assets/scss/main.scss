@@ -24,6 +24,40 @@
     transform: translateX(-100%);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    transform: scaleY(90%);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(100%);
+  }
+}
+@keyframes in1 {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes an1 {
+  from {
+    transform: translateX(20%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes an2 {
+  from {
+    transform: translateX(-20%) scaleX(-100%);
+  }
+  to {
+    transform: translateX(0) scaleX(-100%);
+  }
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -94,6 +128,9 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
     // font-family: "Space Grotesk";
@@ -106,19 +143,33 @@
     justify-content: center;
     text-align: center;
   }
-  button {
-    @apply relative bg-[#1c1c1c];
+  .btn,
+  input {
+    @apply relative bg-[#1c1c1c] font-SpaceGrotesk rounded;
     span {
       @apply text-white font-SpaceGrotesk font-bold text-lg z-10 relative;
     }
   }
-  button::before {
+  .btn::before {
     content: "";
     @apply bg-[#1c1c1c]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
   }
-  button:after {
+  .btn:after {
     content: "";
     @apply bg-[#1c1c1c]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
+  .modal {
+    div {
+      @apply z-10 relative rounded;
+    }
+  }
+  .modal::before {
+    content: "";
+    @apply bg-[#080808]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .modal:after {
+    content: "";
+    @apply bg-[#080808]/80 absolute left-[8px] z-0 top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
   .nav-link:hover {
     @apply text-gray-600;
@@ -126,9 +177,12 @@
   .partner-slide {
     animation: 21s slide infinite linear;
   }
+  .fade-in {
+    animation: 0.2s fadeIn linear;
+  }
   .partners:before,
   .partners:after {
-    @apply w-12 md:w-96 h-24;
+    @apply w-12 md:w-[calc(30%-19px)] h-24;
     position: absolute;
     content: "";
     z-index: 10;
@@ -142,7 +196,7 @@
     right: 0;
   }
   .partners:hover {
-    @apply cursor-pointer;
+    @apply cursor-crosshair;
   }
   .partners:hover .partner-slide {
     animation-play-state: paused;
@@ -155,6 +209,25 @@
     scrollbar-width: none;
   }
   .solutions-backdrop {
-    @apply backdrop-blur-[1px] hover:backdrop-blur-0;
+    @apply backdrop-blur-[2px];
+  }
+  .an1 {
+    animation: an1 ease-out 2.5s;
+  }
+  .an2 {
+    animation: an2 ease-out 2.5s;
+  }
+  .in1 {
+    animation: in1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  ::-moz-selection {
+    @apply text-black bg-white;
+  }
+
+  ::selection {
+    @apply text-black bg-white;
   }
 }
