@@ -1,8 +1,9 @@
+import { config } from "dotenv";
 import { db } from "../db/setup";
 import { insertEmailSchema, email } from "../db/schema";
 import { Resend } from 'resend';
 
-const resend = new Resend('re_KRVKQqLm_HdEL2Y5eh9mChoun8BWhJowV');
+const resend = new Resend(process.env.RESEND);
 
 /**
  * @param address
