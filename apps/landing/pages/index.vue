@@ -17,11 +17,11 @@ const angel1 = ref() as unknown as any;
     <!-- Hero -->
     <div
       class="min-w-full min-h-[calc(100vh-100px)] relative overflow-hidden flex flex-col justify-center items-center font-SpaceGrotesk text-white gap-3 bg-[url('@/assets/bg.png')] bg-cover bg-no-repeat">
-      <div class="max-w-[1536px]">
-        <h1 class="z-[999] font-bold text-[30px] md:text-[60px] text-center">
+      <div class="max-w-[1536px] uppercase">
+        <h1 class="z-[999] font-bold text-[30px] md:text-[55px] text-center">
           Your Universal zk-Identity and Financial Passport
         </h1>
-        <h2 class="font-normal text-[19px] md:text-[24px] text-center mb-8">
+        <h2 class="font-normal text-[19px] md:text-[24px] text-center mb-8 capitalize">
           Simplifying DeFi and Web3 with Self-Sovereign Omnichain Identity and Trust
         </h2>
         <div class="w-full flex justify-center items-center">
