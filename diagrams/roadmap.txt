@@ -1,0 +1,21 @@
+ZERO Labs Roadmap
+> Q3, 2024
+Initial Prototype
+Waitlist
+Closed Alpha
+
+> Q4, 2024
+Open Hypernode Launch
+First Open Beta [Viction]
+Onboard Early Issuers
+
+> Q1, 2025
+Attestation SDK
+Open zkSchema Contributions
+Live Protocol
+
+> Q2, 2025
+Introduce OMNI ZERO
+Second Open Beta [OMNI ZERO]
+Establish Omni-Governance
+...
