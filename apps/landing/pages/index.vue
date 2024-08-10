@@ -49,93 +49,103 @@ const angel1 = ref() as unknown as any;
 
     <!-- About -->
     <div
-      class="max-w-full flex in1 justify-center items-center bg-[url('@/assets/Zero-coin.png')] bg-cover bg-center bg-no-repeat md:bg-none">
+      class="relative max-w-full flex min-h-fit h-[480px] justify-center items-center bg-white bg-cover bg-center bg-no-repeat bg-none">
       <div
-        class="w-full md:max-w-[45%] border-[#111111] bg-[rgba(0,0,0,0.6)] solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+        class="max-w-[1536px] solutions-backdrop text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+        <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center text-black">
           THE <span class="underline">MISSION</span>
         </h1>
-        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-          At ZERO, we believe in a future where you have complete control
-          over your digital identity and can navigate the DeFi and Web3 world with
+        <p
+          class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px] text-black">
+          At ZERO, we're building a future where you have complete control
+          over your digital identity and can navigate the new web with
           confidence.
         </p>
-        <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-          We achieve this through a suite of core functionalities
-          designed to streamline identity management and empower you financially.
+        <p
+          class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px] text-black">
+          We believe in a world where you can seamlessly prove who you are, what you know, and what you own - without
+          sacrificing your privacy.</p>
+        <p
+          class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px] text-black">
+          Our mission is to empower you to navigate the Web3 landscape with confidence, unlocking opportunities and
+          experiences based on your verifiable credentials.
         </p>
       </div>
       <img src="@/assets/Zero-coin.png" alt="Zero-coin"
-        class="w-[calc(320px)] cursor-crosshair ml-[10%] h-fit hidden md:block" :draggable="false">
+        class="w-[calc(320px)] absolute -bottom-48 z-10 cursor-crosshair ml-[10%] h-fit -left-80 hidden md:block"
+        :draggable="false">
     </div>
     <!-- Solutions -->
     <div id="solutions">
-      <div class="max-w-full flex in1 justify-center items-center bg-none">
-        <img src="@/assets/statue-head.png" alt="Zero-coin"
-          class="w-[calc(320px)] cursor-crosshair mr-[10%] h-fit hidden md:block" :draggable="false">
-        <div
-          class="w-full md:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-          <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
-            IDENTITY
-          </h1>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Issue and verify zk-proof self-sovereign credentials for use anywhere.
-          </p>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Our omIDs empowers you to verify sensitive information about
-            yourself without revealing the underlying details.
-          </p>
+      <div class="bg-black w-full z-30">
+        <div class="max-w-full bg-black flex in1 justify-center items-center bg-none">
+          <img src="@/assets/statue-head.png" alt="Zero-coin"
+            class="w-[calc(320px)] cursor-crosshair mr-[10%] h-fit hidden lg:block" :draggable="false">
+          <div
+            class="w-full lg:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+            <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+              IDENTITY
+            </h1>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Issue and verify zk-proof self-sovereign credentials for dynamic use anywhere.
+            </p>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              ZERO's omIDs let you share verifiable credentials without exposing your personal information, ensuring
+              both
+              privacy and trust.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="max-w-full flex in1 justify-center items-center bg-none">
-        <div
-          class="w-full md:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-          <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
-            PASSPORT
-          </h1>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Access, manage and control your digital identity on any wallet across chains.
-          </p>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Your omPassport is an SBT to verify your credentials onchain and secretely links all your wallets together.
-          </p>
+        <div class="max-w-full flex in1 justify-center items-center bg-none">
+          <div
+            class="w-full lg:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+            <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+              PASSPORT
+            </h1>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Access, manage and control your digital identity on any wallet across chains.
+            </p>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Your omPassport is your key to Web3, securely linking your wallets and credentials across chains while
+              maintaining your privacy.
+            </p>
+          </div>
+          <img src="@/assets/passport.png" alt="Zero-coin"
+            class="w-[calc(320px)] cursor-crosshair ml-[10%] h-fit hidden lg:block" :draggable="false">
         </div>
-        <img src="@/assets/passport.png" alt="Zero-coin"
-          class="w-[calc(320px)] cursor-crosshair ml-[10%] h-fit hidden md:block" :draggable="false">
-      </div>
-      <div class="max-w-full flex in1 justify-center items-center bg-none">
-        <img src="@/assets/vault.png" alt="Zero-coin"
-          class="w-[calc(320px)] cursor-crosshair mr-[10%] h-fit hidden md:block" :draggable="false">
-        <div
-          class="w-full md:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-          <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
-            BALANCE
-          </h1>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Make seamless & borderless payments through gasless abstraction.
-          </p>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            omBalance gasless abstraction removes the complexity of onchain payments, allowing you to access seamless
-            payments and subscriptions.
-          </p>
+        <div class="max-w-full flex in1 justify-center items-center bg-none">
+          <img src="@/assets/vault.png" alt="Zero-coin"
+            class="w-[calc(320px)] cursor-crosshair mr-[10%] h-fit hidden lg:block" :draggable="false">
+          <div
+            class="w-full lg:max-w-[45%] border-[#111111]  solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+            <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+              BALANCE
+            </h1>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Make seamless & borderless payments through gasless abstraction.
+            </p>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              While omBalance can simplify payments, its true power lies in enabling access to exclusive services and
+              opportunities based on your verified credentials.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="max-w-full flex in1 justify-center items-center bg-none">
-        <div
-          class="w-full md:max-w-[45%] border-[#111111] solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
-          <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
-            SMART KEY
-          </h1>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            Secure your identity, and your funds using secure passkeys.
-          </p>
-          <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
-            We safegaurd your identity, recovery phrases, and assets using secure encryptions with passkeys to provide
-            sovereignty & recoverability.
-          </p>
+        <div class="max-w-full flex in1 justify-center items-center bg-none">
+          <div
+            class="w-full lg:max-w-[45%] border-[#111111] solutions-backdrop border-b md:text-left py-4 md:h-[calc(50vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-10">
+            <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-center">
+              SMART KEY
+            </h1>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Secure your identity, and your funds using secure passkeys.
+            </p>
+            <p class="font-SpaceGrotesk font-normal text-[19px] md:text-[24px] text-center md:text-left max-w-[1536px]">
+              Safeguard your credentials and data with advanced encryption and passkeys, ensuring only you have access.
+            </p>
+          </div>
+          <img src="@/assets/discord-qr.png" alt="qr-code"
+            class="w-[calc(320px)] cursor-crosshair ml-[10%] h-fit hidden lg:block" :draggable="false">
         </div>
-        <img src="@/assets/discord-qr.png" alt="qr-code"
-          class="w-[calc(320px)] cursor-crosshair ml-[10%] h-fit hidden md:block" :draggable="false">
       </div>
     </div>
   </div>
