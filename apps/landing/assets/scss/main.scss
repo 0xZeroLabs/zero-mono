@@ -36,7 +36,7 @@
 }
 @keyframes in1 {
   from {
-    transform: translateY(30%);
+    transform: translateY(15%);
   }
   to {
     transform: translateY(0);
@@ -182,7 +182,7 @@
   }
   .partners:before,
   .partners:after {
-    @apply w-12 md:w-[calc(30%-19px)] h-24;
+    @apply w-12 md:w-[calc(27%-19px)] h-24;
     position: absolute;
     content: "";
     z-index: 10;
@@ -229,5 +229,12 @@
 
   ::selection {
     @apply text-black bg-white;
+  }
+  .negative::-moz-selection {
+    @apply text-white bg-black;
+  }
+
+  .negative::selection {
+    @apply text-white bg-black;
   }
 }
