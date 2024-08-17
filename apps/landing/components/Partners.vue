@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#080808] w-full pt-5 flex flex-col justify-start items-center border-[#111111] border-y" id="partners">
+  <div class="bg-[#000] w-full pt-5 flex flex-col justify-start items-center border-[#111111] border-y" id="partners">
     <div class="h-fit overflow-hidden w-full flex flex-col justify-center items-center">
       <div>
         <h3 class="font-SpaceGrotesk text-2xl">Trusted By</h3>
