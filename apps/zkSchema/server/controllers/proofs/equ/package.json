@@ -1,0 +1,9 @@
+{
+  "name": "equ",
+  "version": "1.0.0",
+  "description": "The Circom equ circuit.",
+  "scripts": {},
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  }
+}
