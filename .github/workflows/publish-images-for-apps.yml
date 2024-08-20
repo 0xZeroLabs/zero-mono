@@ -30,20 +30,20 @@ jobs:
             - name: Deploy to Koyeb
               run: koyeb service redeploy mid-dorey/landing
 
-    publish_app:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v3
-            - name: build
-              run: |
-                docker build . -t lordewan/0xzero-app:latest
-              working-directory: ./apps/zkSchema
-            - name: publish
-              run: |
-                docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
-                docker push lordewan/zkSchema:latest
-              working-directory: ./apps/zkSchema
+#    publish_app:
+#        runs-on: ubuntu-latest
+#        steps:
+#            - name: checkout
+#              uses: actions/checkout@v3
+#            - name: build
+#              run: |
+#                docker build . -t lordewan/0xzero-app:latest
+#              working-directory: ./apps/zkSchema
+#            - name: publish
+#              run: |
+#                docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
+#                docker push lordewan/zkSchema:latest
+#              working-directory: ./apps/zkSchema
 #            - name: Install and configure the Koyeb CLI
 #              uses: koyeb-community/install-koyeb-cli@v2
 #              with:
