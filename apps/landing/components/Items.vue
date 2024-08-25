@@ -4,7 +4,7 @@
             <img class="w-44 h-fit md:w-52 logo" src="@/assets/viction-logo.svg" alt="viction" :draggable="false" />
             <img class="w-44 h-fit md:w-52 logo" src="@/assets/aligned-logo-white.svg" alt="aligned"
                 :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo hidden" src="@/assets/phronai-logo.svg" alt="phronai" :draggable="false" />
+            <img class="w-44 h-fit md:w-52 logo" src="@/assets/phronai-logo.svg" alt="phronai" :draggable="false" />
             <img class="w-32 h-fit md:w-40 logo" src="@/assets/irys-white.svg" alt="irys" :draggable="false" />
             <img class="w-44 h-fit md:w-52 logo hidden" src="@/assets/sendtokens-logo.svg" alt="sendtokens"
                 :draggable="false" />
