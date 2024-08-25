@@ -1,4 +1,9 @@
 ZERO Labs Roadmap
+> Q2, 2024
+ * Architecture Design.
+ * Testing Feasibility.
+ * Competitive Analysis.
+
 > Q3, 2024
  * Initial Prototype
  * Waitlist
@@ -19,6 +24,14 @@ ZERO Labs Roadmap
  * Second Open Beta [OMNI ZERO]
  * Establish Omni-Governance ...
 
+
+			ZERO		IdOS		Privado
+Privacy preserving	Yes		Yes		Yes
+User Encrypted		Yes		Yes		No
+Dynamic Credentials	Yes		No		No
+Open Source		No		Yes		Yes
+Embeddable		Yes		No		No
+Proof of Uniqueness	Yes		No		Yes
 
 MVP
 > Generation
