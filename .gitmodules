@@ -1,3 +1,6 @@
 [submodule "apps/services/mpc-key-share/contracts/lib/eigenlayer-middleware"]
 	path = apps/services/mpc-key-share/contracts/lib/eigenlayer-middleware
 	url = https://github.com/Layr-Labs/eigenlayer-middleware
+[submodule "apps/services/mpc-key-share/contracts/lib/openzeppelin-contracts"]
+	path = apps/services/mpc-key-share/contracts/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
