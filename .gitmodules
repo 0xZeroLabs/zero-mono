@@ -1,0 +1,3 @@
+[submodule "apps/services/mpc-key-share/contracts/lib/eigenlayer-middleware"]
+	path = apps/services/mpc-key-share/contracts/lib/eigenlayer-middleware
+	url = https://github.com/Layr-Labs/eigenlayer-middleware
