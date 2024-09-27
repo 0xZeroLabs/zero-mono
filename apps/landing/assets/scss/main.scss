@@ -16,6 +16,51 @@
   font-family: "Italiana";
   src: url("./fonts/Italiana-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Ultrabold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -132,7 +177,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-SpaceMono font-light px-5 w-full;
     // font-family: "Space Grotesk";
   }
   .wrapper {
@@ -145,9 +190,9 @@
   }
   .btn,
   input {
-    @apply relative bg-[#1c1c1c] font-SpaceGrotesk rounded;
-    span {
-      @apply text-white font-SpaceGrotesk font-bold text-lg z-10 relative;
+    @apply relative bg-[#1c1c1c] px-2 rounded flex justify-center items-center;
+    * {
+      @apply text-white text-sm z-10 relative;
     }
   }
   .btn::before {
@@ -157,6 +202,21 @@
   .btn:after {
     content: "";
     @apply bg-[#1c1c1c]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
+
+  .btn2 {
+    @apply relative bg-[#e9e9e9] px-2 rounded flex justify-center items-center;
+    * {
+      @apply text-black text-sm z-10 relative;
+    }
+  }
+  .btn2::before {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .btn2:after {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
   .modal {
     div {
@@ -182,7 +242,7 @@
   }
   .partners:before,
   .partners:after {
-    @apply w-12 md:w-[calc(27%-19px)] h-24;
+    @apply w-[40px] h-24;
     position: absolute;
     content: "";
     z-index: 10;

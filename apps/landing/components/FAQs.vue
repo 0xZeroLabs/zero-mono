@@ -3,12 +3,12 @@
         <div
             class="relative w-[94%] lg:w-[80%] in1 rounded-md flex min-h-fit justify-center items-center bg-white bg-cover bg-center bg-no-repeat bg-none">
             <div
-                class="min-w-full max-w-[1536px] text-left py-4 min-h-[calc(52vh)] flex flex-col justify-center items-center md:items-start relative font-SpaceGrotesk text-white gap-3 px-6">
-                <h1 class="font-SpaceGrotesk font-bold text-[40px] md:text-[70px] capitalize text-left text-black">
+                class="min-w-full max-w-[1536px] text-left py-4 min-h-[calc(52vh)] flex flex-col justify-center items-center md:items-start relativetext-white gap-3 px-6">
+                <h1 class="font-bold text-[40px] md:text-[70px] capitalize text-left text-black">
                     <span class="negative">FAQs</span>
                 </h1>
                 <div
-                    class="w-full font-SpaceGrotesk negative font-normal text-[19px] md:text-[24px] text-left md:text-left max-w-[1536px] text-black">
+                    class="w-fullnegative font-normal text-[19px] md:text-[24px] text-left md:text-left max-w-[1536px] text-black">
                     <div class="accordion-items w-full" ref="accordionItems">
                         <div v-for="(item, index) in faq" :key="index" class="mb-5 w-full">
                             <Accordion :title="item.title" :id="`faqs-${index}`" :active="item.active" :faq="faq">

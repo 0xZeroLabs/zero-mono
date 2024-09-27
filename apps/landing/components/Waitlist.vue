@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute bg-[#080808] border-[0.5px] rounded border-[#fff]/80 modal top-[60px] p-6 max-lg:left-0 right-0 max-w-[32rem] w-[91.666667%] font-SpaceGrotesk"
+    <div class="absolute bg-[#080808] border-[0.5px] rounded border-[#fff]/80 modal top-[60px] p-6 left-0 max-w-[32rem] w-[91.666667%]"
         style="margin: 0 auto;">
         <div class="w-full justify-center text-center">
             <h2 class="font-bold text-2xl">
