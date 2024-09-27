@@ -11,7 +11,7 @@
                 <button type="submit"
                     class="w-full h-[40px] border-[0.5px] border-[#fff] text-white mt-6 btn"
                     @click.prevent="submitEmail" @keyup.enter="submitEmail">
-                    <span><Scramble :content="value" /></span>
+                    <ScrambleBtn :content="value" />
                 </button>
                 <WaitlistFeedback :formFeedback="(formFeedback as string)" :isLoading="isLoading" />
             </form>

@@ -1,7 +1,9 @@
 <template>
-    <span v-for="(char, index) in displayText" :key="index" @mouseenter="startScramble" @mouseleave="stopScramble">
+  <div class="w-full h-full flex items-center justify-center" @mouseenter="startScramble" @mouseleave="stopScramble">
+    <span v-for="(char, index) in displayText" :key="index">
       {{ char }}
     </span>
+  </div>
 </template>
 
 <script lang="ts" setup>
