@@ -7,7 +7,7 @@
                 Empowering self-sovereignty through zero-knowledge
             </h1>
             <h2 class="negative font-normal text-[19px] md:text-[24px] text-left ml-8 md:ml-12 lg:ml-0 mb-8 z-10 relative">
-                ZERO Labs is building solutions to accelerate real-world value for the open web with secure data ownership and trust.
+                ZERO Labs is building solutions to accelerate real-world value for the open web with secure and trustless data ownership.
             </h2>
             <div class="gap-2 flex justify-start items-center z-10 relative">
                 <button @click="use" class="bg-[#e9e9e9] w-[168px] h-[40px] border-[0.2px] border-[#000] btn2">
