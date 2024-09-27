@@ -22,17 +22,17 @@
             <Transition name="menu" :duration="250">
                 <div v-if="menuOpen" class="contents gap-2">
                     <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/solutions" class="nav-buttonnk"><Scramble content="Solutions" /></router-link>
+                        <router-link to="/solutions" class="nav-buttonnk"><ScrambleBtn content="Solutions" /></router-link>
                     </button>
                     <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/developers" class="nav-buttonnk"><Scramble content="Developers" /></router-link>
+                        <router-link to="/developers" class="nav-buttonnk"><ScrambleBtn content="Developers" /></router-link>
                     </button>
                     <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/company" class=""><Scramble content="Company" /></router-link>
+                        <router-link to="/company" class=""><ScrambleBtn content="Company" /></router-link>
                     </button>
                     <button @click="toggleWaitlistState"
                         class="nav-button w-[140px] h-[40px] border-[0.5px] border-[#fff] btn">
-                        <span><Scramble content="Join Waitlist" /></span>
+                        <span><ScrambleBtn content="Join Waitlist" /></span>
                     </button>
                 </div>
             </Transition>
