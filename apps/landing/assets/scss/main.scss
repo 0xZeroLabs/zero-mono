@@ -180,6 +180,12 @@
     @apply bg-background text-foreground font-SpaceMono font-light px-5 w-full;
     // font-family: "Space Grotesk";
   }
+  a:hover {
+    @apply underline;
+  }
+  button a:hover {
+    @apply no-underline;
+  }
   .wrapper {
     width: 100%;
     height: 100%;
