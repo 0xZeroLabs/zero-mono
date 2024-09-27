@@ -5,7 +5,6 @@
         <div class="h-fit partners whitespace-nowrap">
           <Items />
           <Items />
-          <Items />
         </div>
       </div>
     </div>

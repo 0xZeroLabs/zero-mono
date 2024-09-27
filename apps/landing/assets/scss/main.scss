@@ -235,6 +235,7 @@
     @apply text-gray-600;
   }
   .partner-slide {
+    @apply w-[150%];
     animation: 21s slide infinite linear;
   }
   .fade-in {
@@ -242,7 +243,7 @@
   }
   .partners:before,
   .partners:after {
-    @apply w-[40px] h-24;
+    @apply h-24;
     position: absolute;
     content: "";
     z-index: 10;
