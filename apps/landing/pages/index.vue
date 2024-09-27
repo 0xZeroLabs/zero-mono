@@ -3,7 +3,7 @@
 <template>
   <div class="min-h-full">
     <Head>
-      <title>ZΞRO Labs - Unlocking complete self-soverignty</title>
+      <title>ZERO Labs - Unlocking complete self-soverignty</title>
     </Head>
     <Hero />
 
