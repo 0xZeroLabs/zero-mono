@@ -1,12 +1,64 @@
 <template>
-    <div
-        class="min-w-full rounded-3xl p-5 mb-2 relative overflow-hidden flex flex-col justify-start items-center text-black gap-3 bg-white">
-        <div class="">
-            <p class="negative font-normal text-[14px] md:text-[16px] text-left z-10 relative">
-                We're a foundry committed to solving complex issues limiting self-sovereignty. Our mission is to
-                streamline the way individuals are given control of their data as well, in order to enable them to  their
-                privacy.
+    <div class="us gap-2 text-sm">
+        <div class="bg-[#e8e8e8] rounded-3xl p-5 text-black w-full column-ends2">
+            <h3 class="font-bold negative">
+                Foundry of innovation
+            </h3>
+            <p class="negative font-normal mt-2 text-left z-10 relative">
+                We're a venture studio committed to solving the intricate challenges that hinder self-sovereignty. Our
+                goal is to simplify the process of empowering individuals with control over their data, thereby
+                safeguarding their privacy. Founded in Nigeria in 2024, we're is dedicated to tackling global challenges
+                and are collaborating with
+                teams internationally to achieve the collective goal of empowering digital freedom.
             </p>
+        </div>
+        <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
+            <h3 class="font-bold negative">
+                Made by innovators
+            </h3>
         </div>
     </div>
 </template>
+
+<style scoped>
+a {
+    @apply font-light;
+}
+
+h3 {
+    @apply text-[19px] md:text-[24px];
+}
+
+p {
+    @apply text-sm;
+}
+
+.us {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+
+.column-ends,
+.column-ends2 {
+    grid-column-end: span 5;
+}
+
+.row-ends {
+    grid-row-end: span 2;
+}
+
+@media (min-width: 1024px) {
+    .column-ends {
+        grid-column-end: span calc(5/2);
+    }
+
+    .column-ends2 {
+        grid-column-end: span calc(5/3);
+    }
+
+    .row-ends {
+        grid-column-end: span calc(2);
+    }
+}
+</style>

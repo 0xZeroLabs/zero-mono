@@ -6,13 +6,11 @@
             <h1 class="negative font-normal text-[24px] md:text-[32px] text-left mb-4 z-10 relative">
                 Empowering self-sovereignty through zero-knowledge
             </h1>
-            <h2 class="negative font-normal text-[16px] md:text-[19px] text-left ml-8 md:ml-12 mb-8 z-10 relative">
+            <h2 class="negative font-normal text-[16px] md:text-[19px] text-left mb-8 z-10 relative">
                 ZERO Labs is building solutions to accelerate real-world value for the open web with secure and trustless data ownership.
             </h2>
             <div class="gap-2 flex justify-start items-center z-10 relative">
-                <button @click="use" class="bg-[#e9e9e9] w-[168px] h-[40px] border-[0.2px] border-[#000] btn2">
-                    <span class="negative"><Scramble :content="value" /></span>
-                </button>
+                <ScrambleBtn content="Explore protocol" type="inverse-alt" />
                 <a href="https://docs.0xzero.org/developers/zero-sdk"
                     class="negative text-sm"><Scramble content="Read whitepaper" /></a>
             </div>
@@ -21,11 +19,4 @@
 </template>
 
 <script lang="ts" setup>
-let value = ref("Explore protocol");
-const use = () => {
-    value.value = "Coming soon..";
-    setTimeout(() => {
-        value.value = "Explore protocol";
-    }, 1500);
-};
 </script>

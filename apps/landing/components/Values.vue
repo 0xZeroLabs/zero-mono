@@ -4,28 +4,29 @@
             <h3 class="font-bold negative">
                 Fail fast
             </h3>
-            <p class="negative">Embracing setbacks as learning experiences, we encourage a culture that embraces growth through failure.
-            </p>
+            <p class="negative">Embracing setbacks as opportunities for growth, we foster a culture that values learning
+                from failure.</p>
         </div>
         <div class="bg-[#ff2f2f] rounded-3xl p-5 text-black w-full column-ends smallers">
             <h3 class="font-bold negative">
                 Integrity
             </h3>
-            <p class="negative">We embrace openness and truthfulness, as honesty is the cornerstone of a strong community. </p>
+            <p class="negative">We value openness and truthfulness, and we recognize honesty as the foundation of a
+                resilient team.</p>
         </div>
         <div class="bg-[#2fd5ff] rounded-3xl p-5 text-black w-full column-ends row-ends">
             <h3 class="font-bold negative">
                 Open source
             </h3>
-            <p class="negative">We are ardent proponents of open source values, recognizing the power of shared knowledge and
-                collaboration.</p>
+            <p class="negative">As passionate advocates for open source principles, we harness the collective power of
+                shared knowledge and collaboration.</p>
         </div>
         <div class="w-full bg-[#fffc2f] rounded-3xl p-5 text-black colu negativemn-ends row-ends">
             <h3 class="font-bold negative">
                 Less is more
             </h3>
-            <p class="negative">Our principle of doing the simplest thing that could work keeps us agile and effective in our
-                problem-solving.</p>
+            <p class="negative">By embracing the simplicity principle, we ensure agility and effectiveness in our
+                problem-solving approach.</p>
         </div>
     </div>
 </template>

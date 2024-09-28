@@ -1,6 +1,7 @@
 <template>
     <Transition name="cover" :duration="300">
-        <span v-if="menuOpen" class="fixed z-[100] w-screen h-screen top-0 left-0 bg-[#00000080] backdrop-blur cursor-default"></span>
+        <span v-if="menuOpen"
+            class="fixed z-[100] w-screen h-screen top-0 left-0 bg-[#00000080] backdrop-blur cursor-default"></span>
     </Transition>
     <div class="w-full py-4 flex justify-start items-center fixed top-0 z-[999]">
         <div class="z-[999] flex flex-wrap gap-2 justify-start items-center text-white w-[calc(100%-10px)]"
@@ -8,8 +9,7 @@
             <router-link to="/" class="h-[40px] border-[0.5px] border-[#fff] btn">
                 <img src="@/assets/logo.svg" class="w-fit h-4">
             </router-link>
-            <button @click="toggleMenuState"
-                class="w-[40px] h-[40px] border-[0.5px] border-[#fff] btn">
+            <button @click="toggleMenuState" class="w-[40px] h-[40px] border-[0.5px] border-[#fff] btn">
                 <svg class="fill-white shrink-0" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                         class="transform origin-center transition duration-200 ease-out"
@@ -21,27 +21,18 @@
             </button>
             <Transition name="menu" :duration="250">
                 <div v-if="menuOpen" class="contents gap-2">
-                    <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/solutions" class="nav-buttonnk"><ScrambleBtn content="Solutions" /></router-link>
-                    </button>
-                    <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/developers" class="nav-buttonnk"><ScrambleBtn content="Developers" /></router-link>
-                    </button>
-                    <button class="nav-button h-[40px] border-[0.5px] border-[#fff] btn">
-                        <router-link to="/company" class=""><ScrambleBtn content="Company" /></router-link>
-                    </button>
-                    <button @click="toggleWaitlistState"
-                        class="nav-button w-[140px] h-[40px] border-[0.5px] border-[#fff] btn">
-                        <span><ScrambleBtn content="Join Waitlist" /></span>
-                    </button>
+                    <ScrambleBtn class="nav-button" content="Solutions" to="/solutions" />
+                    <ScrambleBtn class="nav-button" content="Developers" to="/developers" />
+                    <ScrambleBtn class="nav-button" content="Company" to="/company" />
+                    <ScrambleBtn class="nav-button" content="Join Waitlist" type="alt" @click="toggleWaitlistState" />
+                </div>
+            </Transition>
+            <Transition name="waitlist">
+                <div v-if="waitlistOpen" class="absolute w-full">
+                    <Waitlist />
                 </div>
             </Transition>
         </div>
-        <Transition name="waitlist">
-            <div v-if="waitlistOpen" class="absolute w-full">
-                <Waitlist />
-            </div>
-        </Transition>
     </div>
 </template>
 
@@ -78,37 +69,37 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.menu-enter-active button {
+.menu-enter-active .nav-button {
     transition: all 0.1s ease-in-out;
 }
 
-.menu-enter-from button,
-.menu-leave-to button {
+.menu-enter-from .nav-button,
+.menu-leave-to .nav-button {
     transform: translateX(-10px);
     opacity: 0;
 }
 
-.menu-enter-active button:nth-child(1),
-.menu-enter-from button:nth-child(4),
-.menu-leave-to button:nth-child(4) {
+.menu-enter-active .nav-button:nth-child(1),
+.menu-enter-from .nav-button:nth-child(4),
+.menu-leave-to .nav-button:nth-child(4) {
     transition-delay: 0.1s;
 }
 
-.menu-enter-active button:nth-child(2),
-.menu-enter-from button:nth-child(3),
-.menu-leave-to button:nth-child(3) {
+.menu-enter-active .nav-button:nth-child(2),
+.menu-enter-from .nav-button:nth-child(3),
+.menu-leave-to .nav-button:nth-child(3) {
     transition-delay: 0.15s;
 }
 
-.menu-enter-active button:nth-child(3),
-.menu-enter-from button:nth-child(2),
-.menu-leave-to button:nth-child(2) {
+.menu-enter-active .nav-button:nth-child(3),
+.menu-enter-from .nav-button:nth-child(2),
+.menu-leave-to .nav-button:nth-child(2) {
     transition-delay: 0.2s;
 }
 
-.menu-enter-active button:nth-child(4),
-.menu-enter-from button:nth-child(1),
-.menu-leave-to button:nth-child(1) {
+.menu-enter-active .nav-button:nth-child(4),
+.menu-enter-from .nav-button:nth-child(1),
+.menu-leave-to .nav-button:nth-child(1) {
     transition-delay: 0.25s;
 }
 </style>

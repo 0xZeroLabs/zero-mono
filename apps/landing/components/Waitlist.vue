@@ -2,17 +2,13 @@
     <div class="absolute bg-[#080808] border-[0.5px] rounded border-[#fff]/80 modal top-[60px] p-6 left-0 max-w-[32rem] w-[91.666667%]"
         style="margin: 0 auto;">
         <div class="w-full justify-center text-center">
-            <h2 class="font-bold text-2xl">
+            <h2 class="font-bold text-[19px] md:text-[24px]">
                 Welcome to the front lines of the revolution.
             </h2>
             <form method="post" class="w-full rounded-2xl">
                 <input v-model="email" type="email" name="email" placeholder="Email"
-                    class="w-full px-3 outline-1 h-[40px] border-[0.5px] border-[#fff]/40 text-white mt-5" />
-                <button type="submit"
-                    class="w-full h-[40px] border-[0.5px] border-[#fff] text-white mt-6 btn"
-                    @click.prevent="submitEmail" @keyup.enter="submitEmail">
-                    <ScrambleBtn :content="value" />
-                </button>
+                    class="w-full px-3 outline-1 h-[40px] border-[0.5px] border-[#fff]/40 text-white text-sm mt-5" />
+                <ScrambleBtn :content="value" type="form" @click.prevent="submitEmail" @keyup.enter="submitEmail" />
                 <WaitlistFeedback :formFeedback="(formFeedback as string)" :isLoading="isLoading" />
             </form>
         </div>

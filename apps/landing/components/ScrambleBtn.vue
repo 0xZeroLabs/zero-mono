@@ -1,8 +1,119 @@
 <template>
-  <div class="w-full h-full flex items-center justify-center" @mouseenter="startScramble" @mouseleave="stopScramble">
-    <span v-for="(char, index) in displayText" :key="index">
-      {{ char }}
-    </span>
+  <div v-if="props.to">
+    <router-link :to="to" v-if="props.type === 'regular'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </router-link>
+
+    <router-link :to="to" v-else-if="props.type === 'form'"
+      class="w-full h-[40px] border-[0.5px] border-[#fff] text-white mt-6 btn" @mouseenter="startScramble"
+      @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </router-link>
+
+    <router-link :to="to" v-if="props.type === 'alt'"
+      class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#fff] btn" @mouseenter="startScramble"
+      @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </router-link>
+
+    <router-link :to="to" v-if="props.type === 'inverse'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn2"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </router-link>
+
+    <router-link :to="to" v-if="props.type === 'inverse-alt'"
+      class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#000] btn2" @mouseenter="startScramble"
+      @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </router-link>
+  </div>
+
+  <div v-else @click="changeState">
+    <button v-if="props.type === 'regular'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </button>
+
+    <button v-else-if="props.type === 'form'" class="w-full h-[40px] border-[0.5px] border-[#fff] text-white mt-6 btn"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </button>
+
+    <button v-if="props.type === 'alt'" class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#fff] btn"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </button>
+
+    <button v-if="props.type === 'inverse'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn2"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </button>
+
+    <button v-if="props.type === 'inverse-alt'" class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#000] btn2"
+      @mouseenter="startScramble" @mouseleave="stopScramble">
+      <div class="w-full h-full flex justify-center items-center">
+        <div>
+          <span v-for="(char, index) in displayText" :key="index">
+            {{ char }}
+          </span>
+        </div>
+      </div>
+    </button>
   </div>
 </template>
 
@@ -12,6 +123,15 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  to: {
+    type: String,
+    required: false,
+  },
+  type: {
+    type: String,
+    required: false,
+    default: 'regular',
+  }
 });
 
 const displayText = ref(props.content.split(''));
@@ -55,9 +175,18 @@ const stopScramble = () => {
   }
   displayText.value = props.content.split('');
 };
+
+const changeState = () => {
+  stopScramble();
+  displayText.value = props.content.split('');
+}
 </script>
 
 <style scoped>
+a {
+  @apply no-underline;
+}
+
 .scramble-text span {
   display: inline-block;
   transition: all 0.1s ease-in-out;
