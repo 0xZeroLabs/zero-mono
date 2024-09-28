@@ -1,5 +1,5 @@
 <template>
-    <span v-for="(char, index) in displayText" :key="index" @mouseenter="startScramble" @mouseleave="stopScramble">
+    <span class="negative"v-for="(char, index) in displayText" :key="index" @mouseenter="startScramble" @mouseleave="stopScramble">
       {{ char }}
     </span>
 </template>
