@@ -1,15 +1,19 @@
 <template>
-    <div class="min-w-[1056px] md:min-w-[1664px] h-fit partner-slide inline-block whitespace-nowrap">
-        <div class="flex items-center justify-around">
-            <img class="w-44 h-fit md:w-52 logo" src="@/assets/viction-logo.svg" alt="viction" :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo" src="@/assets/aligned-logo-white.svg" alt="aligned"
-                :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo" src="@/assets/phronai-logo.svg" alt="phronai" :draggable="false" />
-            <img class="w-32 h-fit md:w-40 logo" src="@/assets/irys-white.svg" alt="irys" :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo hidden" src="@/assets/sendtokens-logo.svg" alt="sendtokens"
-                :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo hidden" src="@/assets/0xpass-white.svg" alt="0xpass" :draggable="false" />
-            <img class="w-44 h-fit md:w-52 logo" src="@/assets/sindri-white.svg" alt="sindri" :draggable="false" />
+    <div class="h-fit partners-track">
+        <div class="w-32 h-fit md:w-48 logo">
+            <img class="w-full logo" src="@/assets/morph-logo-white.svg" alt="morph" :draggable="false" />
+        </div>
+        <div class="w-32 h-fit md:w-48 logo">
+            <img class="w-full logo" src="@/assets/aligned-logo-white.svg" alt="aligned" :draggable="false" />
+        </div>
+        <div class="w-28 h-fit md:w-32 logo">
+            <img class="w-full logo" src="@/assets/irys-white.svg" alt="irys" :draggable="false" />
+        </div>
+        <div class="w-32 h-fit md:w-48 logo">
+            <img class="w-full logo" src="@/assets/sindri-white.svg" alt="sindri" :draggable="false" />
+        </div>
+        <div class="w-32 h-fit md:w-48 logo">
+            <img class="w-full logo" src="@/assets/kwil-logo-white.svg" alt="kwil" :draggable="false" />
         </div>
     </div>
 </template>
@@ -18,5 +22,9 @@
 img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+}
+
+.logo {
+    @apply mx-[7vw];
 }
 </style>

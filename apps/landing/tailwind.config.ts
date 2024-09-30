@@ -17,7 +17,9 @@ module.exports = {
     extend: {
       fontFamily: {
         SpaceGrotesk: ["Space Grotesk"],
-        Italiana: ["Italiana"]
+        SpaceMono: ["Space Mono"],
+        Italiana: ["Italiana"],
+        Neue: ["Neue"]
       },
       colors: {
         border: "hsl(var(--border))",

@@ -16,12 +16,57 @@
   font-family: "Italiana";
   src: url("./fonts/Italiana-Regular.ttf");
 }
-@keyframes slide {
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Ultrabold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@keyframes slideIn {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Adjust slide distance as needed */
   }
 }
 @keyframes fadeIn {
@@ -132,8 +177,14 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-SpaceMono font-light px-5 w-full;
     // font-family: "Space Grotesk";
+  }
+  a:hover {
+    @apply underline;
+  }
+  button a:hover {
+    @apply no-underline;
   }
   .wrapper {
     width: 100%;
@@ -145,9 +196,9 @@
   }
   .btn,
   input {
-    @apply relative bg-[#1c1c1c] font-SpaceGrotesk rounded;
-    span {
-      @apply text-white font-SpaceGrotesk font-bold text-lg z-10 relative;
+    @apply relative bg-[#1c1c1c] px-2 rounded flex justify-center items-center;
+    * {
+      @apply text-white text-sm z-10 relative;
     }
   }
   .btn::before {
@@ -157,6 +208,21 @@
   .btn:after {
     content: "";
     @apply bg-[#1c1c1c]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
+
+  .btn2 {
+    @apply relative bg-[#e9e9e9] px-2 rounded flex justify-center items-center;
+    * {
+      @apply text-black text-sm z-10 relative;
+    }
+  }
+  .btn2::before {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .btn2:after {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
   .modal {
     div {
@@ -174,15 +240,26 @@
   .nav-link:hover {
     @apply text-gray-600;
   }
-  .partner-slide {
-    animation: 21s slide infinite linear;
-  }
   .fade-in {
     animation: 0.2s fadeIn linear;
   }
+  .partners {
+    @apply w-screen flex justify-start flex-row relative;
+  }
+  .partners-track {
+    @apply w-auto flex items-center whitespace-nowrap;
+    transition: transform 0.3s ease-in-out;
+    animation: slideIn 16s infinite linear;
+  }
+  
+  .partners:hover {
+    .partners-track {
+      animation-play-state: paused;
+    }
+  }
   .partners:before,
   .partners:after {
-    @apply w-12 md:w-[calc(27%-19px)] h-24;
+    @apply h-24 w-2;
     position: absolute;
     content: "";
     z-index: 10;
@@ -197,9 +274,6 @@
   }
   .partners:hover {
     @apply cursor-crosshair;
-  }
-  .partners:hover .partner-slide {
-    animation-play-state: paused;
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;

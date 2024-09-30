@@ -6,6 +6,14 @@ export default defineNuxtConfig({
   devServer: {
     port: 3000,
   },
+  app: {
+    head: {
+      titleTemplate: {
+        tagPriority: "critical",
+        textContent: "%s — ZERO Labs",
+      },
+    },
+  },
   colorMode: {
     preference: "dark",
     globalName: "__NUXT_COLOR_MODE__",
@@ -14,4 +22,4 @@ export default defineNuxtConfig({
     classSuffix: "",
     storageKey: "nuxt-color-mode",
   },
-})
+});
