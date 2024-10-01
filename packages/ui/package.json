@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@0xzerolabs/ui",
   "version": "0.0.0",
   "private": true,
   "main": "nuxt.mjs",
