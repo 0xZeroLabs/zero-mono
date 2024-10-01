@@ -1,9 +1,8 @@
-export const server = "";
+export const server = '';
 
-export const extensionId = "";
+export const extensionId = '';
 
-export const checkerAdress = "";
-export const rpc = "";
+export const checkerAdress = '';
+export const rpc = '';
 
-
-export const abi = {}
+export const abi = {};
