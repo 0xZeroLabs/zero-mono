@@ -4,7 +4,10 @@
 
 # ZERO Protocol Mono
 
-[![Publish Apps to DockerHub and Koyeb](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)  [![Publish Package to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml)
+[![Documentation](https://img.shields.io/badge/docs-%F0%9F%93%84-blue)](https://docs.0xzero.org)
+[![NPM Package](https://img.shields.io/npm/v/@0xzerolabs/sdk.svg)](https://www.npmjs.org/package/@0xzerolabs/sdk)
+[![Publish Apps to DockerHub and Koyeb](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)
+[![Publish Package to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml)
 
 Welcome to the base of all of our code. Feel free to look around.
 
