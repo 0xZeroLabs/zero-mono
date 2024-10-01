@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Store the Current Branch Name
         run: |
@@ -35,10 +34,6 @@ jobs:
       - name: Install Sindri CLI Tool
         run: |
           npm install -g sindri@latest
-
-      - name: Install JavaScript Dependencies
-        run: |
-          npm ci
 
       - name: Lint Circuit
         run: |
@@ -87,15 +82,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install Sindri CLI Tool
         run: |
           npm install -g sindri@latest
-
-      - name: Install JavaScript Dependencies
-        run: |
-          npm ci
 
       - name: Extract Version Tag
         run: |

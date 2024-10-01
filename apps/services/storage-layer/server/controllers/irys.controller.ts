@@ -20,7 +20,7 @@ export const uploadData = async (data: string) => {
   try {
     const receipt = await irys.upload(data);
     console.log(
-      `Data uploaded ==> https://testnet-gateway.irys.xyz/${receipt.id}`
+      `Data uploaded ==> https://gateway.irys.xyz/${receipt.id}`
     );
   } catch (e) {
     console.log("Error uploading data ", e);
@@ -35,7 +35,7 @@ export const uploadFile = async (file: any) => {
   try {
     const receipt = await irys.uploadFile(file, { tags: tags });
     console.log(
-      `File uploaded ==> https://testnet-gateway.irys.xyz/${receipt.id}`
+      `File uploaded ==> https://gateway.irys.xyz/${receipt.id}`
     );
   } catch (e) {
     console.log("Error uploading file ", e);

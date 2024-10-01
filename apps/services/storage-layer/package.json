@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate": "sindri init",
-    "compile": "tsx compile.ts --",
     "build": "nitro build",
     "dev": "nitro dev",
     "prepare": "nitro prepare",
