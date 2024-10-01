@@ -1,6 +1,6 @@
 import sindri from "sindri";
 
-export const generate = async (X: number, Y: number, type: string) => {
+export const generate = async (X: string, Y: string, type: string) => {
   const circuitIdentifier = `${type}:latest`;
   const proofInput = { X, Y };
 
@@ -14,3 +14,5 @@ export const generate = async (X: number, Y: number, type: string) => {
     return { error };
   }
 };
+
+generate("18", "18", 'equ').then(console.log)
