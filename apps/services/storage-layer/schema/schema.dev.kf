@@ -1,0 +1,29 @@
+database zero;
+
+use zero {
+    registry_address: '',
+    chain: 'morph_holesky'
+} as zero_testn;
+
+
+table human {
+    id text primary key minlen(40) maxlen(42),
+    verified bool notnull,
+    // credential_ids needs to be an array
+    foreign key (credential_ids) references credential(id) on delete set_null,
+    credential_ids text notnull
+}
+
+table credential {
+    id text primary key unique,
+    foreign key (human_id) references human(id) on delete set_null,
+    human_id text notnull,
+    type text notnull,
+    // data is encrypted
+    data blob notnull,
+    issuance_date text notnull,
+    expiry_date text,
+    withdrawn bool
+}
+
+//// setup create, delete, and update
