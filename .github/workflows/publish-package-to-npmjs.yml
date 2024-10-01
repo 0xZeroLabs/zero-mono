@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci
+      - run: npm i
         working-directory: ./apps/sdk
       - run: npm publish
         working-directory: ./apps/sdk
