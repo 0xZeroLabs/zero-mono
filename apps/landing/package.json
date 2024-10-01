@@ -1,5 +1,5 @@
 {
-  "name": "@repo/landing",
+  "name": "@0xzerolabs/landing",
   "private": true,
   "type": "module",
   "scripts": {

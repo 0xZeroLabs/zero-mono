@@ -1,5 +1,5 @@
 {
-  "name": "@repo/zk-infra",
+  "name": "@0xzerolabs/zk-infra",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
