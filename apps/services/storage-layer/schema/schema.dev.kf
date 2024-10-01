@@ -8,10 +8,7 @@ use zero {
 
 table human {
     id text primary key minlen(40) maxlen(42),
-    verified bool notnull,
-    // credential_ids needs to be an array
-    foreign key (credential_ids) references credential(id) on delete set_null,
-    credential_ids text notnull
+    verified bool notnull
 }
 
 table credential {
