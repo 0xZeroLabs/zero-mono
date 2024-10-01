@@ -8,8 +8,8 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "pnpm build",
-    "version": "pnpm format && git add -A src",
+    "prepare": "npm build",
+    "version": "npm format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "files": [
