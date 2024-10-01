@@ -8,13 +8,13 @@
                 Developers
             </h5>
             <ul class="ml-5">
-                <li class=""><a href="/">
+                <li class=""><a href="https://github.com/0xZeroLabs">
                         <Scramble content="Github" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://docs.0xzero.org/">
                         <Scramble content="Docs" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://docsend.com/view/2fbpws5p2vsjnqqj">
                         <Scramble content="Whitepaper" />
                     </a></li>
                 <li class=""><a href="/">
@@ -30,13 +30,13 @@
                 Connect
             </h5>
             <ul class="ml-5">
-                <li class=""><a href="/">
+                <li class=""><a href="https://x.com/0xZeroOrg">
                         <Scramble content="X (Twitter)" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://discord.gg/bqscx4Mg5j">
                         <Scramble content="Discord" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://t.me/zeroproto">
                         <Scramble content="Telegram" />
                     </a></li>
                 <li class=""><a href="/">
