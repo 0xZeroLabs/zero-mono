@@ -1,6 +1,10 @@
-# ZERO Labs Mono
+<p align="center">
+  <img src="./apps/sdk/assets/logo.png" width="300" alt="0xzero.org" />
+</p>
 
-[![Publish Apps to DockerHub and Koyeb](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)
+# ZERO Protocol Mono
+
+[![Publish Apps to DockerHub and Koyeb](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)  [![Publish Package to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml)
 
 Welcome to the base of all of our code. Feel free to look around.
 
