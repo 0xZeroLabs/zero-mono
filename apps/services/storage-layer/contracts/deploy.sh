@@ -17,6 +17,11 @@ if [ -z "$PRIVATE_KEY" ]; then
     exit 1
 fi
 
+if [ -z "$API_URL" ]; then
+    echo "API_URL is not set. Please set it in .env"
+    exit 1
+fi
+
 forge install
 
 forge script script/Deployer.s.sol \

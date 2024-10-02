@@ -31,8 +31,8 @@ contract OMID is ERC721, ERC721URIStorage {
     }
 
     mapping(address => Human) private humans;
-    mapping(address => mapping(address => Human)) private humanCredentials;
-    mapping(address => Credential[]) private credentials;
+    mapping(address => Credential) private humanCredentials;
+    mapping(address => address[]) private credentials;
 
     address public operator;
     string private ipfsCID;
@@ -75,7 +75,7 @@ contract OMID is ERC721, ERC721URIStorage {
         humans[_human].verified = _verified;
         humans[_human].created = block.timestamp;
         _setTokenURI(0, string(abi.encodePacked("ipfs://", ipfsCID)));
-        _mint(_human, _tokenIdCounter);
+        _mint(_human, 0);
         emit Mint(_human);
     }
 
@@ -129,7 +129,7 @@ contract OMID is ERC721, ERC721URIStorage {
      * Data is stored in a nested mapping relative to credential's merkleroot
      * By default they can only store data on addresses that have been minted
      */
-    function createCredential(address _human, string _merkleroot) external {
+    function createCredential(address _human, address _merkleroot) external {
         require(keccak256(abi.encode(humans[_human].created)) != zeroHash, "Human doesn't exists");
         require(
             keccak256(abi.encode(humanCredentials[_merkleroot].merkleroot)) == zeroHash, "Credential already exists"
@@ -141,8 +141,8 @@ contract OMID is ERC721, ERC721URIStorage {
         emit CreateCredential(_human);
     }
 
-    function deleteCredential(address _human) external {
-        require(keccak256(abi.encode(humans[_human].created)) != zeroHash, "Human doesn't exists");
+    function deleteCredential(address _merkleroot) external {
+        require(keccak256(abi.encode(humans[_merkleroot].created)) != zeroHash, "Human doesn't exists");
         require(
             keccak256(abi.encode(humanCredentials[_merkleroot].merkleroot)) != zeroHash, "Credential doesn't exists"
         );
@@ -150,8 +150,8 @@ contract OMID is ERC721, ERC721URIStorage {
             msg.sender == operator || msg.sender == operator,
             "Only operators and users have rights to delete a user's data"
         );
-        delete humanCredentials[_human];
-        emit DeleteCredential(_human);
+        delete humanCredentials[_merkleroot];
+        emit DeleteCredential(_merkleroot);
     }
 
     function updateCredential(address _human, address _merkleroot) external {
@@ -167,15 +167,15 @@ contract OMID is ERC721, ERC721URIStorage {
         emit DeleteCredential(_human);
     }
 
-    function hasCredential(address _human, address _merkleroot) external view returns (bool) {
-        return (keccak256(abi.encode(credentials[_human].created)) != zeroHash);
+    function hasCredential(address _human) external view returns (bool) {
+        return (keccak256(abi.encode(credentials[_human])) != zeroHash);
     }
 
-    function getCredentials(address _human, address _merkleroot) external view returns (Soul memory) {
+    function getCredentials(address _human) external view returns (address[] memory) {
         return credentials[_human];
     }
 
-    function getCredentialOwner(address _human) external view returns (address[] memory) {
-        return humanCredentials[_merkleroot][_human];
+    function getCredentialOwner(address _merkleroot) external view returns (address) {
+        return humanCredentials[_merkleroot].human;
     }
 }

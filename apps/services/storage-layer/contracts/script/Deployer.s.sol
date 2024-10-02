@@ -9,7 +9,7 @@ contract CheckProofScript is Script {
 
     function setUp() public {}
 
-    function run(address _alignedServiceManager, address _paymentService) external returns (address) {
+    function run(string memory _cid) external returns (address) {
         vm.startBroadcast();
 
         OMID verifyBatchInclusionCaller = new OMID(_cid);
