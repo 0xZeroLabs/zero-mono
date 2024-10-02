@@ -39,10 +39,10 @@
                 <li class=""><a href="https://t.me/zeroproto">
                         <Scramble content="Telegram" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://www.linkedin.com/company/0xzero">
                         <Scramble content="LinkedIn" />
                     </a></li>
-                <li class=""><a href="/">
+                <li class=""><a href="https://youtube.com/@0xZeroOrg">
                         <Scramble content="YouTube" />
                     </a></li>
             </ul>
@@ -55,7 +55,7 @@
                 <li class=""><a href="/about">
                         <Scramble content="About Us" />
                     </a></li>
-                <li class=""><a href="/blog">
+                <li class=""><a href="https://paragraph.xyz/@0xzero">
                         <Scramble content="Blog" />
                     </a></li>
                 <li class=""><a href="/contact">
@@ -78,7 +78,7 @@ a {
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(3, auto);
 }
 
 .column-ends {
@@ -95,15 +95,18 @@ footer {
 
 @media (min-width: 1024px) {
     .logo {
-        grid-column-end: span calc(4/2);
+        grid-column-end: span 2;
+        grid-row-end: span 1;
     }
 
     .column-ends {
-        grid-column-end: span calc(4/3);
+        grid-column-end: span 1;
+        grid-row-end: span 2;
     }
 
     .row-ends {
-        grid-column-end: span calc(2);
+        grid-column-end: span 2;
+        grid-row-end: span 3;
     }
 }
 </style>
