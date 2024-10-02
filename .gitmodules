@@ -7,3 +7,6 @@
 [submodule "apps/services/verifier/contracts/lib/forge-std"]
 	path = apps/services/verifier/contracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "apps/services/storage-layer/contracts/lib/forge-std"]
+	path = apps/services/storage-layer/contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
