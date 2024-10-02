@@ -1,0 +1,11 @@
+{
+  "name": "OMNI IDENTITY", 
+  "description": "OMID SBT representing the commitment of a unique identity within the ZERO Protocol ecosystem.",
+  "image": "ipfs://bafkreihxwqhfl5c35ehf4fpafl7s5f4r2oowb6ni7vqtiaghu4xmr2uy6y", 
+  "attributes": [
+    {
+      "trait_type": "Verified",
+      "value": "true" 
+    }
+  ]
+}
