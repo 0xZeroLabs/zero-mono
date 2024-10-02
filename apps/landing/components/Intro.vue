@@ -1,5 +1,5 @@
 <template>
-    <div class="text-sm">
+    <div class="text-sm relative h-auto">
         <div class="bg-[#e8e8e8] min-h-[260px]lg:min-h-[320px] rounded-3xl p-5 text-black w-full">
             <h3 class="font-bold negative">
                 Foundry of innovation
