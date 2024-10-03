@@ -19,7 +19,7 @@
     "@irys-network/bundler-client": "^0.0.2",
     "@kwilteam/kwil-js": "^0.7.1",
     "aligned-ts": "^0.0.9",
-    "ethers": "^6.13.2",
+    "ethers": "^6.13.3",
     "nitropack": "latest"
   },
   "devDependencies": {

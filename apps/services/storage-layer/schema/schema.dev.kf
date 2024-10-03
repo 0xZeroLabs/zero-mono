@@ -1,10 +1,11 @@
-database zero;
+database zero_protocol;
 
+/*
 use zero {
     registry_address: '',
     chain: 'morph_holesky'
-} as zero_testn;
-
+} as zero_testnet;
+*/
 
 table human {
     id text primary key minlen(40) maxlen(42),
@@ -24,3 +25,57 @@ table credential {
 }
 
 //// setup create, delete, and update
+@kgw(authn='true')
+procedure create_human ($id text, $verified bool) public {
+    INSERT INTO human (id, verified)
+    VALUES ($id, $verified);
+}
+
+@kgw(authn='true')
+procedure update_human ($id text, $verified bool) public {
+    UPDATE human
+    SET verified=$verified
+    WHERE id=$id;
+}
+
+procedure get_human ($id text) public view returns table(id text, verified bool) {
+    return SELECT id, verified
+    FROM human
+    WHERE id=$id;
+}
+
+@kgw(authn='true')
+procedure create_credential ($id text, $human_id text, $type text, $data blob, $issuance_date text, $expiry_date text) public {
+    INSERT INTO credential (id, human_id, type, data, issuance_date, expiry_date)
+    VALUES ($id, 
+    (
+        SELECT $human_id
+        FROM human
+    ), $type, $data, $issuance_date, $expiry_date);
+}
+
+@kgw(authn='true')
+procedure update_credential ($id text, $data blob) public {
+    UPDATE credential
+    SET id=$id, data=$data
+    WHERE id=$id;
+}
+
+@kgw(authn='true')
+procedure withdraw_credential ($id text) public {
+    UPDATE credential
+    SET withdrawn=false
+    WHERE id=$id;
+}
+
+procedure get_credential ($id text) public view returns table(id text, human_id text, type text, data blob, issuance_date text, expiry_date text, withdrawn bool) {
+    return SELECT id, human_id, type, data, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE id=$id;
+}
+
+procedure get_credentials ($human_id text) public view returns table(id text, human_id text, type text, data blob, issuance_date text, expiry_date text, withdrawn bool) {
+    return SELECT id, human_id, type, data, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE human_id=$human_id;
+}

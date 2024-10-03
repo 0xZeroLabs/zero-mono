@@ -152,6 +152,37 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
 
+  apps/services/storage-layer:
+    dependencies:
+      '@grpc/grpc-js':
+        specifier: ^1.11.1
+        version: 1.11.3
+      '@grpc/proto-loader':
+        specifier: ^0.7.13
+        version: 0.7.13
+      '@irys-network/bundler-client':
+        specifier: ^0.0.2
+        version: 0.0.2(arweave@1.15.5)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@kwilteam/kwil-js':
+        specifier: ^0.7.1
+        version: 0.7.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      aligned-ts:
+        specifier: ^0.0.9
+        version: 0.0.9(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ethers:
+        specifier: ^6.13.3
+        version: 6.13.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      nitropack:
+        specifier: latest
+        version: 2.9.7(encoding@0.1.13)(magicast@0.3.4)
+    devDependencies:
+      minimist:
+        specifier: ^1.2.8
+        version: 1.2.8
+      tsx:
+        specifier: ^4.17.0
+        version: 4.19.1
+
   apps/wallet:
     dependencies:
       '@radix-ui/react-icons':
@@ -234,86 +265,6 @@ importers:
         specifier: ^5.4.1
         version: 5.4.8(@types/node@22.7.4)(sass@1.77.6)(terser@5.31.1)
 
-  apps/zk-infra:
-    dependencies:
-      '@grpc/grpc-js':
-        specifier: ^1.11.1
-        version: 1.11.1
-      '@grpc/proto-loader':
-        specifier: ^0.7.13
-        version: 0.7.13
-      '@irys-network/bundler-client':
-        specifier: ^0.0.2
-        version: 0.0.2(arweave@1.15.1)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@kwilteam/kwil-js':
-        specifier: ^0.7.1
-        version: 0.7.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      aligned-ts:
-        specifier: ^0.0.9
-        version: 0.0.9(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      ethers:
-        specifier: ^6.13.2
-        version: 6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      nitropack:
-        specifier: latest
-        version: 2.9.7(encoding@0.1.13)(magicast@0.3.4)
-      sindri:
-        specifier: 0.0.1-alpha.55
-        version: 0.0.1-alpha.55(chokidar@3.6.0)
-    devDependencies:
-      minimist:
-        specifier: ^1.2.8
-        version: 1.2.8
-      tsx:
-        specifier: ^4.17.0
-        version: 4.17.0
-
-  examples/hello-world:
-    dependencies:
-      '@0xzerolabs/sdk':
-        specifier: ^0.1.0
-        version: 0.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@eslint/js':
-        specifier: ^9.9.0
-        version: 9.11.1
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.10
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
-      '@vitejs/plugin-react':
-        specifier: ^4.3.1
-        version: 4.3.2(vite@5.4.8(@types/node@22.7.4)(sass@1.77.6)(terser@5.31.1))
-      eslint:
-        specifier: ^9.9.0
-        version: 9.11.1(jiti@1.21.6)
-      eslint-plugin-react-hooks:
-        specifier: ^5.1.0-rc.0
-        version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.11.1(jiti@1.21.6))
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.9
-        version: 0.4.12(eslint@9.11.1(jiti@1.21.6))
-      globals:
-        specifier: ^15.9.0
-        version: 15.9.0
-      typescript:
-        specifier: ^5.5.3
-        version: 5.6.2
-      typescript-eslint:
-        specifier: ^8.0.1
-        version: 8.7.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.8(@types/node@22.7.4)(sass@1.77.6)(terser@5.31.1)
-
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
@@ -376,9 +327,6 @@ importers:
 
 packages:
 
-  '@0xzerolabs/sdk@0.1.0':
-    resolution: {integrity: sha512-NQ0XowprIvxc9zYqHA8zrITBX2bJY3xZm/pEmV39rW1YR2P9OGmauJHGjUso348fBpUydLGuUnoa38Wd70t0KA==}
-
   '@adraffy/ens-normalize@1.10.1':
     resolution: {integrity: sha512-96Z2IP3mYmF1Xg2cDm8f1gWGf/HUVedQ3FMifV4kG/PQ4yEP51xDtRAEfhVNt5f/uzpNkZHwWQuUcu6D6K+Ekw==}
 
@@ -403,12 +351,12 @@ packages:
     resolution: {integrity: sha512-6kljJFRsTLXCvgkNhBoOLhVyo7rmih+8+XAtdeciIXkZYwzwVS3TFPLMqBUO2HcY6gYtQQRmTG52R5ihyi/bXA==}
     hasBin: true
 
-  '@aptos-labs/aptos-client@0.1.0':
-    resolution: {integrity: sha512-q3s6pPq8H2buGp+tPuIRInWsYOuhSEwuNJPwd2YnsiID3YSLihn2ug39ktDJAcSOprUcp7Nid8WK7hKqnUmSdA==}
+  '@aptos-labs/aptos-client@0.1.1':
+    resolution: {integrity: sha512-kJsoy4fAPTOhzVr7Vwq8s/AUg6BQiJDa7WOqRzev4zsuIS3+JCuIZ6vUd7UBsjnxtmguJJulMRs9qWCzVBt2XA==}
     engines: {node: '>=15.10.0'}
 
-  '@aptos-labs/ts-sdk@1.27.0':
-    resolution: {integrity: sha512-LsQpkrVEXGLaDFSLXvvU0+1X27kTlGBiy1rZqfcaW2hARN9m/Bc/AjztxXKeEXS/D7QmEJAeB6RS7CLM8aqC3w==}
+  '@aptos-labs/ts-sdk@1.28.0':
+    resolution: {integrity: sha512-N5rECac5KoQRr+iS0L7Y3NM5hVVluvoERTxMFQ0aVsz8u5RBjIoBVol5GR9MTZwxHbZEJUoJxUsr/Z/Qscoz1A==}
     engines: {node: '>=11.0.0'}
 
   '@babel/code-frame@7.24.2':
@@ -764,8 +712,8 @@ packages:
     resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.25.0':
-    resolution: {integrity: sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==}
+  '@babel/runtime@7.25.6':
+    resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/standalone@7.24.7':
@@ -1741,8 +1689,8 @@ packages:
     resolution: {integrity: sha512-UCCxkDvUbCKitAkC0FK4uE3u4owBa5CzwISeQBMCrZJZcsqPdpt3iR2+ZXQOvZW4jJrfWYTJGUVysAba7nOtmw==}
     engines: {node: '>=16.17'}
 
-  '@grpc/grpc-js@1.11.1':
-    resolution: {integrity: sha512-gyt/WayZrVPH2w/UTLansS7F9Nwld472JxxaETamrM8HNlsa+jSLNyKAZmhxI2Me4c3mQHFiS1wWHDY1g1Kthw==}
+  '@grpc/grpc-js@1.11.3':
+    resolution: {integrity: sha512-i9UraDzFHMR+Iz/MhFLljT+fCpgxZ3O6CxwGJ8YuNYHJItIHUzKJpW2LvoFZNnGPwqc9iWy9RAucxV0JoR9aUQ==}
     engines: {node: '>=12.10.0'}
 
   '@grpc/proto-loader@0.7.13':
@@ -2041,11 +1989,9 @@ packages:
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
 
-  '@noble/curves@1.4.2':
-    resolution: {integrity: sha512-TavHr8qycMChk8UwMld0ZDRvatedkzWfH8IiaeGCfymOP5i0hSCozz9vHOL0nkwk7HRMlFnAiKpS2jrUmSybcw==}
-
-  '@noble/curves@1.5.0':
-    resolution: {integrity: sha512-J5EKamIHnKPyClwVrzmaf5wSdQXgdHcPZIZLu3bwnbeCx8/7NPK5q2ZBWF+5FvYGByjiQQsJYX6jfgB2wDPn3A==}
+  '@noble/curves@1.6.0':
+    resolution: {integrity: sha512-TlaHRXDehJuRNR9TfZDNQ45mMEd5dwUwmicsafcIX4SsNiqnCHKjE/1alYPd/lDRVhxdhUAlv8uEhMCI5zjIJQ==}
+    engines: {node: ^14.21.3 || >=16}
 
   '@noble/ed25519@1.7.3':
     resolution: {integrity: sha512-iR8GBkDt0Q3GyaVcIu7mSsVIqnFbkbRzGLWlvhwunacoLwt4J3swfKhfaM6rN6WY+TBGoYT1GtT1mIh2/jGbRQ==}
@@ -2054,9 +2000,9 @@ packages:
     resolution: {integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==}
     engines: {node: '>= 16'}
 
-  '@noble/hashes@1.4.0':
-    resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
-    engines: {node: '>= 16'}
+  '@noble/hashes@1.5.0':
+    resolution: {integrity: sha512-1j6kQFb7QRru7eKN3ZDvRcP13rugwdxZqCjbiAVZfIJwgj2A65UmT4TgARXGlXgnRkORLTDTrO19ZErt7+QXgA==}
+    engines: {node: ^14.21.3 || >=16}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2612,14 +2558,14 @@ packages:
   '@rushstack/eslint-patch@1.5.1':
     resolution: {integrity: sha512-6i/8UoL0P5y4leBIGzvkZdS85RDMG9y1ihZzmTZQ5LdHUYmZ7pKFoj8X0236s3lusPs1Fa5HTQUpwI+UfTcmeA==}
 
-  '@scure/base@1.1.7':
-    resolution: {integrity: sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g==}
+  '@scure/base@1.1.9':
+    resolution: {integrity: sha512-8YKhl8GHiNI/pU2VMaofa2Tor7PJRAjwQLBBuilkJ9L5+13yVbC7JO/wS7piioAvPSwR3JKM1IJ/u4xQzbcXKg==}
 
-  '@scure/bip32@1.4.0':
-    resolution: {integrity: sha512-sVUpc0Vq3tXCkDGYVWGIZTRfnvu8LoTDaev7vbwh0omSvVORONr960MQWdKqJDCReIEmTj3PAr73O3aoxz7OPg==}
+  '@scure/bip32@1.5.0':
+    resolution: {integrity: sha512-8EnFYkqEQdnkuGBVpCzKxyIwDCBLDVj3oiX0EKUFre/tOjL/Hqba1D6n/8RcmaQy4f95qQFrO2A8Sr6ybh4NRw==}
 
-  '@scure/bip39@1.3.0':
-    resolution: {integrity: sha512-disdg7gHuTDZtY+ZdkmLpPCk7fxZSu3gBiEGuoC1XYxv9cGx3Z6cpTggCgW6odSOOIXCiDjuGejW+aJKCY/pIQ==}
+  '@scure/bip39@1.4.0':
+    resolution: {integrity: sha512-BEEm6p8IueV/ZTfQLp/0vhw4NPnT9oWf5+28nvmeUICjP99f4vr2d+qc7AVGDDtwRep6ifR43Yed9ERVmiITzw==}
 
   '@selderee/plugin-htmlparser2@0.11.0':
     resolution: {integrity: sha512-P33hHGdldxGabLFjPPpaTxVolMrzrcegejx+0GxjrIb9Zv48D8yAIA/QTDR2dFl7Uz7urX8aX6+5bCZslr+gWQ==}
@@ -2692,8 +2638,8 @@ packages:
     resolution: {integrity: sha512-E1ImOIAD1tBZFRdjeM4/pzTiTApC0AOBGwyAMS4fwIodCWArzJ3DWdoh8cKxeFM2fElkxBh2Aqts1BPC373rHA==}
     engines: {node: '>=5.10'}
 
-  '@solana/web3.js@1.95.2':
-    resolution: {integrity: sha512-SjlHp0G4qhuhkQQc+YXdGkI8EerCqwxvgytMgBpzMUQTafrkNant3e7pgilBGgjy/iM40ICvWBLgASTPMrQU7w==}
+  '@solana/web3.js@1.95.3':
+    resolution: {integrity: sha512-O6rPUN0w2fkNqx/Z3QJMB9L225Ex10PRDH8bTaIUPZXMPV0QP8ZpPvjQnXK+upUczlRgzHzd6SjKIha1p+I6og==}
 
   '@supercharge/promise-pool@3.2.0':
     resolution: {integrity: sha512-pj0cAALblTZBPtMltWOlZTQSLT07jIaFNeM8TWoJD1cQMgDB9mcMlVMoetiB35OzNJpqQ2b+QEtwiR9f20mADg==}
@@ -3691,8 +3637,8 @@ packages:
   aproba@2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
 
-  arbundles@0.11.1:
-    resolution: {integrity: sha512-H1hyI98VTggH7pyxaa6jKuzB3UYHKSwRQChT2pJp8uGGv20FQEQjug/n+mza4yM8dMcLHwXji0PLpmKQKoJs+g==}
+  arbundles@0.11.2:
+    resolution: {integrity: sha512-vyX7vY6S8B4RFhGSoCixbnR/Z7ckpJjK+b/H7zcgRWJqqXjZqQ+3DQIJ19vKl5AvzNSsj5ja9kQDoZhMiGpBFw==}
 
   archiver-utils@5.0.2:
     resolution: {integrity: sha512-wuLJMmIBQYCsGZgYLTy5FIB2pF6Lfb6cXMSF8Qywwk3t20zWnAi7zLcQFdKQmIB8wyZpY5ER38x08GbwtR2cLA==}
@@ -3764,8 +3710,8 @@ packages:
     peerDependencies:
       arweave: ^1.10.0
 
-  arweave@1.15.1:
-    resolution: {integrity: sha512-rT7FOwqdudd5npqp4xOYdDT2035LtpcqePjwirh4wjRiEtVsz1FZkRiM2Yj+fOAwYzOm/hNG0GDOipDSaiEGGQ==}
+  arweave@1.15.5:
+    resolution: {integrity: sha512-Zj3b8juz1ZtDaQDPQlzWyk2I4wZPx3RmcGq8pVJeZXl2Tjw0WRy5ueHPelxZtBLqCirGoZxZEAFRs6SZUSCBjg==}
     engines: {node: '>=18'}
 
   asap@2.0.6:
@@ -3836,11 +3782,11 @@ packages:
   axios@0.27.2:
     resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
 
-  axios@1.6.2:
-    resolution: {integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==}
-
   axios@1.7.2:
     resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==}
+
+  axios@1.7.4:
+    resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
 
   axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
@@ -5213,10 +5159,6 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
-  ethers@6.13.2:
-    resolution: {integrity: sha512-9VkriTTed+/27BGuY1s0hf441kqwHJ1wtN2edksEtiRvXx+soxRX3iSXTfFqq2+YwrOqbDoTHjIhQnjJRlzKmg==}
-    engines: {node: '>=14.0.0'}
-
   ethers@6.13.3:
     resolution: {integrity: sha512-/DzbZOLVtoO4fKvvQwpEucHAQgIwBGWuRvBdwE/lMXgXvvHHTSkn7XqAQ2b+gjJzZDJjWA9OD05bVceVOsBHbg==}
     engines: {node: '>=14.0.0'}
@@ -6062,8 +6004,8 @@ packages:
     resolution: {integrity: sha512-JVYhQnN59LVPFCEcVa2C3CrEKYacvjRfqIQl+h8oi91aLYQVWRYbxjPcv1bUiUy/kLmQaANrYfNMCO3kuEDHfw==}
     engines: {node: '>=14'}
 
-  jayson@4.1.1:
-    resolution: {integrity: sha512-5ZWm4Q/0DHPyeMfAsrwViwUS2DMVsQgWh8bEEIVTkfb3DzHZ2L3G5WUnF+AKmGjjM9r1uAv73SaqC1/U4RL45w==}
+  jayson@4.1.2:
+    resolution: {integrity: sha512-5nzMWDHy6f+koZOuYsArh2AXs73NfWYVlFyJJuCedr93GpY+Ku8qq10ropSXVfHK+H0T6paA88ww+/dV+1fBNA==}
     engines: {node: '>=8'}
     hasBin: true
 
@@ -7842,8 +7784,8 @@ packages:
   proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
 
-  protobufjs@7.3.2:
-    resolution: {integrity: sha512-RXyHaACeqXeqAKGLDl68rQKbmObRsTIn4TYVUUug1KfS47YWCo5MacGITEryugIgZqORCvJWEk4l449POg5Txg==}
+  protobufjs@7.4.0:
+    resolution: {integrity: sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==}
     engines: {node: '>=12.0.0'}
 
   protocols@2.0.1:
@@ -8098,8 +8040,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rpc-websockets@9.0.2:
-    resolution: {integrity: sha512-YzggvfItxMY3Lwuax5rC18inhbjJv9Py7JXRHxTIi94JOLrqBsSsUUc5bbl5W6c11tXhdfpDPK0KzBhoGe8jjw==}
+  rpc-websockets@9.0.4:
+    resolution: {integrity: sha512-yWZWN0M+bivtoNLnaDbtny4XchdAIF5Q4g/ZsC5UC61Ckbp0QczwO8fg44rV3uYmY4WHd+EZQbn90W1d8ojzqQ==}
 
   run-applescript@5.0.0:
     resolution: {integrity: sha512-XcT5rBksx1QdIhlFOCtgZkB99ZEouFZ1E2Kc2LHqNW13U3/74YGdkQRmThTwxy4QIyookibDKYZOPqX//6BlAg==}
@@ -8810,8 +8752,8 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
-  tsx@4.17.0:
-    resolution: {integrity: sha512-eN4mnDA5UMKDt4YZixo9tBioibaMBpoxBkD+rIPAjVmYERSG0/dWEY1CEFuV89CgASlKL499q8AhmkMnnjtOJg==}
+  tsx@4.19.1:
+    resolution: {integrity: sha512-0flMz1lh74BR4wOvBjuh9olbnwqCPc35OOlfyzHba0Dc+QNUeWX/Gq2YTbnwcWPO3BMd8fkzRVrHcsR+a7z7rA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -9527,13 +9469,6 @@ packages:
 
 snapshots:
 
-  '@0xzerolabs/sdk@0.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)':
-    dependencies:
-      ethers: 6.13.3(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   '@adraffy/ens-normalize@1.10.1': {}
 
   '@alloc/quick-lru@5.2.0': {}
@@ -9554,21 +9489,21 @@ snapshots:
 
   '@aptos-labs/aptos-cli@0.2.0': {}
 
-  '@aptos-labs/aptos-client@0.1.0':
+  '@aptos-labs/aptos-client@0.1.1':
     dependencies:
-      axios: 1.6.2
+      axios: 1.7.4
       got: 11.8.6
     transitivePeerDependencies:
       - debug
 
-  '@aptos-labs/ts-sdk@1.27.0':
+  '@aptos-labs/ts-sdk@1.28.0':
     dependencies:
       '@aptos-labs/aptos-cli': 0.2.0
-      '@aptos-labs/aptos-client': 0.1.0
-      '@noble/curves': 1.5.0
-      '@noble/hashes': 1.4.0
-      '@scure/bip32': 1.4.0
-      '@scure/bip39': 1.3.0
+      '@aptos-labs/aptos-client': 0.1.1
+      '@noble/curves': 1.6.0
+      '@noble/hashes': 1.5.0
+      '@scure/bip32': 1.5.0
+      '@scure/bip39': 1.4.0
       eventemitter3: 5.0.1
       form-data: 4.0.0
       js-base64: 3.7.7
@@ -10184,7 +10119,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@babel/runtime@7.25.0':
+  '@babel/runtime@7.25.6':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -11018,7 +10953,7 @@ snapshots:
       '@types/retry': 0.12.2
       retry: 0.13.1
 
-  '@grpc/grpc-js@1.11.1':
+  '@grpc/grpc-js@1.11.3':
     dependencies:
       '@grpc/proto-loader': 0.7.13
       '@js-sdsl/ordered-map': 4.4.2
@@ -11027,7 +10962,7 @@ snapshots:
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.2.3
-      protobufjs: 7.3.2
+      protobufjs: 7.4.0
       yargs: 17.7.2
 
   '@headlessui/tailwindcss@0.2.1(tailwindcss@3.4.4(ts-node@10.9.2(@types/node@22.7.4)(typescript@5.6.2)))':
@@ -11168,9 +11103,9 @@ snapshots:
 
   '@ioredis/commands@1.2.0': {}
 
-  '@irys-network/bundler-client@0.0.2(arweave@1.15.1)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
+  '@irys-network/bundler-client@0.0.2(arweave@1.15.5)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
     dependencies:
-      '@aptos-labs/ts-sdk': 1.27.0
+      '@aptos-labs/ts-sdk': 1.28.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -11180,10 +11115,10 @@ snapshots:
       '@near-js/keystores-browser': 0.0.3
       '@near-js/providers': 0.0.4(encoding@0.1.13)
       '@near-js/transactions': 0.1.1
-      '@solana/web3.js': 1.95.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@solana/web3.js': 1.95.3(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
       '@supercharge/promise-pool': 3.2.0
       algosdk: 1.24.1(encoding@0.1.13)
-      arbundles: 0.11.1(arweave@1.15.1)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      arbundles: 0.11.2(arweave@1.15.5)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
       async-retry: 1.3.3
       axios: 1.7.2
       base64url: 3.0.1
@@ -11460,7 +11395,7 @@ snapshots:
   '@kwilteam/kwil-js@0.7.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       axios: 0.27.2
-      ethers: 6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ethers: 6.13.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       jssha: 3.3.1
       long: 5.2.3
     transitivePeerDependencies:
@@ -11615,19 +11550,15 @@ snapshots:
     dependencies:
       '@noble/hashes': 1.3.2
 
-  '@noble/curves@1.4.2':
+  '@noble/curves@1.6.0':
     dependencies:
-      '@noble/hashes': 1.4.0
-
-  '@noble/curves@1.5.0':
-    dependencies:
-      '@noble/hashes': 1.4.0
+      '@noble/hashes': 1.5.0
 
   '@noble/ed25519@1.7.3': {}
 
   '@noble/hashes@1.3.2': {}
 
-  '@noble/hashes@1.4.0': {}
+  '@noble/hashes@1.5.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -12478,6 +12409,12 @@ snapshots:
     optionalDependencies:
       rollup: 4.18.0
 
+  '@rollup/plugin-alias@5.1.0(rollup@4.22.5)':
+    dependencies:
+      slash: 4.0.0
+    optionalDependencies:
+      rollup: 4.22.5
+
   '@rollup/plugin-commonjs@25.0.8(rollup@4.18.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
@@ -12489,6 +12426,17 @@ snapshots:
     optionalDependencies:
       rollup: 4.18.0
 
+  '@rollup/plugin-commonjs@25.0.8(rollup@4.22.5)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      commondir: 1.0.1
+      estree-walker: 2.0.2
+      glob: 8.1.0
+      is-reference: 1.2.1
+      magic-string: 0.30.10
+    optionalDependencies:
+      rollup: 4.22.5
+
   '@rollup/plugin-inject@5.0.5(rollup@4.18.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
@@ -12497,11 +12445,25 @@ snapshots:
     optionalDependencies:
       rollup: 4.18.0
 
+  '@rollup/plugin-inject@5.0.5(rollup@4.22.5)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      estree-walker: 2.0.2
+      magic-string: 0.30.10
+    optionalDependencies:
+      rollup: 4.22.5
+
   '@rollup/plugin-json@6.1.0(rollup@4.18.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
     optionalDependencies:
       rollup: 4.18.0
+
+  '@rollup/plugin-json@6.1.0(rollup@4.22.5)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+    optionalDependencies:
+      rollup: 4.22.5
 
   '@rollup/plugin-node-resolve@15.2.3(rollup@4.18.0)':
     dependencies:
@@ -12513,6 +12475,17 @@ snapshots:
       resolve: 1.22.8
     optionalDependencies:
       rollup: 4.18.0
+
+  '@rollup/plugin-node-resolve@15.2.3(rollup@4.22.5)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      '@types/resolve': 1.20.2
+      deepmerge: 4.3.1
+      is-builtin-module: 3.2.1
+      is-module: 1.0.0
+      resolve: 1.22.8
+    optionalDependencies:
+      rollup: 4.22.5
 
   '@rollup/plugin-replace@5.0.7(rollup@4.18.0)':
     dependencies:
@@ -12536,6 +12509,14 @@ snapshots:
     optionalDependencies:
       rollup: 4.18.0
 
+  '@rollup/plugin-terser@0.4.4(rollup@4.22.5)':
+    dependencies:
+      serialize-javascript: 6.0.2
+      smob: 1.5.0
+      terser: 5.31.1
+    optionalDependencies:
+      rollup: 4.22.5
+
   '@rollup/pluginutils@4.2.1':
     dependencies:
       estree-walker: 2.0.2
@@ -12551,7 +12532,7 @@ snapshots:
 
   '@rollup/pluginutils@5.1.0(rollup@4.22.5)':
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
@@ -12655,18 +12636,18 @@ snapshots:
 
   '@rushstack/eslint-patch@1.5.1': {}
 
-  '@scure/base@1.1.7': {}
+  '@scure/base@1.1.9': {}
 
-  '@scure/bip32@1.4.0':
+  '@scure/bip32@1.5.0':
     dependencies:
-      '@noble/curves': 1.4.2
-      '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.7
+      '@noble/curves': 1.6.0
+      '@noble/hashes': 1.5.0
+      '@scure/base': 1.1.9
 
-  '@scure/bip39@1.3.0':
+  '@scure/bip39@1.4.0':
     dependencies:
-      '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.7
+      '@noble/hashes': 1.5.0
+      '@scure/base': 1.1.9
 
   '@selderee/plugin-htmlparser2@0.11.0':
     dependencies:
@@ -12756,11 +12737,11 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@solana/web3.js@1.95.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
+  '@solana/web3.js@1.95.3(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.25.0
-      '@noble/curves': 1.5.0
-      '@noble/hashes': 1.4.0
+      '@babel/runtime': 7.25.6
+      '@noble/curves': 1.6.0
+      '@noble/hashes': 1.5.0
       '@solana/buffer-layout': 4.0.1
       agentkeepalive: 4.5.0
       bigint-buffer: 1.1.5
@@ -12769,9 +12750,9 @@ snapshots:
       bs58: 4.0.1
       buffer: 6.0.3
       fast-stable-stringify: 1.0.0
-      jayson: 4.1.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      jayson: 4.1.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       node-fetch: 2.7.0(encoding@0.1.13)
-      rpc-websockets: 9.0.2
+      rpc-websockets: 9.0.4
       superstruct: 2.0.2
     transitivePeerDependencies:
       - bufferutil
@@ -14292,7 +14273,7 @@ snapshots:
 
   aligned-ts@0.0.9(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
-      ethers: 6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ethers: 6.13.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       sha3: 2.1.4
       ws: 8.18.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -14335,7 +14316,7 @@ snapshots:
 
   aproba@2.0.0: {}
 
-  arbundles@0.11.1(arweave@1.15.1)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10):
+  arbundles@0.11.2(arweave@1.15.5)(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10):
     dependencies:
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/hash': 5.7.0
@@ -14352,7 +14333,7 @@ snapshots:
     optionalDependencies:
       '@randlabs/myalgo-connect': 1.4.2
       algosdk: 1.24.1(encoding@0.1.13)
-      arweave-stream-tx: 1.2.2(arweave@1.15.1)
+      arweave-stream-tx: 1.2.2(arweave@1.15.5)
       multistream: 4.1.0
       tmp-promise: 3.0.3
     transitivePeerDependencies:
@@ -14384,7 +14365,7 @@ snapshots:
 
   arconnect@0.4.2:
     dependencies:
-      arweave: 1.15.1
+      arweave: 1.15.5
     optional: true
 
   are-we-there-yet@2.0.0:
@@ -14467,13 +14448,13 @@ snapshots:
       is-array-buffer: 3.0.2
       is-shared-array-buffer: 1.0.2
 
-  arweave-stream-tx@1.2.2(arweave@1.15.1):
+  arweave-stream-tx@1.2.2(arweave@1.15.5):
     dependencies:
-      arweave: 1.15.1
+      arweave: 1.15.5
       exponential-backoff: 3.1.1
     optional: true
 
-  arweave@1.15.1:
+  arweave@1.15.5:
     dependencies:
       arconnect: 0.4.2
       asn1.js: 5.4.1
@@ -14584,7 +14565,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  axios@1.6.2:
+  axios@1.7.2:
     dependencies:
       follow-redirects: 1.15.6
       form-data: 4.0.0
@@ -14592,7 +14573,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  axios@1.7.2:
+  axios@1.7.4:
     dependencies:
       follow-redirects: 1.15.6
       form-data: 4.0.0
@@ -15346,6 +15327,8 @@ snapshots:
   damerau-levenshtein@1.0.8: {}
 
   dateformat@4.6.3: {}
+
+  db0@0.1.4: {}
 
   db0@0.1.4(drizzle-orm@0.31.2(@opentelemetry/api@1.9.0)(@types/pg@8.11.6)(@types/react@18.3.10)(pg@8.12.0)(postgres@3.4.4)(react@18.3.1)):
     optionalDependencies:
@@ -16247,13 +16230,13 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   esutils@2.0.3: {}
 
   etag@1.8.1: {}
 
-  ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  ethers@6.13.3(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0
@@ -17114,7 +17097,7 @@ snapshots:
 
   is-reference@1.2.1:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   is-regex@1.1.4:
     dependencies:
@@ -17234,7 +17217,7 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  jayson@4.1.1(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  jayson@4.1.2(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
       '@types/connect': 3.4.38
       '@types/node': 12.20.55
@@ -17919,8 +17902,8 @@ snapshots:
 
   magicast@0.3.4:
     dependencies:
-      '@babel/parser': 7.24.4
-      '@babel/types': 7.24.0
+      '@babel/parser': 7.25.6
+      '@babel/types': 7.25.6
       source-map-js: 1.2.1
 
   make-dir@3.1.0:
@@ -18295,14 +18278,14 @@ snapshots:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.1
-      '@rollup/plugin-alias': 5.1.0(rollup@4.18.0)
-      '@rollup/plugin-commonjs': 25.0.8(rollup@4.18.0)
-      '@rollup/plugin-inject': 5.0.5(rollup@4.18.0)
-      '@rollup/plugin-json': 6.1.0(rollup@4.18.0)
-      '@rollup/plugin-node-resolve': 15.2.3(rollup@4.18.0)
-      '@rollup/plugin-replace': 5.0.7(rollup@4.18.0)
-      '@rollup/plugin-terser': 0.4.4(rollup@4.18.0)
-      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
+      '@rollup/plugin-alias': 5.1.0(rollup@4.22.5)
+      '@rollup/plugin-commonjs': 25.0.8(rollup@4.22.5)
+      '@rollup/plugin-inject': 5.0.5(rollup@4.22.5)
+      '@rollup/plugin-json': 6.1.0(rollup@4.22.5)
+      '@rollup/plugin-node-resolve': 15.2.3(rollup@4.22.5)
+      '@rollup/plugin-replace': 5.0.7(rollup@4.22.5)
+      '@rollup/plugin-terser': 0.4.4(rollup@4.22.5)
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
       '@types/http-proxy': 1.17.14
       '@vercel/nft': 0.26.5(encoding@0.1.13)
       archiver: 7.0.1
@@ -18314,7 +18297,7 @@ snapshots:
       cookie-es: 1.1.0
       croner: 8.0.2
       crossws: 0.2.4
-      db0: 0.1.4(drizzle-orm@0.31.2(@opentelemetry/api@1.9.0)(@types/pg@8.11.6)(@types/react@18.3.10)(pg@8.12.0)(postgres@3.4.4)(react@18.3.1))
+      db0: 0.1.4
       defu: 6.1.4
       destr: 2.0.3
       dot-prop: 8.0.2
@@ -18345,8 +18328,8 @@ snapshots:
       pkg-types: 1.1.1
       pretty-bytes: 6.1.1
       radix3: 1.1.2
-      rollup: 4.18.0
-      rollup-plugin-visualizer: 5.12.0(rollup@4.18.0)
+      rollup: 4.22.5
+      rollup-plugin-visualizer: 5.12.0(rollup@4.22.5)
       scule: 1.3.0
       semver: 7.6.2
       serve-placeholder: 2.0.2
@@ -18356,7 +18339,7 @@ snapshots:
       uncrypto: 0.1.3
       unctx: 2.3.1
       unenv: 1.9.0
-      unimport: 3.7.2(rollup@4.18.0)
+      unimport: 3.7.2(rollup@4.22.5)
       unstorage: 1.10.2(ioredis@5.4.1)
       unwasm: 0.3.9
     transitivePeerDependencies:
@@ -19701,7 +19684,7 @@ snapshots:
 
   proto-list@1.2.4: {}
 
-  protobufjs@7.3.2:
+  protobufjs@7.4.0:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
       '@protobufjs/base64': 1.1.2
@@ -20033,7 +20016,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.22.5
       fsevents: 2.3.3
 
-  rpc-websockets@9.0.2:
+  rpc-websockets@9.0.4:
     dependencies:
       '@swc/helpers': 0.5.11
       '@types/uuid': 8.3.4
@@ -20928,7 +20911,7 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.3.3
 
-  tsx@4.17.0:
+  tsx@4.19.1:
     dependencies:
       esbuild: 0.23.1
       get-tsconfig: 4.7.6
