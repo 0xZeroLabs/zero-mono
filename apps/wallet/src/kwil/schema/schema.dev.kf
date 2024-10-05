@@ -25,17 +25,16 @@ table credential {
 }
 
 //// setup create, delete, and update
-@kgw(authn='true')
-procedure create_human ($id text, $verified bool) public {
+
+procedure create_human ($verified bool) public {
     INSERT INTO human (id, verified)
-    VALUES ($id, $verified);
+    VALUES (@caller, $verified);
 }
 
-@kgw(authn='true')
-procedure update_human ($id text, $verified bool) public {
+procedure update_human ($verified bool) public {
     UPDATE human
     SET verified=$verified
-    WHERE id=$id;
+    WHERE id=@caller;
 }
 
 procedure get_human ($id text) public view returns table(id text, verified bool) {
@@ -44,28 +43,27 @@ procedure get_human ($id text) public view returns table(id text, verified bool)
     WHERE id=$id;
 }
 
-@kgw(authn='true')
-procedure create_credential ($id text, $human_id text, $type text, $data blob, $issuance_date text, $expiry_date text) public {
+
+procedure create_credential ($id text, $type text, $data blob, $issuance_date text, $expiry_date text) public {
     INSERT INTO credential (id, human_id, type, data, issuance_date, expiry_date)
     VALUES ($id, 
     (
-        SELECT $human_id
+        SELECT @caller
         FROM human
     ), $type, $data, $issuance_date, $expiry_date);
 }
 
-@kgw(authn='true')
 procedure update_credential ($id text, $data blob) public {
     UPDATE credential
     SET id=$id, data=$data
-    WHERE id=$id;
+    WHERE human_id=@caller;
 }
 
-@kgw(authn='true')
+
 procedure withdraw_credential ($id text) public {
     UPDATE credential
     SET withdrawn=false
-    WHERE id=$id;
+    WHERE human_id=@caller;
 }
 
 procedure get_credential ($id text) public view returns table(id text, human_id text, type text, data blob, issuance_date text, expiry_date text, withdrawn bool) {

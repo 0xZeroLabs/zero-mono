@@ -1,4 +1,4 @@
-const DEV_CENTER_SERVER = 'https://dev.zkpass.org/v1/sdk'
+const DEV_CENTER_SERVER = 'https://storage.0xzero.org/v1/sdk'
 
 const ErrorType = {
   DO_NOT_MEET_REQUIREMENTS: 0,
@@ -73,7 +73,8 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
   sendResponse({ received: true })
 })
 
-function dispatchMessage(data) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function dispatchMessage(data: { type: string, id: any }) {
   console.log('dispatchMessage', data.type)  
   try {
     switch (data.type) {
@@ -98,7 +99,7 @@ function dispatchMessage(data) {
   }
 }
 
-function sendMessageToBackground(type, data) {
+function sendMessageToBackground(type: string, data?: { type: string } | undefined) {
   chrome.runtime?.sendMessage({ type, data })
 }
 
@@ -106,6 +107,7 @@ function sendMessageToBackground(type, data) {
  *
  * @param {*} message  { type: string; id?: number | string; proof?: any; taskId?: string }
  */
-function broadcastMessage(message) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function broadcastMessage(message: { type: string; id: any }) {
   window.postMessage({...message, source: 'zkPass'}, '*')
 }
