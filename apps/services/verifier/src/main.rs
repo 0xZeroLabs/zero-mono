@@ -34,7 +34,7 @@ async fn verify_proof(
     private_key: &str,
 ) -> Result<(bool, Option<String>), Box<dyn std::error::Error>> {
     let verification_data = VerificationData {
-        proving_system: ProvingSystemId::GnarkPlonkBn254,
+        proving_system: ProvingSystemId::Groth16Bn254,
         proof,
         proof_generator_addr: ADDRESS.to_string(),
         verification_key,
