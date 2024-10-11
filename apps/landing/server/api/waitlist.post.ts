@@ -1,4 +1,4 @@
-import { addWaitlist } from "./waitlist.controller";
+import { addWaitlist } from "./controllers/waitlist.controller";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
