@@ -18,7 +18,7 @@ const kwil = new WebKwil({
 const signer = new ethers.Wallet(""!);
 const dbid = Utils.generateDBID(signer.address, "zero_protocol");
 
-async function createHuman(id: string, verified: boolean) {
+export const createHuman = async () => {
   const kwilSigner = await getSigner();
 
   const result = await kwil.execute(
@@ -27,7 +27,7 @@ async function createHuman(id: string, verified: boolean) {
       name: "create_human",
       inputs: [
         {
-          $verified: verified,
+          $verified: false,
         },
       ],
     },

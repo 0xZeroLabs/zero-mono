@@ -16,6 +16,7 @@ export default defineConfig({
         main: "index.html",
         background: "./src/background.ts",
         content: "./src/content.ts",
+        message: "./src/message.ts"
       },
       output: {
         dir: "dist",
