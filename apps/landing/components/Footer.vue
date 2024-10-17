@@ -61,6 +61,9 @@
                 <li class=""><a href="/contact">
                         <Scramble content="Contact" />
                     </a></li>
+                <li class=""><a href="https://docs.0xzero.org/community/press-kit">
+                        <Scramble content="Press Kit" />
+                    </a></li>
             </ul>
             <h5 class="font-bold negative mt-4">ZERO Labs © 2024</h5>
         </div>
