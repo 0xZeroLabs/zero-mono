@@ -5,11 +5,11 @@
                 Foundry of innovation
             </h3>
             <p class="negative font-normal mt-2 text-left z-10 relative">
-                We're a venture studio committed to solving the intricate challenges that hinder self-sovereignty. Our
+                We're a startup studio committed to solving the intricate challenges that hinder self-sovereignty. Our
                 goal is to simplify the process of empowering individuals with control over their data, thereby
-                safeguarding their privacy. Founded in Nigeria, we're dedicated to tackling global challenges
-                and are collaborating with
-                teams internationally to achieve the collective goal of empowering digital freedom.
+                safeguarding their privacy. Founded in Nigeria, we're dedicated to tackling global challenges and are
+                collaborating with diverse teams internationally to achieve the collective goal of empowering digital
+                freedom.
             </p>
         </div>
     </div>
