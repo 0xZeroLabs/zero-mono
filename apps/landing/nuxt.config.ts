@@ -14,6 +14,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    litApiKey: process.env.LIT,
+    nodeEnv: process.env.NODE_ENV,
+  },
   colorMode: {
     preference: "dark",
     globalName: "__NUXT_COLOR_MODE__",

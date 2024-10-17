@@ -23,6 +23,7 @@
     "primevue": "^3.52.0",
     "radix-vue": "^1.8.4",
     "resend": "^3.3.0",
+    "stytch": "^11.7.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^10.0.0",

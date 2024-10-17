@@ -19,12 +19,3 @@ document.addEventListener("keydown", (event) => {
     });
   }
 });
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const eventListener = (event: any) => {
-  if (event.source === window && event.data && event.data.type === "HELLO") {
-    window.removeEventListener("message", eventListener);
-    console.log("hello");
-  }
-};
-window.addEventListener("message", eventListener);

@@ -1,8 +1,10 @@
 import { ethers } from "ethers";
 import omid from "./abi/OMID.json";
 
+
+//// implement verification of credential
 const config = useRuntimeConfig();
-const tokenContract = config.omid;
+const tokenContract = "0x008484085F02c25C8d82A5Db5aFBA6e1151e24f1";
 const abi = omid.abi;
 
 export const mint = async (toAddress: string) => {
