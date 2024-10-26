@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./apps/sdk/assets/logo.png" width="300" alt="0xzero.org" />
+  <img src="./apps/protocol/sdk/assets/logo.png" width="300" alt="0xzero.org" />
 </p>
 
 # ZERO Protocol Mono
 
 [![Documentation](https://img.shields.io/badge/docs-%F0%9F%93%84-blue)](https://docs.0xzero.org)
 [![NPM Package](https://img.shields.io/npm/v/@0xzerolabs/sdk.svg)](https://www.npmjs.org/package/@0xzerolabs/sdk)
-[![publish apps to koyeb via docker](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml/badge.svg)](https://github.com/ZeroFi-Labs/zero-mono/actions/workflows/publish-images-for-apps.yml)
+[![Publish ZERO Labs Landing Page to DockerHub and Koyeb](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml)
 [![publish package to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml)
 [![License](https://img.shields.io/github/license/0xZeroLabs/zero-mono?style)](https://github.com/0xZeroLabs/zero-mono/blob/master/LICENSE)
 
