@@ -11,7 +11,7 @@
             </h2>
             <div class="gap-2 flex justify-start items-center z-10 relative">
                 <ScrambleBtn content="Explore protocol" type="inverse-alt" />
-                <a href="https://docsend.com/view/2fbpws5p2vsjnqqj"
+                <a href="https://docs.0xzero.org/overview/whitepaper"
                     class="negative text-sm"><Scramble content="Read whitepaper" /></a>
             </div>
         </div>

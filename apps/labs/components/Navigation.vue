@@ -4,7 +4,7 @@
             class="fixed z-[100] w-screen h-screen top-0 left-0 bg-[#00000080] backdrop-blur cursor-default"></span>
     </Transition>
     <div class="w-full py-4 flex justify-start items-center fixed top-0 z-[999]">
-        <div class="z-[999] flex flex-wrap gap-2 justify-start items-center text-white"
+        <div class="z-[999] flex flex-wrap gap-2 justify-start items-center text-white max-w-[calc(100%-10px)]"
             ref="menuContent">
             <router-link to="/" class="h-[40px] border-[0.5px] border-[#fff] btn">
                 <img src="@/assets/logo.svg" class="w-fit h-4">
