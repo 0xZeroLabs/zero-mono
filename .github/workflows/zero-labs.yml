@@ -16,12 +16,12 @@ jobs:
             - name: build
               run: |
                 docker build . -t lordewan/0xzero-landing:latest
-              working-directory: ./apps/labs
+              working-directory: ./apps/labs/website
             - name: publish
               run: |
                 docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
                 docker push lordewan/0xzero-landing:latest
-              working-directory: ./apps/labs
+              working-directory: ./apps/labs/website
             - name: Install and configure the Koyeb CLI
               uses: koyeb-community/install-koyeb-cli@v2
               with:
