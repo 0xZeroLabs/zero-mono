@@ -16,3 +16,6 @@
 [submodule "apps/protocol/contracts/lib/forge-std"]
 	path = apps/protocol/contracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "apps/docs"]
+	path = apps/docs
+	url = https://github.com/0xZeroLabs/zero-docs.git
