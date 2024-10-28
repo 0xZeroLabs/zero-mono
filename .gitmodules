@@ -13,3 +13,9 @@
 [submodule "apps/services/storage-layer/contracts/lib/openzeppelin-contracts"]
 	path = apps/services/storage-layer/contracts/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "apps/protocol/contracts/lib/forge-std"]
+	path = apps/protocol/contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "apps/docs"]
+	path = apps/docs
+	url = https://github.com/0xZeroLabs/zero-docs.git
