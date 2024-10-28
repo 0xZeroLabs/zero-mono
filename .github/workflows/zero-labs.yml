@@ -1,4 +1,4 @@
-name: Publish ZERO Labs Landing Page to DockerHub and Koyeb
+name: Deploy ZERO Labs Website
 
 on:
   push:

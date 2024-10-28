@@ -1,4 +1,4 @@
-name: Publish Package to npmjs
+name: Publish SDK to npmjs
 on:
   release:
     types: [published]
