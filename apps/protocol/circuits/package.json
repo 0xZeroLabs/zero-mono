@@ -1,0 +1,21 @@
+{
+  "name": "proofs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-util": "^7.1.5",
+    "ethers": "^6.13.4",
+    "sindri": "0.0.1-alpha.61"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.1"
+  }
+}
