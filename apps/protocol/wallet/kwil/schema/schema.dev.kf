@@ -1,0 +1,79 @@
+database zero_protocol;
+
+/*
+use zero {
+    registry_address: '',
+    chain: 'morph_holesky'
+} as zero_testnet;
+*/
+
+table human {
+    id text primary key minlen(40) maxlen(42),
+    verified bool notnull
+}
+
+table credential {
+    id text primary key unique,
+    foreign key (human_id) references human(id) on delete set_null,
+    human_id text notnull,
+    type text notnull,
+    // data is encrypted
+    data blob notnull,
+    issuance_date int notnull,
+    expiry_date int,
+    withdrawn int
+}
+
+//// setup create, delete, and update
+
+procedure create_human () public {
+    INSERT INTO human (id, verified)
+    VALUES (@caller, false);
+}
+
+procedure update_human ($verified bool) public {
+    UPDATE human
+    SET verified=$verified
+    WHERE id=@caller;
+}
+
+procedure get_human ($id text) public view returns table(id text, verified bool) {
+    return SELECT id, verified
+    FROM human
+    WHERE id=$id;
+}
+
+
+procedure create_credential ($id text, $type text, $data blob, $expiry_date int) public {
+    INSERT INTO credential (id, human_id, type, data, issuance_date, expiry_date)
+    VALUES ($id, 
+    (
+        SELECT @caller
+        FROM human
+    ), $type, $data, @block_timestamp, $expiry_date);
+}
+
+procedure update_credential ($id text, $data blob) public {
+    UPDATE credential
+    SET id=$id, data=$data
+    WHERE human_id=@caller;
+}
+
+
+procedure withdraw_credential () public {
+    UPDATE credential
+    SET withdrawn=@block_timestamp
+    WHERE human_id=@caller;
+}
+
+procedure get_credential ($id text) public view returns table(id text, human_id text, type text, data blob, issuance_date int, expiry_date int, withdrawn int) {
+    return SELECT id, human_id, type, data, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE id=$id;
+}
+
+procedure get_credentials ($human_id text) public view returns table(id text, human_id text, type text, data blob, issuance_date int, expiry_date int, withdrawn int) {
+    return SELECT id, human_id, type, data, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE human_id=$human_id;
+}
