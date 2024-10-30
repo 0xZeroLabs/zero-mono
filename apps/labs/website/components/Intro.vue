@@ -1,11 +1,13 @@
 <template>
     <div class="text-sm relative h-auto">
-        <div class="bg-[#e8e8e8] min-h-[260px]lg:min-h-[320px] rounded-3xl p-5 text-black w-full">
+        <spline-viewer url="https://prod.spline.design/wqcsCJFeJl94DdiB/scene.splinecode"
+            class="absolute min-h-[260px] lg:h-[320px] hidden"></spline-viewer>
+        <div class="bg-[#e8e8e8] min-h-[260px]lg:min-h-[320px] rounded-3xl p-5 text-black w-full relative">
             <h3 class="font-bold negative">
                 Foundry of innovation
             </h3>
             <p class="negative font-normal mt-2 text-left z-10 relative">
-                We're a startup studio committed to solving the intricate challenges that hinder self-sovereignty. Our
+                We're a startup committed to solving the intricate challenges that hinder self-sovereignty. Our
                 goal is to simplify the process of empowering individuals with control over their data, thereby
                 safeguarding their privacy. Founded in Nigeria, we're dedicated to tackling global challenges and are
                 collaborating with diverse teams internationally to achieve the collective goal of empowering digital

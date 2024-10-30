@@ -34,7 +34,7 @@ defineExpose({
     <div class="py-2">
         <h2>
             <button :id="`accordion-title-${id}`"
-                class="flex items-center justify-between text-xl w-full md:text-2xl cursor-pointer py-2"
+                class="flex items-center justify-between text-xl w-full md:text-2xl py-2"
                 @click.prevent="toggleAccordion(id)" :aria-expanded="accordionOpen"
                 :aria-controls="`accordion-text-${id}`">
                 <span>{{ title }}</span>
