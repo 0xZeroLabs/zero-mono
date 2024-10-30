@@ -9,7 +9,6 @@
 [![Deploy ZERO Labs Website](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml)
 [![Publish SDK to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml)
 [![License](https://img.shields.io/github/license/0xZeroLabs/zero-mono?style)](https://github.com/0xZeroLabs/zero-mono/blob/master/LICENSE)
-
 Welcome to the base of all of our code. Feel free to look around.
 
 ## What's inside?
