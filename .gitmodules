@@ -7,3 +7,6 @@
 [submodule "apps/protocol/services/tlsn"]
 	path = apps/protocol/services/tlsn
 	url = https://github.com/0xZeroLabs/tlsn.git
+[submodule "apps/protocol/services/s3n"]
+	path = apps/protocol/services/s3n
+	url = https://github.com/0xZeroLabs/s3n.git
