@@ -17,7 +17,6 @@ A Turborepo which includes the following packages/apps:
 
 ### Apps and Packages
 
-- `@0xzerolabs/labs`: a [Nuxt.js](https://nuxt.com/) app, the landing page
 - `@0xzerolabs/ui`: a stub Vue component library shared by both the applications
 - `@0xzerolabs/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 
