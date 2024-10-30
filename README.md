@@ -6,10 +6,9 @@
 
 [![Documentation](https://img.shields.io/badge/docs-%F0%9F%93%84-blue)](https://docs.0xzero.org)
 [![NPM Package](https://img.shields.io/npm/v/@0xzerolabs/sdk.svg)](https://www.npmjs.org/package/@0xzerolabs/sdk)
-[![Publish ZERO Labs Landing Page to DockerHub and Koyeb](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml)
-[![publish package to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/publish-package-to-npmjs.yml)
+[![Deploy ZERO Labs Website](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml)
+[![Publish SDK to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml)
 [![License](https://img.shields.io/github/license/0xZeroLabs/zero-mono?style)](https://github.com/0xZeroLabs/zero-mono/blob/master/LICENSE)
-
 Welcome to the base of all of our code. Feel free to look around.
 
 ## What's inside?

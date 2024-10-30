@@ -1,7 +1,7 @@
 <template>
     <Transition name="cover" :duration="300">
         <span v-if="menuOpen"
-            class="fixed z-[100] w-screen h-screen top-0 left-0 bg-[#00000080] backdrop-blur cursor-default"></span>
+            class="fixed z-[100] w-screen h-screen top-0 left-0 bg-[#00000080] backdrop-blur"></span>
     </Transition>
     <div class="w-full py-4 flex justify-start items-center fixed top-0 z-[999]">
         <div class="z-[999] flex flex-wrap gap-2 justify-start items-center text-white max-w-[calc(100%-10px)]"

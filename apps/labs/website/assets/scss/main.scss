@@ -251,7 +251,7 @@
     transition: transform 0.3s ease-in-out;
     animation: slideIn 16s infinite linear;
   }
-  
+
   .partners:hover {
     .partners-track {
       animation-play-state: paused;
@@ -295,6 +295,9 @@
     animation: in1 linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+  }
+  #logo {
+    display: hidden !important;
   }
 
   ::-moz-selection {
