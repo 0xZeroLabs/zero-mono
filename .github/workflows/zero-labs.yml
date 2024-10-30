@@ -3,29 +3,32 @@ name: Deploy ZERO Labs Website
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches:
-    - main
+    paths:
+      - 'apps/labs/website/**'
 
 jobs:
-    publish_landing:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v3
-            - name: build
-              run: |
-                docker build . -t lordewan/0xzero-landing:latest
-              working-directory: ./apps/labs/website
-            - name: publish
-              run: |
-                docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
-                docker push lordewan/0xzero-landing:latest
-              working-directory: ./apps/labs/website
-            - name: Install and configure the Koyeb CLI
-              uses: koyeb-community/install-koyeb-cli@v2
-              with:
-                api_token: "${{ secrets.KOYEB_TOKEN }}"
-                github_token: "${{ secrets.GITHUB_TOKEN }}"
-            - name: Deploy to Koyeb
-              run: koyeb service redeploy mid-dorey/landing
+  publish_landing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: build
+        run: |
+          docker build . -t lordewan/0xzero-landing:latest
+        working-directory: ./apps/labs/website
+
+      - name: publish
+        run: |
+          docker login -u lordewan -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker push lordewan/0xzero-landing:latest
+        working-directory: ./apps/labs/website
+
+      - name: Install and configure the Koyeb CLI
+        uses: koyeb-community/install-koyeb-cli@v2
+        with:
+          api_token: "${{ secrets.KOYEB_TOKEN }}"
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Deploy to Koyeb
+        run: koyeb service redeploy mid-dorey/landing
