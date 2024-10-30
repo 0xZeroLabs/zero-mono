@@ -7,6 +7,7 @@
 [![Documentation](https://img.shields.io/badge/docs-%F0%9F%93%84-blue)](https://docs.0xzero.org)
 [![NPM Package](https://img.shields.io/npm/v/@0xzerolabs/sdk.svg)](https://www.npmjs.org/package/@0xzerolabs/sdk)
 [![License](https://img.shields.io/github/license/0xZeroLabs/zero-mono?style)](https://github.com/0xZeroLabs/zero-mono/blob/master/LICENSE)
+
 Welcome to the base of all of our code. Feel free to look around.
 
 ## What's inside?
