@@ -8,7 +8,7 @@
 <p align="center">
    <a href="https://github.com/0xZeroLabs/zero-mono/network/members"><img src="https://img.shields.io/github/forks/0xZeroLabs/zero-mono?style=social"></a>
    <img src="https://img.shields.io/github/stars/0xZeroLabs/zero-mono?style=social">
-   <a href="https://x.com/0xZeroOrg"><img src="https://img.shields.io/twitter/follow/0xZeroLabs.svg?style=social"></a>
+   <a href="https://x.com/0xZeroProtocol"><img src="https://img.shields.io/twitter/follow/0xZeroProtocol.svg?style=social"></a>
    <br>
    <img src="https://img.shields.io/github/languages/count/0xZeroLabs/zero-mono">
    <a href="https://github.com/0xZeroLabs/zero-mono/issues"><img src="https://img.shields.io/github/issues/0xZeroLabs/zero-mono"></a>
