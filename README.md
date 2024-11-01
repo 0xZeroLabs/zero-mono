@@ -15,8 +15,7 @@
    <a href="https://github.com/0xZeroLabs/zero-mono/pulls"><img src="https://img.shields.io/github/issues-pr-raw/0xZeroLabs/zero-mono"></a>
    <a href="https://github.com/0xZeroLabs/zero-mono/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/0xZeroLabs/zero-mono"></a>
    <img src="https://img.shields.io/github/languages/code-size/0xZeroLabs/zero-mono">
-</p>
-<p align="center">
+<br>
   <a href="https://docs.0xzero.org"><img src="https://img.shields.io/badge/docs-%F0%9F%93%84-blue"></a>
   <a href="https://github.com/0xZeroLabs/zero-mono/blob/master/LICENSE"><img src="https://img.shields.io/github/license/0xZeroLabs/zero-mono?style"></a>
 <a href="https://www.npmjs.org/package/@0xzerolabs/sdk"><img src="https://img.shields.io/npm/v/@0xzerolabs/sdk.svg"></a>
