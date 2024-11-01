@@ -2,19 +2,19 @@
     <div class="initiatives gap-2 text-sm">
         <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
             <h3 class="font-bold negative">
-                ZERO Protocol
+                S3N
             </h3>
             <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
-                ZERO is the identity layer for the new web. It empowers users to prove information from verifiable
-                credentials through ZKPs(zero-knowledge proofs), as well as privately-held dynamic data via Web proofs
-                (zkTLS). It enables a frictionless web3 experience for users as well as easy, seamless, compliant user
-                data verification for developers.
+                S3N is the identity layer for the new web. It is a decentralised self-sovereign identity solution that
+                enables permissionless issuance, verifiable provenance, and trustless verification of credentials. It
+                integrates a trusted notaries AVS (Core) on
+                <Scramble to="https://eigenlayer.xyz" content="EigenLayer" /> through the
+                <Scramble href="https://othentic.xyz" content="Othentic Stack" />, as a secure replacement for signing
+                credentials, thereby enabling an open ecosystem for secure identity.
             </p>
             <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
-                <ScrambleBtn content="Learn more" type="inverse-alt" />
-                <a href="https://docs.0xzero.org/" class="negative text-sm">
-                    <Scramble content="Documentation" />
-                </a>
+                <ScrambleBtn to="https://s3n.xyz/" content="Learn more" type="inverse-alt" />
+                <Scramble to="https://docs.0xzero.org/" content="Documentation" />
             </div>
         </div>
 
@@ -23,16 +23,14 @@
                 OMID Wallet
             </h3>
             <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
-                OMID (omni-identity) wallet is an application that enables users interact with the ZERO Protocol. It
+                OMID (omni-identity) wallet is an application that enables users interact with the S3N Core. It
                 gives them the ability to grant access to their provable (verifiable/dynamic) data, as well as permision
                 the issuance of credentials. It serves as a way to provide users self-custody to their identities and
                 let's them make the trust assumption for their data.
             </p>
             <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
                 <ScrambleBtn content="Learn more" type="inverse-alt" />
-                <a href="https://docs.0xzero.org/" class="negative text-sm">
-                    <Scramble content="Install app" />
-                </a>
+                <Scramble to="https://docs.0xzero.org/" content="Install app" />
             </div>
         </div>
     </div>
