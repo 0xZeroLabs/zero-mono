@@ -158,7 +158,7 @@ const OptionsIndex = () => {
             </div>
           ) : (
             <div className="space-y-2">
-              <Label htmlFor="importValue">Seed Phrase or Private Key</Label>
+              <Label>Seed Phrase or Private Key</Label>
               <Textarea
                 id="importValue"
                 placeholder="Enter your 12 or 24 word seed phrase, or your private key"

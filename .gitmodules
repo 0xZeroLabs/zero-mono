@@ -1,12 +1,9 @@
-[submodule "apps/protocol/contracts/lib/forge-std"]
+[submodule "apps/s3n/contracts/lib/forge-std"]
 	path = apps/protocol/contracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
 [submodule "apps/docs"]
 	path = apps/docs
 	url = https://github.com/0xZeroLabs/zero-docs.git
-[submodule "apps/protocol/services/tlsn"]
-	path = apps/protocol/services/tlsn
-	url = https://github.com/0xZeroLabs/tlsn.git
-[submodule "apps/protocol/services/s3n"]
-	path = apps/protocol/services/s3n
+[submodule "apps/s3n/core"]
+	path = apps/s3n/core
 	url = https://github.com/0xZeroLabs/s3n.git

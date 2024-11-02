@@ -1,6 +1,6 @@
 <template>
   <div v-if="props.to">
-    <router-link :to="to" v-if="props.type === 'regular'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn"
+    <a :href="to" v-if="props.type === 'regular'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn"
       @mouseenter="startScramble" @mouseleave="stopScramble">
       <div class="w-full h-full flex justify-center items-center">
         <div>
@@ -9,9 +9,9 @@
           </span>
         </div>
       </div>
-    </router-link>
+    </a>
 
-    <router-link :to="to" v-else-if="props.type === 'form'"
+    <a :href="to" v-else-if="props.type === 'form'"
       class="w-full h-[40px] border-[0.5px] border-[#fff] text-white mt-6 btn" @mouseenter="startScramble"
       @mouseleave="stopScramble">
       <div class="w-full h-full flex justify-center items-center">
@@ -21,9 +21,9 @@
           </span>
         </div>
       </div>
-    </router-link>
+    </a>
 
-    <router-link :to="to" v-if="props.type === 'alt'"
+    <a :href="to" v-if="props.type === 'alt'"
       class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#fff] btn" @mouseenter="startScramble"
       @mouseleave="stopScramble">
       <div class="w-full h-full flex justify-center items-center">
@@ -33,9 +33,9 @@
           </span>
         </div>
       </div>
-    </router-link>
+    </a>
 
-    <router-link :to="to" v-if="props.type === 'inverse'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn2"
+    <a :href="to" v-if="props.type === 'inverse'" class="nav-button h-[40px] border-[0.5px] border-[#fff] btn2"
       @mouseenter="startScramble" @mouseleave="stopScramble">
       <div class="w-full h-full flex justify-center items-center">
         <div>
@@ -44,9 +44,9 @@
           </span>
         </div>
       </div>
-    </router-link>
+    </a>
 
-    <router-link :to="to" v-if="props.type === 'inverse-alt'"
+    <a :href="to" v-if="props.type === 'inverse-alt'"
       class="nav-button w-[160px] h-[40px] border-[0.5px] border-[#000] btn2" @mouseenter="startScramble"
       @mouseleave="stopScramble">
       <div class="w-full h-full flex justify-center items-center">
@@ -56,7 +56,7 @@
           </span>
         </div>
       </div>
-    </router-link>
+    </a>
   </div>
 
   <div v-else @click="changeState">
@@ -184,7 +184,7 @@ const changeState = () => {
 
 <style scoped>
 a {
-  @apply no-underline;
+  @apply no-underline cursor-crosshair;
 }
 
 .scramble-text span {

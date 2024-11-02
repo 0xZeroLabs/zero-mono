@@ -8,21 +8,21 @@
                 Developers
             </h5>
             <ul class="ml-5">
-                <li class=""><a href="https://github.com/0xZeroLabs">
-                        <Scramble content="Github" />
-                    </a></li>
-                <li class=""><a href="https://docs.0xzero.org/">
-                        <Scramble content="Docs" />
-                    </a></li>
-                <li class=""><a href="https://docsend.com/view/2fbpws5p2vsjnqqj">
-                        <Scramble content="Whitepaper" />
-                    </a></li>
-                <li class=""><a href="/">
-                        <Scramble content="Forum" />
-                    </a></li>
-                <li class=""><a href="/">
-                        <Scramble content="Research" />
-                    </a></li>
+                <li class="">
+                    <Scramble to="https://github.com/0xZeroLabs" content="Github" />
+                </li>
+                <li class="">
+                    <Scramble to="https://docs.0xzero.org/" content="Docs" />
+                </li>
+                <li class="">
+                    <Scramble to="https://docsend.com/view/2fbpws5p2vsjnqqj" content="Whitepaper" />
+                </li>
+                <li class="">
+                    <Scramble to="/" content="Forum" />
+                </li>
+                <li class="">
+                    <Scramble to="/" content="Research" />
+                </li>
             </ul>
         </div>
         <div class="bg-[#e8e8e8] rounded-3xl p-5 text-black w-full column-ends">
@@ -30,21 +30,21 @@
                 Connect
             </h5>
             <ul class="ml-5">
-                <li class=""><a href="https://x.com/0xZeroOrg">
-                        <Scramble content="X (Twitter)" />
-                    </a></li>
-                <li class=""><a href="https://discord.gg/bqscx4Mg5j">
-                        <Scramble content="Discord" />
-                    </a></li>
-                <li class=""><a href="https://t.me/zeroproto">
-                        <Scramble content="Telegram" />
-                    </a></li>
-                <li class=""><a href="https://www.linkedin.com/company/0xzero">
-                        <Scramble content="LinkedIn" />
-                    </a></li>
-                <li class=""><a href="https://youtube.com/@0xZeroOrg">
-                        <Scramble content="YouTube" />
-                    </a></li>
+                <li class="">
+                    <Scramble to="https://x.com/0xZeroOrg" content="X (Twitter)" />
+                </li>
+                <li class="">
+                    <Scramble to="https://discord.gg/bqscx4Mg5j" content="Discord" />
+                </li>
+                <li class="">
+                    <Scramble to="https://t.me/zeroproto" content="Telegram" />
+                </li>
+                <li class="">
+                    <Scramble to="https://www.linkedin.com/company/0xzero" content="LinkedIn" />
+                </li>
+                <li class="">
+                    <Scramble to="https://youtube.com/@0xZeroOrg" content="YouTube" />
+                </li>
             </ul>
         </div>
         <div class="bg-[#e8e8e8] rounded-3xl p-5 text-black w-full column-ends">
@@ -52,18 +52,18 @@
                 Company
             </h5>
             <ul class="ml-5">
-                <li class=""><a href="/about">
-                        <Scramble content="About Us" />
-                    </a></li>
-                <li class=""><a href="https://paragraph.xyz/@0xzero">
-                        <Scramble content="Blog" />
-                    </a></li>
-                <li class=""><a href="/contact">
-                        <Scramble content="Contact" />
-                    </a></li>
-                <li class=""><a href="https://docs.0xzero.org/community/press-kit">
-                        <Scramble content="Press Kit" />
-                    </a></li>
+                <li class="">
+                    <Scramble to="/about" content="About Us" />
+                </li>
+                <li class="">
+                    <Scramble to="https://paragraph.xyz/@0xzero" content="Blog" />
+                </li>
+                <li class="">
+                    <Scramble to="/contact" content="Contact" />
+                </li>
+                <li class="">
+                    <Scramble to="https://docs.0xzero.org/community/press-kit" content="Press Kit" />
+                </li>
             </ul>
             <h5 class="font-bold negative mt-4">ZERO Labs © 2024</h5>
         </div>

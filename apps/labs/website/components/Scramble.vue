@@ -1,7 +1,12 @@
 <template>
-    <span class="negative"v-for="(char, index) in displayText" :key="index" @mouseenter="startScramble" @mouseleave="stopScramble">
-      {{ char }}
-    </span>
+    <a :href="to" target="_blank" v-if="props.type === 'regular'" class="scramble-text" @mouseenter="startScramble"
+      @mouseleave="stopScramble">
+      <div>
+        <span class="negative" v-for="(char, index) in displayText" :key="index">
+          {{ char }}
+        </span>
+      </div>
+    </a>
 </template>
 
 <script lang="ts" setup>
@@ -10,6 +15,15 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  to: {
+    type: String,
+    required: false,
+  },
+  type: {
+    type: String,
+    required: false,
+    default: 'regular',
+  }
 });
 
 const displayText = ref(props.content.split(''));
@@ -53,10 +67,15 @@ const stopScramble = () => {
   }
   displayText.value = props.content.split('');
 };
+
+const changeState = () => {
+  stopScramble();
+  displayText.value = props.content.split('');
+}
 </script>
 
 <style scoped>
-.scramble-text span {
+.scramble-text {
   display: inline-block;
   transition: all 0.1s ease-in-out;
 }

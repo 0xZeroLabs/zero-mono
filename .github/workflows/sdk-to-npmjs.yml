@@ -16,9 +16,9 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
       - run: npm i
-        working-directory: ./apps/protocol/sdk
+        working-directory: ./apps/omid/s3n/sdk
       - run: npm publish --access public
-        working-directory: ./apps/protocol/sdk
+        working-directory: ./apps/omid/s3n/sdk
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
