@@ -1,5 +1,5 @@
-[submodule "apps/s3n/contracts/lib/forge-std"]
-	path = apps/protocol/contracts/lib/forge-std
+[submodule "apps/s3n/omid/contracts/lib/forge-std"]
+	path = apps/s3n/omid/contracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
 [submodule "apps/docs"]
 	path = apps/docs
