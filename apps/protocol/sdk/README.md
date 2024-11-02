@@ -5,6 +5,7 @@
 # OMID SDK
 
 ![ES Version](https://img.shields.io/badge/ES-2020-yellow)
+[![Publish SDK to npmjs](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/sdk-to-npmjs.yml)
 
 The OMID SDK is the utility package for the [OMID Wallet](https://protocol.0xzero.org/omid).
 

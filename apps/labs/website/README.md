@@ -1,4 +1,6 @@
-# Nuxt 3 Minimal Starter
+# ZERO Labs Website
+
+[![Deploy ZERO Labs Website](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml/badge.svg)](https://github.com/0xZeroLabs/zero-mono/actions/workflows/zero-labs.yml)
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
