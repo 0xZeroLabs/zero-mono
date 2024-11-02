@@ -7,9 +7,7 @@
             <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
                 S3N is the identity layer for the new web. It is a decentralised self-sovereign identity solution that
                 enables permissionless issuance, verifiable provenance, and trustless verification of credentials. It
-                integrates a trusted notaries AVS (Core) on
-                <Scramble to="https://eigenlayer.xyz" content="EigenLayer" /> through the
-                <Scramble href="https://othentic.xyz" content="Othentic Stack" />, as a secure replacement for signing
+                integrates a trusted notaries AVS (Core) on  <a href="https://eigenlayer.xyz" class="negative underline">EigenLayer</a> through the <a href="https://othentic.xyz" class="negative underline">Othentic Stack</a>, as a secure replacement for signing
                 credentials, thereby enabling an open ecosystem for secure identity.
             </p>
             <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
