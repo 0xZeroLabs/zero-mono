@@ -22,7 +22,7 @@
             <Transition name="menu" :duration="250">
                 <div v-if="menuOpen" class="contents gap-2">
                     <ScrambleBtn class="nav-button" content="Solutions" to="/solutions" />
-                    <ScrambleBtn class="nav-button" content="Developers" to="/developers" />
+                    <ScrambleBtn class="nav-button" content="Developers" to="https://s3n.xyz" />
                     <ScrambleBtn class="nav-button" content="Company" to="/company" />
                     <ScrambleBtn class="nav-button" content="Join Waitlist" type="alt" @click="toggleWaitlistState" />
                 </div>
