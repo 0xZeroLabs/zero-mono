@@ -13,6 +13,9 @@
                 collaborating with diverse teams internationally to achieve the collective goal of empowering digital
                 freedom.
             </p>
+            <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
+                <ScrambleBtn to="/company" content="Meet the team" type="inverse-alt" />
+            </div>
         </div>
     </div>
 </template>
