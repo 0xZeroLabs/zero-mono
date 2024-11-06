@@ -4,6 +4,3 @@
 [submodule "apps/docs"]
 	path = apps/docs
 	url = https://github.com/0xZeroLabs/zero-docs.git
-[submodule "apps/s3n/core"]
-	path = apps/s3n/core
-	url = https://github.com/0xZeroLabs/s3n.git
