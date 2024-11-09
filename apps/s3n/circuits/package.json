@@ -5,14 +5,12 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "tsx index.ts"
+    "test": "tsx ./tests/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethereumjs-util": "^7.1.5",
-    "ethers": "^6.13.4",
     "sindri": "0.0.1-alpha.61"
   },
   "devDependencies": {
