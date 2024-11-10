@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <img src="./apps/protocol/sdk/assets/logo.png" width="300" alt="0xzero.org" />
+  <img src="https://github.com/0xZeroLabs/.github/blob/c436347ed57935dbfd260b1790c15b1e1a7f36e0/assets/logo-banner.png" width="300" alt="0xzero.org" />
 </p>
 
 <br>
