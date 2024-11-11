@@ -14,12 +14,13 @@ table human {
 } // user identity core. uses evm wallet address as did
 
 table credential {
-    id text primary key unique, // credential merkle hash
+    id text primary key unique, // unique credential identifier
     foreign key (human_id) references human(id) on delete set_null,
     human_id text notnull,
-    cred_type text notnull,
+    cred_type text[] notnull,
     cred_level text,
-    content blob notnull, // encrypted credential fields
+    cred_status text,
+    content blob notnull, // encrypted credential fields. contains issuer details for privacy
     proof blob notnull, // notarisation proof for credential fields
     issuance_date int notnull,
     expiry_date int,
