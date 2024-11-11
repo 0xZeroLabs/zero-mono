@@ -20,8 +20,9 @@ table credential {
     cred_type text[] notnull,
     cred_level text,
     cred_status text,
-    content blob notnull, // encrypted credential fields. contains issuer details for privacy
+    content blob notnull, // encrypted credential fields. contains issuance details for privacy
     proof blob notnull, // notarisation proof for credential fields
+    issuer text notnull,
     issuance_date int notnull,
     expiry_date int,
     withdrawn int // render credential invalid. this is different from deleting
