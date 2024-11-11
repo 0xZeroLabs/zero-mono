@@ -1,0 +1,86 @@
+database s3n_did;
+
+/*
+use s3n {
+    registry_address: '',
+    chain: 'holesky'
+} as s3n_testnet;
+*/
+
+table human {
+    id text primary key minlen(40) maxlen(42), // evm wallet address
+    foreign key (human_attribute_id) references human_attribute(id) on delete set_null,
+    human_attribute_id uuid notnull
+} // user identity core. uses evm wallet address as did
+
+table credential {
+    id text primary key unique, // unique credential identifier
+    foreign key (human_id) references human(id) on delete set_null,
+    human_id text notnull,
+    cred_type text[] notnull,
+    cred_level text,
+    cred_status text,
+    content blob notnull, // encrypted credential fields. contains issuance details for privacy
+    proof blob notnull, // notarisation proof for credential fields
+    issuer text notnull,
+    issuance_date int notnull,
+    expiry_date int,
+    withdrawn int // render credential invalid. this is different from deleting
+} // verifiable credential. based on W3C standard. uses notarisation proof for provenance
+
+table human_attribute {
+    id uuid primary key,
+    foreign key (human_id) references human(id) on delete set_null,
+    human_id text notnull,
+    verified bool notnull,
+    score uint256 notnull // user trust score. attributed based on collusion/malicious attempts
+} // enforced by protocol. has no effect. only stands users out (for ecosystem saety)
+
+
+/*
+procedure create_human () public {
+    INSERT INTO human (id)
+    VALUES (@caller);
+}
+
+procedure get_human ($id text) public view returns table(id text) {
+    return SELECT id
+    FROM human
+    WHERE id=$id;
+}
+
+
+procedure create_credential ($id text, $cred_type text, $content blob, $expiry_date int) public {
+    INSERT INTO credential (id, human_id, cred_type, content, issuance_date, expiry_date)
+    VALUES ($id, 
+    (
+        SELECT @caller
+        FROM human
+    ), $cred_type, $content, @block_timestamp, $expiry_date);
+}
+
+procedure update_credential ($id text, $content blob) public {
+    UPDATE credential
+    SET id=$id, content=$content
+    WHERE human_id=@caller;
+}
+
+
+procedure withdraw_credential () public {
+    UPDATE credential
+    SET withdrawn=@block_timestamp
+    WHERE human_id=@caller;
+}
+
+procedure get_credential ($id text) public view returns table(id text, human_id text, cred_type text, content blob, issuance_date int, expiry_date int, withdrawn int) {
+    return SELECT id, human_id, cred_type, content, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE id=$id;
+}
+
+procedure get_credentials ($human_id text) public view returns table(id text, human_id text, cred_type text, content blob, issuance_date int, expiry_date int, withdrawn int) {
+    return SELECT id, human_id, cred_type, content, issuance_date, expiry_date, withdrawn
+    FROM credential
+    WHERE human_id=$human_id;
+}
+*/
