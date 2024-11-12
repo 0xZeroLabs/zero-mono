@@ -5,30 +5,63 @@
                 Ewan
             </h3>
             <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
-                S3N is the identity layer for the new web. It is a decentralised self-sovereign identity solution that
-                enables permissionless issuance, verifiable provenance, and trustless verification of credentials. It
-                integrates a trusted notaries AVS (Core) on  <a href="https://eigenlayer.xyz" class="negative underline">EigenLayer</a> through the <a href="https://othentic.xyz" class="negative underline">Othentic Stack</a>, as a secure replacement for signing
-                credentials, thereby enabling an open ecosystem for secure identity.
+                Technically focused with a passion for maths and cryptography.
             </p>
             <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
-                <ScrambleBtn to="https://s3n.xyz/" content="Learn more" type="inverse-alt" />
-                <Scramble to="https://docs.0xzero.org/" content="Documentation" />
+
+
             </div>
         </div>
 
         <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
             <h3 class="font-bold negative">
-                OMID Wallet
+                Tobi
             </h3>
             <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
-                OMID (omni-identity) wallet is an application that enables users interact with the S3N Core. It
-                gives them the ability to grant access to their provable (verifiable/dynamic) data, as well as permision
-                the issuance of credentials. It serves as a way to provide users self-custody to their identities and
-                let's them make the trust assumption for their data.
+                Serial founder and leader of some great software developer communities.
             </p>
             <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
-                <ScrambleBtn content="Learn more" type="inverse-alt" />
-                <Scramble to="https://docs.0xzero.org/" content="Install app" />
+
+
+            </div>
+        </div>
+
+        <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
+            <h3 class="font-bold negative">
+                Dave
+            </h3>
+            <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
+                Professional engineer who mastered content and growth.
+            </p>
+            <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
+
+
+            </div>
+        </div>
+
+        <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
+            <h3 class="font-bold negative">
+                Adriel
+            </h3>
+            <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
+                Eloquent in the arts, embodies creativity.
+            </p>
+            <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
+
+
+            </div>
+        </div>
+
+        <div class="bg-[#fff] rounded-3xl p-5 text-black w-full column-ends">
+            <h3 class="font-bold negative">
+                Alake
+            </h3>
+            <p class="negative font-normal text-[14px] md:text-[16px] mt-2 text-left z-10 relative">
+                Math-pilled, cryptography and rust lover. Alake builds systems that scale.
+            </p>
+            <div class="gap-2 flex justify-start items-center z-10 mt-6 relative">
+
+
             </div>
         </div>
     </div>
