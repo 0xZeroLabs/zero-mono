@@ -8,7 +8,7 @@
     <h3 class="text-white font-normal text-[19px] md:text-[24px] text-center my-2 z-10 relative">
       Meet the team
     </h3>
-    <Values />
+    <Team />
   </div>
 </template>
 
