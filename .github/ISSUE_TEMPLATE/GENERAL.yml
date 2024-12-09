@@ -27,7 +27,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: software
     attributes:
       label: Version
       description: What software are you having issues with?
