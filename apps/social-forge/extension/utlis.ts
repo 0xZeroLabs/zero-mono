@@ -4,14 +4,17 @@ export function importWallet(
   importType: "seedPhrase" | "privateKey",
   importValue: string
 ): ethers.HDNodeWallet | ethers.Wallet {
-    if (importType === "seedPhrase") {
-      return ethers.Wallet.fromPhrase(importValue)
-    } else {
-      return new ethers.Wallet(importValue)
-    }
+  if (importType === "seedPhrase") {
+    return ethers.Wallet.fromPhrase(importValue)
+  } else {
+    return new ethers.Wallet(importValue)
+  }
 }
 
-export async function encryptWallet(wallet: ethers.HDNodeWallet | ethers.Wallet, pin: string): Promise<string> {
+export async function encryptWallet(
+  wallet: ethers.HDNodeWallet | ethers.Wallet,
+  pin: string
+): Promise<string> {
   try {
     return await wallet.encrypt(pin)
   } catch (error) {
@@ -19,7 +22,10 @@ export async function encryptWallet(wallet: ethers.HDNodeWallet | ethers.Wallet,
   }
 }
 
-export async function decryptWallet(encryptedWallet: string, pin: string): Promise<ethers.HDNodeWallet | ethers.Wallet> {
+export async function decryptWallet(
+  encryptedWallet: string,
+  pin: string
+): Promise<ethers.HDNodeWallet | ethers.Wallet> {
   try {
     return await ethers.Wallet.fromEncryptedJson(encryptedWallet, pin)
   } catch (error) {
