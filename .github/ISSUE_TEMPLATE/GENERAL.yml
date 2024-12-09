@@ -29,7 +29,7 @@ body:
   - type: dropdown
     id: software
     attributes:
-      label: Version
+      label: Software
       description: What software are you having issues with?
       options:
         - Website
