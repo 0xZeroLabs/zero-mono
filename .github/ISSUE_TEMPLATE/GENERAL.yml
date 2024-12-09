@@ -3,8 +3,7 @@ description: File a bug report.
 title: "[Bug/Issue]: "
 labels: ["bug", "triage"]
 projects: ["0xZeroOrg/1"]
-assignees:
-  - ["hey-ewan", "defiboyszn"]
+assignees: ["hey-ewan", "defiboyszn"]
 body:
   - type: markdown
     attributes:
