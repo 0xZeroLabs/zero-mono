@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "plasmo dev --target=firefox-mv2",
     "build": "plasmo build --target=firefox-mv2 --no-minify && plasmo build --target=chrome-mv3 --no-minify",
-    "package": "plasmo package --target=firefox-mv2 && plasmo package --target=chrome-mv3"
+    "package": "plasmo package --target=firefox-mv2 && plasmo package --target=chrome-mv3",
+    "format": "prettier --write \"**/*.{ts,tsx,json}\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

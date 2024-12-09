@@ -1,10 +1,10 @@
 import {
   AvatarIcon,
+  BadgeIcon,
   ComponentBooleanIcon,
   EnterFullScreenIcon,
   LockClosedIcon,
-  UpdateIcon,
-  BadgeIcon
+  UpdateIcon
 } from "@radix-ui/react-icons"
 import React, { useEffect, useState } from "react"
 
