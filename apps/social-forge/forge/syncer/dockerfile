@@ -1,0 +1,17 @@
+FROM node:22.6
+
+RUN npm i -g pnpm
+
+WORKDIR /app
+
+RUN pnpm i -g @othentic/othentic-cli typescript ts-node '@types/node'
+
+ADD ./syncer/index.ts ./
+
+ADD .env ./
+
+ADD ./syncer/package*.json ./
+
+RUN pnpm add
+
+ENTRYPOINT ["node", "index.js" ]
