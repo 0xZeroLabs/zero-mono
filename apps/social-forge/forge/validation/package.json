@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@story-protocol/core-sdk": "1.2.0-rc.3",
+    "tlsn-js": "v0.1.0-alpha.5.3",
     "viem": "^2.21.54"
   }
 }
