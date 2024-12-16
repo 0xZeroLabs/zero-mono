@@ -41,8 +41,8 @@ export type NFTInput = {
   tokenId: string;
   ipMetadata: {
     ipMetadataURI: string;
-    ipMetadataHash: string;
-    nftMetadataHash: string;
+    ipMetadataHash?: string;
+    nftMetadataHash?: string;
     nftMetadataURI: string;
   };
   txOptions?: {

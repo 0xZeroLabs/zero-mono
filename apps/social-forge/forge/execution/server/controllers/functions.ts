@@ -10,8 +10,12 @@ export const registerNFTasIP = async (nftdata: NFTInput): Promise<IPAsset> => {
     // https://docs.story.foundation/docs/ip-asset#adding-nft--ip-metadata-to-ip-asset
     ipMetadata: {
       ipMetadataURI: nftdata.ipMetadata.ipMetadataURI,
-      ipMetadataHash: toHex(nftdata.ipMetadata.ipMetadataHash, { size: 32 }),
-      nftMetadataHash: toHex(nftdata.ipMetadata.nftMetadataHash, { size: 32 }),
+      ipMetadataHash: nftdata.ipMetadata.ipMetadataHash
+        ? toHex(nftdata.ipMetadata.ipMetadataHash, { size: 32 })
+        : undefined,
+      nftMetadataHash: nftdata.ipMetadata.nftMetadataHash
+        ? toHex(nftdata.ipMetadata.nftMetadataHash, { size: 32 })
+        : undefined,
       nftMetadataURI: nftdata.ipMetadata.nftMetadataURI,
     },
     txOptions: { waitForTransaction: true },
