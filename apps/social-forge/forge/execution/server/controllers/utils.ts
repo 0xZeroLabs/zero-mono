@@ -1,6 +1,7 @@
 import { privateKeyToAccount, Address, Account } from "viem/accounts";
 import { StoryClient, StoryConfig } from "@story-protocol/core-sdk";
 import { http } from "viem";
+import { Proof } from "tlsn-js/build/types";
 
 // Add your private key to your .env file.
 const privateKey: Address = `0x${process.env.WALLET_PRIVATE_KEY}`;

@@ -7,10 +7,13 @@
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@types/jsdom": "^21.1.7",
     "nitropack": "latest"
   },
   "dependencies": {
     "@story-protocol/core-sdk": "1.2.0-rc.3",
+    "jsdom": "^25.0.1",
+    "tlsn-js": "v0.1.0-alpha.5.3",
     "viem": "^2.21.54"
   }
 }

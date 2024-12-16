@@ -1,5 +1,7 @@
 import { toHex } from "viem";
 import { client, NFTInput, IPAsset } from "./utils";
+import { Proof } from "tlsn-js/build/types";
+import { verify } from "tlsn-js/src/";
 
 export const registerNFTasIP = async (nftdata: NFTInput): Promise<IPAsset> => {
   const response = await client.ipAsset.register({
@@ -16,4 +18,15 @@ export const registerNFTasIP = async (nftdata: NFTInput): Promise<IPAsset> => {
   });
 
   return { txHash: response.txHash, ipId: response.ipId };
+};
+
+export const verifyProof = async (
+  proof: Proof,
+): Promise<{
+  time: number;
+  sent: string;
+  recv: string;
+  notaryUrl: string;
+}> => {
+  return await verify(proof);
 };
