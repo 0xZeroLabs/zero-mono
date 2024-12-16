@@ -1,3 +1,3 @@
 export default eventHandler((event) => {
-  return "Start by editing <code>server/routes/index.ts</code>.";
+  return `this is a Forge server running. the local time is ${new Date().toLocaleString()}.`;
 });
