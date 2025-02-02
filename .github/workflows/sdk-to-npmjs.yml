@@ -4,14 +4,14 @@ on:
     types: [published]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     permissions:
       contents: read
       id-token: write
     steps:
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v4
+      - uses: useblacksmith/setup-node@v5
         with:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
