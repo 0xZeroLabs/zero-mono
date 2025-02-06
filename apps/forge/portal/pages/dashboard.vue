@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { Check, ChevronsUpDown, GalleryVerticalEnd, Search } from 'lucide-vue-next'
-import { ref } from 'vue'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-// Import components from the custom library
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,195 +8,330 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
+} from "@/components/ui/breadcrumb";
+
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Label } from '@/components/ui/label'
-import { Separator } from '@/components/ui/separator'
+} from "@/components/ui/dropdown-menu";
+import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
-  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
-  SidebarInput,
   SidebarInset,
   SidebarMenu,
+  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from '@/components/ui/sidebar'
+} from "@/components/ui/sidebar";
+import {
+  AudioWaveform,
+  BadgeCheck,
+  Bell,
+  ChevronRight,
+  ChevronsUpDown,
+  CreditCard,
+  LogOut,
+  Plus,
+  Sparkles,
+  Hammer,
+  Network,
+} from "lucide-vue-next";
+import { ref } from "vue";
 
+// This is sample data.
 const data = {
-  versions: ['1.0.1', '1.1.0-alpha', '2.0.0-beta1'],
+  user: {
+    name: "Ewan",
+    email: "lordewan@0xzero.org",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  teams: [
+    {
+      name: "ZERO Labs",
+      logo: AudioWaveform,
+      plan: "Free",
+    },
+  ],
   navMain: [
     {
-      title: 'Getting Started',
-      url: '#',
+      title: "API",
+      url: "#",
+      icon: Hammer,
+      isActive: true,
       items: [
-        { title: 'Installation', url: '#' },
-        { title: 'Project Structure', url: '#' },
+        {
+          title: "Applications",
+          url: "#",
+        },
+        {
+          title: "Data providers",
+          url: "#",
+        },
       ],
     },
     {
-      title: 'Building Your Application',
-      url: '#',
+      title: "Network",
+      url: "#",
+      icon: Network,
+      isActive: true,
       items: [
-        { title: 'Routing', url: '#' },
-        { title: 'Data Fetching', url: '#', isActive: true },
-        { title: 'Rendering', url: '#' },
-        { title: 'Caching', url: '#' },
-        { title: 'Styling', url: '#' },
-        { title: 'Optimizing', url: '#' },
-        { title: 'Configuring', url: '#' },
-        { title: 'Testing', url: '#' },
-        { title: 'Authentication', url: '#' },
-        { title: 'Deploying', url: '#' },
-        { title: 'Upgrading', url: '#' },
-        { title: 'Examples', url: '#' },
-      ],
-    },
-    {
-      title: 'API Reference',
-      url: '#',
-      items: [
-        { title: 'Components', url: '#' },
-        { title: 'File Conventions', url: '#' },
-        { title: 'Functions', url: '#' },
-        { title: 'next.config.js Options', url: '#' },
-        { title: 'CLI', url: '#' },
-        { title: 'Edge Runtime', url: '#' },
-      ],
-    },
-    {
-      title: 'Architecture',
-      url: '#',
-      items: [
-        { title: 'Accessibility', url: '#' },
-        { title: 'Fast Refresh', url: '#' },
-        { title: 'Next.js Compiler', url: '#' },
-        { title: 'Supported Browsers', url: '#' },
-        { title: 'Turbopack', url: '#' },
+        {
+          title: "Explorer",
+          url: "#",
+        },
+        {
+          title: "Status",
+          url: "#",
+        },
+        {
+          title: "Storyscan",
+          url: "#",
+        },
       ],
     },
   ],
-}
+};
 
-const selectedVersion = ref(data.versions[0])
-const dropdownOpen = ref(false)
-const search = ref('')
+const activeTeam = ref(data.teams[0]);
 
-function toggleDropdown() {
-  dropdownOpen.value = !dropdownOpen.value
-}
-
-function setSelectedVersion(version: string) {
-  selectedVersion.value = version
+function setActiveTeam(team: (typeof data.teams)[number]) {
+  activeTeam.value = team;
 }
 </script>
 
 <template>
   <SidebarProvider>
-    <Sidebar>
+    <Sidebar collapsible="icon">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger>
+              <DropdownMenuTrigger as-child>
                 <SidebarMenuButton
                   size="lg"
-                  :class="{ 'data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground': dropdownOpen }"
-                  @click="toggleDropdown"
+                  class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
-                  <div class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                    <GalleryVerticalEnd class="size-4" />
+                  <div
+                    class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+                  >
+                    <component :is="activeTeam.logo" class="size-4" />
                   </div>
-                  <div class="flex flex-col gap-0.5 leading-none">
-                    <span class="font-semibold">Documentation</span>
-                    <span>v{{ selectedVersion }}</span>
+                  <div class="grid flex-1 text-left text-sm leading-tight">
+                    <span class="truncate font-semibold">{{
+                      activeTeam.name
+                    }}</span>
+                    <span class="truncate text-xs">{{ activeTeam.plan }}</span>
                   </div>
                   <ChevronsUpDown class="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                v-if="dropdownOpen"
-                class="w-[--radix-dropdown-menu-trigger-width]"
+                class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
                 align="start"
+                side="bottom"
+                :side-offset="4"
               >
+                <DropdownMenuLabel class="text-xs text-muted-foreground">
+                  Teams
+                </DropdownMenuLabel>
                 <DropdownMenuItem
-                  v-for="version in data.versions"
-                  :key="version"
-                  @click="setSelectedVersion(version)"
+                  v-for="(team, index) in data.teams"
+                  :key="team.name"
+                  class="gap-2 p-2"
+                  @click="setActiveTeam(team)"
                 >
-                  v{{ version }}
-                  <Check v-if="version === selectedVersion" class="ml-auto" />
+                  <div
+                    class="flex size-6 items-center justify-center rounded-sm border"
+                  >
+                    <component :is="team.logo" class="size-4 shrink-0" />
+                  </div>
+                  {{ team.name }}
+                  <DropdownMenuShortcut>⌘{{ index + 1 }}</DropdownMenuShortcut>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem class="gap-2 p-2">
+                  <div
+                    class="flex size-6 items-center justify-center rounded-md border bg-background"
+                  >
+                    <Plus class="size-4" />
+                  </div>
+                  <div class="font-medium text-muted-foreground">Add team</div>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>
-
-        <form @submit.prevent>
-          <SidebarGroup class="py-0">
-            <SidebarGroupContent class="relative">
-              <Label for="search" class="sr-only">Search</Label>
-              <SidebarInput
-                id="search"
-                v-model="search"
-                placeholder="Search the docs..."
-                class="pl-8"
-              />
-              <Search class="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </form>
       </SidebarHeader>
-
       <SidebarContent>
-        <SidebarGroup v-for="item in data.navMain" :key="item.title">
-          <SidebarGroupLabel>{{ item.title }}</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem v-for="subItem in item.items" :key="subItem.title">
-                <SidebarMenuButton :class="{ 'is-active': subItem.isActive }" as-child>
-                  <a :href="subItem.url">{{ subItem.title }}</a>
-                </SidebarMenuButton>
+        <SidebarGroup>
+          <SidebarMenu>
+            <Collapsible
+              v-for="item in data.navMain"
+              :key="item.title"
+              as-child
+              :default-open="item.isActive"
+              class="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger as-child>
+                  <SidebarMenuButton :tooltip="item.title">
+                    <component :is="item.icon" />
+                    <span>{{ item.title }}</span>
+                    <ChevronRight
+                      class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+                    />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <SidebarMenuSub>
+                    <SidebarMenuSubItem
+                      v-for="subItem in item.items"
+                      :key="subItem.title"
+                    >
+                      <SidebarMenuSubButton as-child>
+                        <a :href="subItem.url">
+                          <span>{{ subItem.title }}</span>
+                        </a>
+                      </SidebarMenuSubButton>
+                    </SidebarMenuSubItem>
+                  </SidebarMenuSub>
+                </CollapsibleContent>
               </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
+            </Collapsible>
+          </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
-
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger as-child>
+                <SidebarMenuButton
+                  size="lg"
+                  class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+                >
+                  <Avatar class="h-8 w-8 rounded-lg">
+                    <AvatarImage
+                      :src="data.user.avatar"
+                      :alt="data.user.name"
+                    />
+                    <AvatarFallback class="rounded-lg"> CN </AvatarFallback>
+                  </Avatar>
+                  <div class="grid flex-1 text-left text-sm leading-tight">
+                    <span class="truncate font-semibold">{{
+                      data.user.name
+                    }}</span>
+                    <span class="truncate text-xs">{{ data.user.email }}</span>
+                  </div>
+                  <ChevronsUpDown class="ml-auto size-4" />
+                </SidebarMenuButton>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                side="bottom"
+                align="end"
+                :side-offset="4"
+              >
+                <DropdownMenuLabel class="p-0 font-normal">
+                  <div
+                    class="flex items-center gap-2 px-1 py-1.5 text-left text-sm"
+                  >
+                    <Avatar class="h-8 w-8 rounded-lg">
+                      <AvatarImage
+                        :src="data.user.avatar"
+                        :alt="data.user.name"
+                      />
+                      <AvatarFallback class="rounded-lg"> CN </AvatarFallback>
+                    </Avatar>
+                    <div class="grid flex-1 text-left text-sm leading-tight">
+                      <span class="truncate font-semibold">{{
+                        data.user.name
+                      }}</span>
+                      <span class="truncate text-xs">{{
+                        data.user.email
+                      }}</span>
+                    </div>
+                  </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuGroup>
+                  <DropdownMenuItem>
+                    <Sparkles />
+                    Upgrade to Pro
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuGroup>
+                  <DropdownMenuItem>
+                    <BadgeCheck />
+                    Account
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <CreditCard />
+                    Billing
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Bell />
+                    Notifications
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <LogOut />
+                  Log out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-
     <SidebarInset>
-      <header class="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-        <SidebarTrigger class="-ml-1" />
-        <Separator orientation="vertical" class="mr-2 h-4" />
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem class="hidden md:block">
-              <BreadcrumbLink href="#">
-                Building Your Application
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator class="hidden md:block" />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+      <header
+        class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12"
+      >
+        <div class="flex items-center gap-2 px-4">
+          <SidebarTrigger class="-ml-1" />
+          <Separator orientation="vertical" class="mr-2 h-4" />
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem class="hidden md:block">
+                <BreadcrumbLink href="#">
+                  Building Your Application
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator class="hidden md:block" />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
       </header>
-
-      <div class="flex flex-1 flex-col gap-4 p-4">
+      <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
         <div class="grid auto-rows-min gap-4 md:grid-cols-3">
           <div class="aspect-video rounded-xl bg-muted/50" />
           <div class="aspect-video rounded-xl bg-muted/50" />
