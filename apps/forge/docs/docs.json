@@ -16,7 +16,7 @@
         "groups": [
           {
             "group": "Get Started",
-            "pages": ["introduction"]
+            "pages": ["introduction", "why-forge"]
           }
         ]
       },
