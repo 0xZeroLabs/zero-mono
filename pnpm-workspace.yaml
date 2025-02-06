@@ -4,3 +4,4 @@ packages:
   - "apps/labs/*"
   - "apps/s3n/*"
   - "apps/social-forge/*"
+  - "apps/forge/*"
