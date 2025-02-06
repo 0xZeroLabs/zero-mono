@@ -1,1 +1,210 @@
-{"openapi":"3.0.3","info":{"title":"execution","description":"","license":{"name":""},"version":"0.1.0"},"paths":{"/":{"get":{"tags":["Endpoints"],"operationId":"root","responses":{"200":{"description":"Welcome message with current server time","content":{"text/plain":{"schema":{"type":"string"}}}}}}},"/health":{"get":{"tags":["Endpoints"],"operationId":"health_check","responses":{"200":{"description":"Health check endpoint","content":{"text/plain":{"schema":{"type":"string"}}}}}}},"/register":{"post":{"tags":["Endpoints"],"operationId":"register_ip_from_transcript","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ProofRequest"}}},"required":true},"responses":{"200":{"description":"Successfully registered IP","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ProofofTask"}}}},"400":{"description":"Bad request - Invalid proof or schema"},"500":{"description":"Internal server error"}}}}},"components":{"schemas":{"IPAMeta":{"type":"object","description":"IP Metadata","required":["title","description","ipType","creators","media","attributes","tags"],"properties":{"attributes":{"type":"array","items":{"$ref":"#/components/schemas/IPAttribute"},"description":"List of attributes"},"creators":{"type":"array","items":{"$ref":"#/components/schemas/IPCreator"},"description":"List of creators"},"description":{"type":"string","description":"Description of the IP"},"ipType":{"type":"string","description":"Type of IP"},"media":{"type":"array","items":{"$ref":"#/components/schemas/IPMedia"},"description":"List of media files"},"tags":{"type":"array","items":{"type":"string"},"description":"List of tags"},"title":{"type":"string","description":"Title of the IP"}}},"IPAttribute":{"type":"object","description":"IP Attribute information","required":["key","value"],"properties":{"key":{"type":"string","description":"Attribute key"},"value":{"description":"Attribute value"}}},"IPCreator":{"type":"object","description":"IP Creator information","required":["name","address","contributionPercent"],"properties":{"address":{"$ref":"#/components/schemas/Address"},"contributionPercent":{"type":"integer","format":"int32","description":"Contribution percentage"},"name":{"type":"string","description":"Name of the creator"}}},"IPMedia":{"type":"object","description":"IP Media information","required":["name","url","mimetype"],"properties":{"mimetype":{"type":"string","description":"MIME type of the media"},"name":{"type":"string","description":"Name of the media"},"url":{"type":"string","description":"URL of the media"}}},"NFTMeta":{"type":"object","description":"NFT Metadata","required":["name","description"],"properties":{"animation_url":{"type":"string","description":"Optional animation URL","nullable":true},"audio_url":{"type":"string","description":"Optional audio URL","nullable":true},"description":{"type":"string","description":"Description of the NFT"},"image_url":{"type":"string","description":"Optional image URL","nullable":true},"name":{"type":"string","description":"Name of the NFT"},"text_content":{"type":"string","description":"Optional text content","nullable":true}}},"ProofRequest":{"type":"object","description":"Request body for proof registration","required":["transcript_proof","schema"],"properties":{"schema":{"type":"string","description":"The schema string"},"transcript_proof":{"type":"string","description":"The transcript proof string"}}},"ProofofTask":{"type":"object","description":"Proof of Task response","required":["transcript_proof","transaction_hash","ip_id"],"properties":{"ip_id":{"$ref":"#/components/schemas/Address"},"transaction_hash":{"$ref":"#/components/schemas/FixedBytes"},"transcript_proof":{"type":"string","description":"The transcript proof"}}}}},"tags":[{"name":"Endpoints","description":"The Forge API endpoints"}]}
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "execution",
+    "description": "",
+    "license": { "name": "" },
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["General"],
+        "operationId": "root",
+        "responses": {
+          "200": {
+            "description": "Welcome message with current server time",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "string" },
+                "example": "Hello, from this Forge! The time on this server is: 2025-02-06T14:13:12.297568201Z"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": ["General"],
+        "operationId": "health_check",
+        "responses": {
+          "200": {
+            "description": "Health check endpoint",
+            "content": {
+              "text/plain": { "schema": { "type": "string" }, "example": "Ok" }
+            }
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": ["Task"],
+        "operationId": "register_ip_from_transcript",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ProofRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully registered IP",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProofofTask" }
+              }
+            }
+          },
+          "400": { "description": "Bad request - Invalid proof or schema" },
+          "500": { "description": "Internal server error" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IPAMeta": {
+        "type": "object",
+        "description": "IP Metadata",
+        "required": [
+          "title",
+          "description",
+          "ipType",
+          "creators",
+          "media",
+          "attributes",
+          "tags"
+        ],
+        "properties": {
+          "attributes": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/IPAttribute" },
+            "description": "List of attributes"
+          },
+          "creators": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/IPCreator" },
+            "description": "List of creators"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the IP"
+          },
+          "ipType": { "type": "string", "description": "Type of IP" },
+          "media": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/IPMedia" },
+            "description": "List of media files"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "List of tags"
+          },
+          "title": { "type": "string", "description": "Title of the IP" }
+        }
+      },
+      "IPAttribute": {
+        "type": "object",
+        "description": "IP Attribute information",
+        "required": ["key", "value"],
+        "properties": {
+          "key": { "type": "string", "description": "Attribute key" },
+          "value": { "description": "Attribute value" }
+        }
+      },
+      "IPCreator": {
+        "type": "object",
+        "description": "IP Creator information",
+        "required": ["name", "address", "contributionPercent"],
+        "properties": {
+          "address": { "$ref": "#/components/schemas/Address" },
+          "contributionPercent": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Contribution percentage"
+          },
+          "name": { "type": "string", "description": "Name of the creator" }
+        }
+      },
+      "IPMedia": {
+        "type": "object",
+        "description": "IP Media information",
+        "required": ["name", "url", "mimetype"],
+        "properties": {
+          "mimetype": {
+            "type": "string",
+            "description": "MIME type of the media"
+          },
+          "name": { "type": "string", "description": "Name of the media" },
+          "url": { "type": "string", "description": "URL of the media" }
+        }
+      },
+      "NFTMeta": {
+        "type": "object",
+        "description": "NFT Metadata",
+        "required": ["name", "description"],
+        "properties": {
+          "animation_url": {
+            "type": "string",
+            "description": "Optional animation URL",
+            "nullable": true
+          },
+          "audio_url": {
+            "type": "string",
+            "description": "Optional audio URL",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the NFT"
+          },
+          "image_url": {
+            "type": "string",
+            "description": "Optional image URL",
+            "nullable": true
+          },
+          "name": { "type": "string", "description": "Name of the NFT" },
+          "text_content": {
+            "type": "string",
+            "description": "Optional text content",
+            "nullable": true
+          }
+        }
+      },
+      "ProofRequest": {
+        "type": "object",
+        "description": "Request body for proof registration",
+        "required": ["transcript_proof", "schema"],
+        "properties": {
+          "schema": { "type": "string", "description": "The schema string" },
+          "transcript_proof": {
+            "type": "string",
+            "description": "The transcript proof string"
+          }
+        }
+      },
+      "ProofofTask": {
+        "type": "object",
+        "description": "Proof of Task response",
+        "required": ["transcript_proof", "transaction_hash", "ip_id"],
+        "properties": {
+          "ip_id": { "$ref": "#/components/schemas/Address" },
+          "transaction_hash": { "$ref": "#/components/schemas/FixedBytes" },
+          "transcript_proof": {
+            "type": "string",
+            "description": "The transcript proof"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    { "name": "General", "description": "Get data about this execution node." },
+    { "name": "Task", "description": "Perform action on this execution node." }
+  ]
+}
