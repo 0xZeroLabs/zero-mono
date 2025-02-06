@@ -15,13 +15,40 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
-            "pages": ["introduction", "why-forge"]
+            "group": "Overview",
+            "pages": [
+              "introduction",
+              "why-forge",
+              {
+                "group": "Protocol Design",
+                "pages": [
+                  {
+                    "group": "Understanding the AVS",
+                    "pages": [
+                      "protocol-design/understanding-the-avs/abstract",
+                      "protocol-design/understanding-the-avs/execution",
+                      "protocol-design/understanding-the-avs/validation"
+                    ]
+                  },
+                  "protocol-design/why-build-an-avs"
+                ],
+                "icon": "plug"
+              },
+              "web-proofs"
+            ]
+          },
+          {
+            "group": "Build on Forge",
+            "pages": ["build-on-forge/getting-started"]
+          },
+          {
+            "group": "Operators",
+            "pages": ["operators/prerequisites"]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "AVS API Reference",
         "openapi": "api-reference/openapi.json"
       }
     ],
@@ -30,7 +57,7 @@
         {
           "anchor": "Community",
           "href": "https://t.me/ipforge",
-          "icon": "link"
+          "icon": "telegram"
         },
         {
           "anchor": "GitHub",
