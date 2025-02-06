@@ -39,7 +39,7 @@
           },
           {
             "group": "Build on Forge",
-            "pages": ["build-on-forge/getting-started"]
+            "pages": ["build-on-forge/quick-start"]
           },
           {
             "group": "Operators",
