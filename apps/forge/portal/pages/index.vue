@@ -28,4 +28,12 @@ import { Button } from "~/components/ui/button";
       </Breadcrumb>
     </div>
   </header>
+  <main class="flex w-full h-full flex-col justify-center items-center">
+    <h1 class="text-2xl font-bold text-center">Welcome to The Forge Portal</h1>
+    <p class="my-4 text-center">Where do you want to start?</p>
+    <div class="flex flex-col md:flex-row gap-3 mt-2">
+      <Button>Start a new project</Button>
+      <Button variant="secondary">Set up a provider</Button>
+    </div>
+  </main>
 </template>
