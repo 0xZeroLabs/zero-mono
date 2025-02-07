@@ -20,6 +20,7 @@ module.exports = {
         SpaceMono: ["Space Mono"],
         Italiana: ["Italiana"],
         Neue: ["Neue"],
+        Sora: ["Sora"],
       },
       colors: {
         border: "hsl(var(--border))",

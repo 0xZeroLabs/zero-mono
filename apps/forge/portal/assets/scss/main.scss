@@ -56,6 +56,11 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Sora";
+  src: url("./fonts/Sora-VariableFont_wght.ttf");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -124,7 +129,7 @@
 
 @layer base {
   * {
-    @apply border-border font-SpaceMono;
+    @apply border-border font-Sora;
   }
   body {
     @apply bg-background text-foreground;
