@@ -28,7 +28,7 @@
                       "protocol-design/understanding-the-avs/abstract",
                       "protocol-design/understanding-the-avs/execution",
                       "protocol-design/understanding-the-avs/validation"
-                    ]
+                    ],
                   },
                   "protocol-design/why-build-an-avs"
                 ],
@@ -39,11 +39,30 @@
           },
           {
             "group": "Build on Forge",
-            "pages": ["build-on-forge/quick-start"]
+            "pages": [
+              "build-on-forge/quick-start",
+              "build-on-forge/writing-schemas",
+              {
+                "group": "Advanced",
+                "pages": ["build-on-forge/advanced/fine-tune-payments"],
+                "icon": "brackets-square"
+              }
+            ]
           },
           {
             "group": "Operators",
-            "pages": ["operators/prerequisites"]
+            "pages": [
+              "operators/prerequisites",
+              {
+                "group": "Run a node",
+                "pages": [
+                  "operators/run-a-node/execution",
+                  "operators/run-a-node/validation"
+                ],
+                "icon": "server"
+              },
+              "operators/faqs"
+            ]
           }
         ]
       },
