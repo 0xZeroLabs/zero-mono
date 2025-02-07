@@ -81,12 +81,12 @@ const data = {
       isActive: true,
       items: [
         {
-          url: "#",
           title: "My Projects",
+          url: "/projects",
         },
         {
-          url: "#",
           title: "Data Providers",
+          url: "/providers",
         },
       ],
     },
