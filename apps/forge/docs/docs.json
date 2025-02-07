@@ -29,6 +29,7 @@
                       "protocol-design/understanding-the-avs/execution",
                       "protocol-design/understanding-the-avs/validation"
                     ],
+                    "icon": "gears"
                   },
                   "protocol-design/why-build-an-avs"
                 ],
