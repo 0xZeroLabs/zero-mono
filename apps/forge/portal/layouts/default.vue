@@ -62,7 +62,7 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "Ewan",
+    name: "Ewan G.Okugbe",
     email: "lordewan@0xzero.org",
     avatar: "/avatars/shadcn.jpg",
   },
@@ -75,18 +75,18 @@ const data = {
   ],
   navMain: [
     {
-      title: "Application",
+      title: "Applications",
       url: "#",
       icon: Hammer,
       isActive: true,
       items: [
         {
-          title: "All Projects",
           url: "#",
+          title: "My Projects",
         },
         {
-          title: "Providers",
           url: "#",
+          title: "Data Providers",
         },
       ],
     },
@@ -210,9 +210,9 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
                       :key="subItem.title"
                     >
                       <SidebarMenuSubButton as-child>
-                        <a :href="subItem.url">
+                        <nuxt-link :to="subItem.url">
                           <span>{{ subItem.title }}</span>
-                        </a>
+                        </nuxt-link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   </SidebarMenuSub>
@@ -236,7 +236,7 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
                       :src="data.user.avatar"
                       :alt="data.user.name"
                     />
-                    <AvatarFallback class="rounded-lg"> CN </AvatarFallback>
+                    <AvatarFallback class="rounded-lg"> EG </AvatarFallback>
                   </Avatar>
                   <div class="grid flex-1 text-left text-sm leading-tight">
                     <span class="truncate font-semibold">{{
