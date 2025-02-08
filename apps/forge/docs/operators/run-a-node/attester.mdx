@@ -2,7 +2,128 @@
 title: Attester
 ---
 
-<Info>
-  Our team is currently working on this feature. It may neither be public nor
-  fully ready. We appreciate your patience
-</Info>
+<Note>This is still a work in progress and it may be subject to change.</Note>
+
+Continue by using your preferred path to opt-in and run your operator. Make sure you have the variables from the <a href="/operators/prerequisites">Prerequisites</a> page.
+
+<Tabs>
+  <Tab title="Using Docker">
+      <Steps>
+        <Step title="Verify Docker installation">
+          Make sure you have{" "}<a href="https://docs.docker.com/get-docker/"> Docker</a>, and <a href="https://docs.docker.com/compose/install/"> Docker Compose</a> installed and the daemon running on your system.
+
+          We set up a docker compose file to run the Attester node. Now, download the `docker-compose.yml` file using the following command:
+          ```shell
+          curl -O https://raw.githubusercontent.com/0xzerolabs/the-forge/main/validation/docker-compose.yml
+          ```
+        </Step>
+        <Step title="Configure environment variables">
+          Create a .env file. Following the variables from the <a href="/operators/prerequisites">Prerequisites</a> page, fill in the values:
+          ```shell
+          touch .env
+          echo "PRIVATE_KEY=your-operator-private-key" >> .env
+          echo "ETH_RPC_URL=https://eth-holesky-rpc" >> .env
+          echo "EIGENDA_ENDPOINT=https://eigenda-disperser-endpoint" >> .env
+          echo "STORY_RPC_URL=https://story-aeneid-rpc" >> .env
+          echo "BOOTSTRAP_ID=the-forge-othentic-bootstrap-id" >> .env
+          ```
+
+          Confirm the variables you set are correct by running the following commands:
+          ```shell
+          source .env
+          ls $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
+          ```
+
+        </Step>
+        <Step title="Run the Attester">
+          Now, run the node using the following command:
+          ```shell
+          docker-compose up -d
+          ```
+        </Step>
+        <Step title="Confirm the Attester is running">
+        Check the status of the Attester node using the following command:
+        ```shell
+        curl http://localhost:2078/health
+        ```
+
+        It should produce an output the following:
+        ```shell
+        OK
+        ```
+        </Step>
+      </Steps>
+
+      <Check>Congratulations! You're now a part of The Forge.</Check>
+
+  </Tab>
+  <Tab title="From source">
+    <Tip>
+      Building from source requires having a
+      <a href="https://www.rust-lang.org/tools/install">rust</a> development
+      environment set up and may not be suitable for everyone. We recommend
+      **using Docker** instead.
+    </Tip>
+    <Steps>
+        <Step title="Clone the repository">
+          Clone the repository and go to the validation directory using the following command:
+          ```shell
+          git clone https://github.com/0xzerolabs/the-forge.git
+          cd the-forge/validation
+          ```
+        </Step>
+        <Step title="Configure environment variables">
+            Create a .env file. Following the variables from the <a href="/operators/prerequisites">Prerequisites</a> page, fill in the values:
+            ```shell
+            touch .env
+            echo "PRIVATE_KEY=your-operator-private-key" >> .env
+            echo "ETH_RPC_URL=https://eth-holesky-rpc" >> .env
+            echo "EIGENDA_ENDPOINT=https://eigenda-disperser-endpoint" >> .env
+            echo "STORY_RPC_URL=https://story-aeneid-rpc" >> .env
+            echo "BOOTSTRAP_ID=the-forge-othentic-bootstrap-id" >> .env
+            ```
+
+            Confirm the variables you set are correct by running the following commands:
+            ```shell
+            source .env
+            ls $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
+            ```
+
+        </Step>
+        <Step title="Build and run the Attester node">
+          Build the Attester using the following command:
+          ```shell
+          cargo build --release
+          ```
+
+          Run the Attester using the following command:
+          ```shell
+          ./target/release/validation
+          ```
+        </Step>
+        <Step title="Start the Attester">
+          Start the Attester using the following command:
+          ```shell
+          othentic-cli node attester \
+              /ip4/127.0.0.1/tcp/9876/p2p/${BOOTSTRAP_ID} \
+              --avs-webapi 0.0.0.0 \
+              --avs-webapi-port 2078
+          ```
+        </Step>
+        <Step title="Confirm the Validator is running">
+          Check the status of the Attester node using the following command:
+          ```shell
+          curl http://localhost:2078/health
+          ```
+
+          It should produce an output the following:
+          ```shell
+          OK
+          ```
+        </Step>
+      </Steps>
+
+      <Check>Congratulations! You're now a part of The Forge.</Check>
+
+  </Tab>
+</Tabs>

@@ -4,7 +4,61 @@ description: Here's what you need to know to participate in our network
 icon: seal-exclamation
 ---
 
-<Info>
-  Our team is currently working on this feature. It may neither be public nor
-  fully ready. We appreciate your patience
-</Info>
+<Note>This is still a work in progress and it may be subject to change.</Note>
+
+## Requirements
+
+<Card title="Hardware" icon="microchip">
+  **CPU** 4 Cores | **Memory** 16 GB.
+</Card>
+
+<CardGroup cols={2}>
+  <Card title="Get some ETH" icon="square-1">
+    We recommend having at least 0.02 Holesky ETH in your wallet.
+  </Card>
+  <Card title="Find Variables" icon="square-2">
+    Get the RPC URL for <a target="_blank" href="https://chainlist.org/chain/17000">Ethereum Holesky</a>, and {" "}<a target="_blank" href="https://docs.eigenda.xyz/networks/holesky#specs">EigenDA disperser</a> {" "}both on the Holesky network, as well as {" "}<a target="_blank" href="https://docs.story.foundation/docs/network-info#-rpcs">Story Aeneid testnet</a>.
+  </Card>
+</CardGroup>
+
+## Set up your Environment
+
+<Steps>
+  <Step title="Install the Othentic CLI">
+    Make sure you're running the latest version of Node.js:
+    ```shell
+    node -v
+    ```
+
+    If you don't have Node.js installed, you can download it from [here](https://nodejs.org/en/download/).
+
+    Now run the installation command:
+    ```shell
+    npm install -g othentic-cli
+    ```
+
+    Verify the installation by running:
+    ```shell
+    othentic-cli -h
+    ```
+
+  </Step>
+  <Step title="Register as an Operator">
+    The Othentic CLI provides commands for registering as an operator as well as managing your account:
+    ```shell
+    othentic-cli operator register
+    ```
+    Now, convert some of that ETH to stETH before depositing into EigenLayer:
+    ```shell
+    othentic-cli operator deposit --strategy stETH --shares 0.01 --convert 0.012
+    ```
+    Activate your Operator by depositing into EigenLayer. Deposit 0.01 stETH into EigenLayer pool:
+    ```shell
+    othentic-cli operator deposit --strategy stETH --shares 0.01
+    ```
+
+  </Step>
+  <Step title="You're ready to opt-in to our AVS">
+      Now all you need to do is follow our instructions to [run an AVS node](/operators/run-a-node) 🎉.
+  </Step>
+</Steps>
