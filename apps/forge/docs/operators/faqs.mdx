@@ -4,7 +4,30 @@ description: Here's what you need to know to participate in our network
 icon: circle-question
 ---
 
-<Info>
-  Our team is currently working on this feature. It may neither be public nor
-  fully ready. We appreciate your patience
-</Info>
+<AccordionGroup>
+  <Accordion title="How do operators claim their rewards?">
+    Rewards are automatically distributed with Othentic's batch payment
+    function. See
+    [here](https://localhost:3000/operators/faqs#how-do-operators-claim-their-rewards).
+  </Accordion>
+  <Accordion title="Why are the Performers & Aggregators in-house?">
+    We currently aren't keen on running a middleware for our AVS and its
+    functionalities really only require that tasks run be validated by a
+    decentralised network to ensure honesty.
+
+    See{" "} <a href="/protocol-design/why-build-an-avs">why we built an avs</a> to
+    understand better.
+
+  </Accordion>
+  <Accordion title="How do I get network metrics?">
+    We'll be setting up a Grafana dashboard in order to provide important
+    network metrics.
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Slashing Conditions">
+    Slashing has not been implemented yet. Clear guidelines will be provided
+    before it is activated.
+  </Accordion>
+</AccordionGroup>
