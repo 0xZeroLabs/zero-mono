@@ -14,10 +14,26 @@ icon: seal-exclamation
 
 <CardGroup cols={2}>
   <Card title="Get some ETH" icon="square-1">
-    We recommend having at least 0.02 Holesky ETH in your wallet.
+    We recommend having at least 0.02 Holesky ETH in your wallet. Get some from
+    [the faucet](https://holesky-faucet.pk910.de/).
   </Card>
   <Card title="Find Variables" icon="square-2">
-    Get the RPC URL for <a target="_blank" href="https://chainlist.org/chain/17000">Ethereum Holesky</a>, and {" "}<a target="_blank" href="https://docs.eigenda.xyz/networks/holesky#specs">EigenDA disperser</a> {" "}both on the Holesky network, as well as {" "}<a target="_blank" href="https://docs.story.foundation/docs/network-info#-rpcs">Story Aeneid testnet</a>.
+    Get the RPC URL for{" "}
+    <a target="_blank" href="https://chainlist.org/chain/17000">
+      Ethereum Holesky
+    </a>
+    , and{" "}
+    <a target="_blank" href="https://docs.eigenda.xyz/networks/holesky#specs">
+      EigenDA disperser
+    </a>{" "}
+    both on the Holesky network, as well as{" "}
+    <a
+      target="_blank"
+      href="https://docs.story.foundation/docs/network-info#-rpcs"
+    >
+      Story Aeneid testnet
+    </a>
+    .
   </Card>
 </CardGroup>
 
@@ -25,21 +41,25 @@ icon: seal-exclamation
 
 <Steps>
   <Step title="Install the Othentic CLI">
-    Make sure you're running the latest version of Node.js:
+    Make sure you're running the Node v22.6.0 (precisely), see [here](https://docs.othentic.xyz/main/avs-framework/quick-start#prerequisites):
     ```shell
     node -v
     ```
 
-    If you don't have Node.js installed, you can download it from [here](https://nodejs.org/en/download/).
+    If you don't have Node installed, you can download it through [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md/).
 
     Now run the installation command:
     ```shell
-    npm install -g othentic-cli
+    npm i -g @othentic/othentic-cli
     ```
 
     Verify the installation by running:
     ```shell
-    othentic-cli -h
+    othentic-cli -v
+    ```
+    You should see an output similar to the below (version may vary based on releases):
+    ```shell
+    othentic-cli version 1.x.y
     ```
 
   </Step>
