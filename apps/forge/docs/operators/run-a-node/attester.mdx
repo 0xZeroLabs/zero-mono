@@ -12,7 +12,7 @@ Continue by using your preferred path to opt-in and run your operator. Make sure
         <Step title="Verify Docker installation">
           Make sure you have{" "}<a href="https://docs.docker.com/get-docker/"> Docker</a>, and <a href="https://docs.docker.com/compose/install/"> Docker Compose</a> installed and the daemon running on your system.
 
-          We set up a docker compose file to run the Attester node. Now, download the `docker-compose.yml` file using the following command:
+          We set up a Docker Compose file to run the Attester node. Now, download the `docker-compose.yml` file using the following command:
           ```shell
           curl -O https://raw.githubusercontent.com/0xzerolabs/the-forge/main/validation/docker-compose.yml
           ```
@@ -31,7 +31,7 @@ Continue by using your preferred path to opt-in and run your operator. Make sure
           Confirm the variables you set are correct by running the following commands:
           ```shell
           source .env
-          ls $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
+          echo $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
           ```
 
         </Step>
@@ -86,7 +86,7 @@ Continue by using your preferred path to opt-in and run your operator. Make sure
             Confirm the variables you set are correct by running the following commands:
             ```shell
             source .env
-            ls $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
+            echo $PRIVATE_KEY $ETH_RPC_URL $EIGENDA_ENDPOINT $STORY_RPC_URL
             ```
 
         </Step>
