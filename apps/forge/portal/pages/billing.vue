@@ -32,11 +32,7 @@ function goto(link: string) {
           </BreadcrumbItem>
           <BreadcrumbSeparator> </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbPage> Applications </BreadcrumbPage>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator> </BreadcrumbSeparator>
-          <BreadcrumbItem>
-            <BreadcrumbPage> My Projects </BreadcrumbPage>
+            <BreadcrumbPage> Billing </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

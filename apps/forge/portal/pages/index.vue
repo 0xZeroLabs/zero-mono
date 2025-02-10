@@ -10,6 +10,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "~/components/ui/button";
+
+let authenticated = false;
+
+// authenticated ? setPageLayout("default") : setPageLayout(false);
 </script>
 
 <template>
@@ -22,7 +26,7 @@ import { Button } from "~/components/ui/button";
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem class="hidden md:block">
-            <BreadcrumbLink href="#"> Dashboard </BreadcrumbLink>
+            <BreadcrumbPage href="#"> Dashboard </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -31,10 +35,10 @@ import { Button } from "~/components/ui/button";
   <main class="flex w-full h-full flex-col justify-center items-center">
     <h1 class="text-2xl font-bold text-center">Welcome to The Forge Portal</h1>
     <p class="my-4 text-center">Where do you want to start?</p>
-    <div class="flex flex-col md:flex-row gap-3 mt-2">
+    <div class="flex flex-col items-center md:flex-row gap-3 mt-2">
       <nuxt-link to="/projects"><Button>Start a new project</Button></nuxt-link>
-      <nuxt-link to="/providers"
-        ><Button variant="secondary">Set up a provider</Button></nuxt-link
+      <nuxt-link to="/schemas"
+        ><Button variant="secondary">Write schema</Button></nuxt-link
       >
     </div>
   </main>

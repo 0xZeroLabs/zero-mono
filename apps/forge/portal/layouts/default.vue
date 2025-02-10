@@ -55,8 +55,8 @@ import {
   LogOut,
   Plus,
   Sparkles,
-  Hammer,
-  Network,
+  CurlyBraces,
+  FileBox,
 } from "lucide-vue-next";
 
 // This is sample data.
@@ -70,59 +70,46 @@ const data = {
     {
       name: "ZERO Labs",
       logo: AudioWaveform,
-      plan: "Free",
+      plan: "Aeneid",
     },
   ],
   navMain: [
     {
-      title: "Applications",
-      url: "#",
-      icon: Hammer,
-      isActive: true,
-      items: [
-        {
-          title: "My Projects",
-          url: "/projects",
-        },
-        {
-          title: "Data Providers",
-          url: "/providers",
-        },
-      ],
+      title: "My Projects",
+      url: "/projects",
+      icon: FileBox,
     },
     {
-      title: "Network",
-      url: "#",
-      icon: Network,
-      isActive: true,
-      items: [
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Status",
-          url: "#",
-        },
-        {
-          title: "Storyscan",
-          url: "#",
-        },
-      ],
+      title: "Schemas",
+      url: "/schemas",
+      icon: CurlyBraces,
+    },
+    {
+      title: "Data Providers",
+      url: "/providers",
+      icon: Sparkles,
     },
   ],
 };
 
 const activeTeam = ref(data.teams[0]);
 
+const isActive = (url: string) => {
+  return useRoute().path.startsWith(url);
+};
+
 function setActiveTeam(team: (typeof data.teams)[number]) {
   activeTeam.value = team;
+}
+
+function goto(link: string) {
+  useRouter().push(link);
 }
 </script>
 
 <template>
   <SidebarProvider>
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant="inset">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -160,6 +147,10 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
                   :key="team.name"
                   class="gap-2 p-2"
                   @click="setActiveTeam(team)"
+                  :class="{
+                    'bg-sidebar-accent text-sidebar-accent-foreground':
+                      activeTeam.name === team.name,
+                  }"
                 >
                   <div
                     class="flex size-6 items-center justify-center rounded-sm border"
@@ -186,39 +177,23 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
-            <Collapsible
-              v-for="item in data.navMain"
-              :key="item.title"
-              as-child
-              :default-open="item.isActive"
-              class="group/collapsible"
-            >
-              <SidebarMenuItem>
-                <CollapsibleTrigger as-child>
-                  <SidebarMenuButton :tooltip="item.title">
-                    <component :is="item.icon" />
-                    <span>{{ item.title }}</span>
-                    <ChevronRight
-                      class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
-                    />
-                  </SidebarMenuButton>
-                </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <SidebarMenuSub>
-                    <SidebarMenuSubItem
-                      v-for="subItem in item.items"
-                      :key="subItem.title"
-                    >
-                      <SidebarMenuSubButton as-child>
-                        <nuxt-link :to="subItem.url">
-                          <span>{{ subItem.title }}</span>
-                        </nuxt-link>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  </SidebarMenuSub>
-                </CollapsibleContent>
-              </SidebarMenuItem>
-            </Collapsible>
+            <SidebarMenuItem v-for="item in data.navMain">
+              <SidebarMenuButton
+                class="cursor-pointer"
+                :class="{
+                  'bg-sidebar-accent text-sidebar-accent-foreground': isActive(
+                    item.url,
+                  ),
+                }"
+                @click="goto(item.url)"
+                as-child
+              >
+                <div>
+                  <component :is="item.icon" />
+                  <span class="">{{ item.title }}</span>
+                </div>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
@@ -262,7 +237,7 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
                         :src="data.user.avatar"
                         :alt="data.user.name"
                       />
-                      <AvatarFallback class="rounded-lg"> CN </AvatarFallback>
+                      <AvatarFallback class="rounded-lg"> EG </AvatarFallback>
                     </Avatar>
                     <div class="grid flex-1 text-left text-sm leading-tight">
                       <span class="truncate font-semibold">{{
@@ -276,22 +251,34 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                  <DropdownMenuItem>
-                    <Sparkles />
-                    Upgrade to Pro
+                  <DropdownMenuItem
+                    @click="goto('/billing')"
+                    :class="{
+                      'bg-sidebar-accent text-sidebar-accent-foreground':
+                        isActive('/billing'),
+                    }"
+                  >
+                    <CreditCard />
+                    Billing
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                  <DropdownMenuItem>
+                  <DropdownMenuItem
+                    :class="{
+                      'bg-sidebar-accent text-sidebar-accent-foreground':
+                        isActive('/account'),
+                    }"
+                  >
                     <BadgeCheck />
                     Account
                   </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <CreditCard />
-                    Billing
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
+                  <DropdownMenuItem
+                    :class="{
+                      'bg-sidebar-accent text-sidebar-accent-foreground':
+                        isActive('/notifications'),
+                    }"
+                  >
                     <Bell />
                     Notifications
                   </DropdownMenuItem>

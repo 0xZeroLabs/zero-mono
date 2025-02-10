@@ -10,6 +10,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Slash } from "lucide-vue-next";
+
+function goto(link: string) {
+  useRouter().push(link);
+}
 </script>
 
 <template>
@@ -22,11 +26,15 @@ import { Slash } from "lucide-vue-next";
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem class="hidden md:block">
-            <BreadcrumbLink href="/"> Applications </BreadcrumbLink>
+            <BreadcrumbLink class="cursor-pointer" @click="goto('/')">
+              Dashboard
+            </BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator>
-            <Slash />
-          </BreadcrumbSeparator>
+          <BreadcrumbSeparator> </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage> Applications </BreadcrumbPage>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator> </BreadcrumbSeparator>
           <BreadcrumbItem>
             <BreadcrumbPage> Data Providers </BreadcrumbPage>
           </BreadcrumbItem>
