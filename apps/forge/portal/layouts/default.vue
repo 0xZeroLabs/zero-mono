@@ -45,6 +45,7 @@ import {
   SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+// add new icon pack to get github and telegram icons
 import {
   AudioWaveform,
   BadgeCheck,
@@ -57,6 +58,9 @@ import {
   Sparkles,
   CurlyBraces,
   FileBox,
+  GithubIcon,
+  BookOpen,
+  BadgeHelp,
 } from "lucide-vue-next";
 
 // This is sample data.
@@ -88,6 +92,23 @@ const data = {
       title: "Data Providers",
       url: "/providers",
       icon: Sparkles,
+    },
+  ],
+  resources: [
+    {
+      name: "GitHub",
+      url: "https://github.com/0xzerolabs/the-forge",
+      icon: GithubIcon,
+    },
+    {
+      name: "Docs",
+      url: "https://forge.0xzero.org",
+      icon: BookOpen,
+    },
+    {
+      name: "Need help?",
+      url: "https://t.me/ipforge",
+      icon: BadgeHelp,
     },
   ],
 };
@@ -198,6 +219,19 @@ function goto(link: string) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
+        <SidebarGroup class="group-data-[collapsible=icon]:hidden">
+          <SidebarGroupLabel>Resources</SidebarGroupLabel>
+          <SidebarMenu>
+            <SidebarMenuItem v-for="item in data.resources" :key="item.name">
+              <SidebarMenuButton as-child>
+                <a :href="item.url">
+                  <component :is="item.icon" />
+                  <span>{{ item.name }}</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroup>
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
