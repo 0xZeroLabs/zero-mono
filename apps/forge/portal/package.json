@@ -10,8 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
+    "@getpara/web-sdk": "^1.1.0",
     "@radix-icons/vue": "^1.0.0",
     "@remixicon/vue": "^4.6.0",
+    "@vee-validate/zod": "^4.15.0",
     "@vueuse/core": "^12.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -19,8 +22,10 @@
     "radix-vue": "^1.9.8",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "vee-validate": "^4.15.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.5.2",
