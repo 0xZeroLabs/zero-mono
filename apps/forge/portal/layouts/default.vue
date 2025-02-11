@@ -45,7 +45,6 @@ import {
   SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-// add new icon pack to get github and telegram icons
 import {
   AudioWaveform,
   BadgeCheck,
@@ -58,10 +57,14 @@ import {
   Sparkles,
   CurlyBraces,
   FileBox,
-  GithubIcon,
   BookOpen,
-  BadgeHelp,
 } from "lucide-vue-next";
+
+import {
+  RiGithubLine,
+  RiTelegram2Line,
+  RiArrowRightUpLine,
+} from "@remixicon/vue";
 
 // This is sample data.
 const data = {
@@ -98,7 +101,7 @@ const data = {
     {
       name: "GitHub",
       url: "https://github.com/0xzerolabs/the-forge",
-      icon: GithubIcon,
+      icon: RiGithubLine,
     },
     {
       name: "Docs",
@@ -108,7 +111,7 @@ const data = {
     {
       name: "Need help?",
       url: "https://t.me/ipforge",
-      icon: BadgeHelp,
+      icon: RiTelegram2Line,
     },
   ],
 };
@@ -224,10 +227,14 @@ function goto(link: string) {
           <SidebarMenu>
             <SidebarMenuItem v-for="item in data.resources" :key="item.name">
               <SidebarMenuButton as-child>
-                <a :href="item.url">
+                <a :href="item.url" class="peer">
                   <component :is="item.icon" />
                   <span>{{ item.name }}</span>
                 </a>
+                <RiArrowRightUpLine
+                  class="absolute right-1 top-1/2 -translate-y-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-300"
+                  size="16"
+                />
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
