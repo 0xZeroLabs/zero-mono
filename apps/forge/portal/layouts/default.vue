@@ -58,13 +58,10 @@ import {
   CurlyBraces,
   FileBox,
   BookOpen,
+  BadgeHelp,
 } from "lucide-vue-next";
 
-import {
-  RiGithubLine,
-  RiTelegram2Line,
-  RiArrowRightUpLine,
-} from "@remixicon/vue";
+import { RiGithubLine, RiArrowRightUpLine } from "@remixicon/vue";
 
 // This is sample data.
 const data = {
@@ -111,7 +108,7 @@ const data = {
     {
       name: "Need help?",
       url: "https://t.me/ipforge",
-      icon: RiTelegram2Line,
+      icon: BadgeHelp,
     },
   ],
 };
