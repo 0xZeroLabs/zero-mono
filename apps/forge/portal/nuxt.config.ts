@@ -59,7 +59,7 @@ export default defineNuxtConfig({
         },
       },
       nodePolyfills({
-        include: ["crypto", "stream", "process", "path"],
+        include: ["crypto", "stream", "process", "path", "string_decoder"],
       }),
     ],
 
@@ -74,6 +74,12 @@ export default defineNuxtConfig({
           },
         },
       },
+    },
+  },
+
+  nitro: {
+    externals: {
+      inline: ["crypto", "stream", "process", "path", "string_decoder"],
     },
   },
 });
