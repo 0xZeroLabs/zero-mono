@@ -30,7 +30,6 @@
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.15.0",
-    "vite-plugin-node-polyfills": "^0.23.0",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.23.8"
