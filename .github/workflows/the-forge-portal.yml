@@ -1,0 +1,34 @@
+name: Deploy The Forge Portal Website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/forge/portal/**"
+
+jobs:
+  publish_landing:
+    runs-on: blacksmith-4vcpu-ubuntu-2204
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: build and push the image
+        run: |
+          docker login --username hey-ewan --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+          docker build . --tag ghcr.io/0xzerolabs/zero-mono/forge-dev:latest
+          docker push ghcr.io/0xzerolabs/zero-mono/forge-dev:latest
+        working-directory: ./apps/forge/portal
+
+      - name: Install and configure the Koyeb CLI
+        uses: koyeb-community/install-koyeb-cli@v2
+        with:
+          api_token: "${{ secrets.KOYEB_TOKEN2 }}"
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Deploy to Koyeb
+        run: koyeb service redeploy just-genna/the-forge
+
+    permissions:
+      contents: read
+      packages: write
