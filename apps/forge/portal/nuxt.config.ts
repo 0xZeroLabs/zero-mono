@@ -71,9 +71,13 @@ export default defineNuxtConfig({
     // },
   },
 
-  // nitro: {
-  //   externals: {
-  //     inline: ["crypto", "stream", "process", "path", "string_decoder"],
-  //   },
-  // },
+  nitro: {
+    preset: "cloudflare-pages",
+    rollupConfig: {
+      external: ["cloudflare:sockets"],
+    },
+    //   externals: {
+    //     inline: ["crypto", "stream", "process", "path", "string_decoder"],
+    //   },
+  },
 });
