@@ -152,4 +152,40 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .loader {
+    width: fit-content;
+    font-size: 28px;
+    background: linear-gradient(
+        135deg,
+        #0000 calc(50% - 0.5em),
+        #dea584 0 calc(50% + 0.5em),
+        #0000 0
+      )
+      right/300% 100%;
+    animation: l22 2s infinite;
+    border-radius: 0.75rem;
+  }
+
+  .loader::before {
+    @apply uppercase;
+    content: "Loading..";
+    color: #dea584;
+    padding: 0 5px;
+    background: inherit;
+    background-image: linear-gradient(
+      135deg,
+      #dea584 calc(50% - 0.5em),
+      #000 0 calc(50% + 0.5em),
+      #dea584 0
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes l22 {
+    100% {
+      background-position: left;
+    }
+  }
 }

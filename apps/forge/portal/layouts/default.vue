@@ -63,6 +63,18 @@ import {
 
 import { RiGithubLine, RiArrowRightUpLine } from "@remixicon/vue";
 
+import { authClient } from "~/lib/auth-client";
+
+const isLoading = ref(true);
+const authenticated = ref(false);
+const session = authClient.useSession();
+
+watchEffect(() => {
+  isLoading.value = session.value.isPending;
+  authenticated.value = !!session.value.data?.user;
+  !authenticated.value ? gohome() : null;
+});
+
 // This is sample data.
 const data = {
   user: {
@@ -126,10 +138,20 @@ function setActiveTeam(team: (typeof data.teams)[number]) {
 function goto(link: string) {
   useRouter().push(link);
 }
+
+function gohome() {
+  useRouter().push("/");
+}
 </script>
 
 <template>
-  <SidebarProvider>
+  <div
+    v-if="isLoading || !authenticated"
+    class="w-full h-screen flex items-center justify-center px-3"
+  >
+    <div class="loader"></div>
+  </div>
+  <SidebarProvider v-else-if="authenticated">
     <Sidebar collapsible="icon" variant="inset">
       <SidebarHeader>
         <SidebarMenu>
