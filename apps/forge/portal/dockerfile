@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:1
 
 # Adjust NODE_VERSION as desired
-ARG NODE_VERSION=21.6.2
+ARG NODE_VERSION=23.4.0
 FROM node:${NODE_VERSION}-slim as base
 
 LABEL fly_launch_runtime="Nuxt"
@@ -17,17 +17,14 @@ ENV NODE_ENV="production"
 FROM base as build
 
 # Install node modules
-COPY --link package.json ./
-RUN npm install --include=dev
+COPY package.json ./
+RUN npm install --include-dev
 
 # Copy application code
-COPY --link . .
+COPY . .
 
 # Build application
 RUN npm run build
-
-# Remove development dependencies
-RUN npm prune --omit=dev
 
 
 # Final stage for app image
