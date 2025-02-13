@@ -142,6 +142,16 @@ function goto(link: string) {
 function gohome() {
   useRouter().push("/");
 }
+
+const logout = async () => {
+  await authClient.signOut({
+    fetchOptions: {
+      onSuccess: () => {
+        useRouter().push("/");
+      },
+    },
+  });
+};
 </script>
 
 <template>
@@ -344,7 +354,7 @@ function gohome() {
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem @click="logout">
                   <LogOut />
                   Log out
                 </DropdownMenuItem>
