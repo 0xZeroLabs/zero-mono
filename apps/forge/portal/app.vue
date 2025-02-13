@@ -13,10 +13,8 @@ useHead({
 useSeoMeta({
   title: "The Forge Portal",
   ogTitle: "The Forge Portal",
-  description:
-    "Start registering Verifiable Intellectual Property on Story protocol.",
-  ogDescription:
-    "Start registering Verifiable Intellectual Property on Story protocol.",
+  description: "Start registering Verifiable Intellectual Property on Story.",
+  ogDescription: "Start registering Verifiable Intellectual Property on Story.",
   ogImage: "/hero.png",
   twitterCard: "summary_large_image",
   twitterSite: "@ipforge",
