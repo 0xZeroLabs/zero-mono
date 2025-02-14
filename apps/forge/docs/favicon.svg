@@ -1,19 +1,6 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.06145 23.1079C5.26816 22.3769 -3.39077 20.6274 1.4173 5.06384C9.6344 6.09939 16.9728 14.0644 9.06145 23.1079Z" fill="url(#paint0_linear_17557_2021)"/>
-<path d="M8.91928 23.0939C5.27642 21.2223 0.78371 4.20891 17.0071 0C20.7569 7.19341 19.6212 16.5452 8.91928 23.0939Z" fill="url(#paint1_linear_17557_2021)"/>
-<path d="M8.91388 23.0788C8.73534 19.8817 10.1585 9.08525 23.5699 13.1107C23.1812 20.1229 18.984 26.4182 8.91388 23.0788Z" fill="url(#paint2_linear_17557_2021)"/>
-<defs>
-<linearGradient id="paint0_linear_17557_2021" x1="3.77557" y1="5.91571" x2="5.23185" y2="21.5589" gradientUnits="userSpaceOnUse">
-<stop stop-color="#18E299"/>
-<stop offset="1" stop-color="#15803D"/>
-</linearGradient>
-<linearGradient id="paint1_linear_17557_2021" x1="12.1711" y1="-0.718425" x2="10.1897" y2="22.9832" gradientUnits="userSpaceOnUse">
-<stop stop-color="#16A34A"/>
-<stop offset="1" stop-color="#4ADE80"/>
-</linearGradient>
-<linearGradient id="paint2_linear_17557_2021" x1="23.1327" y1="15.353" x2="9.33841" y2="18.5196" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4ADE80"/>
-<stop offset="1" stop-color="#0D9373"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1005px" height="1005px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g><path style="opacity:0.995" fill="#dda483" d="M 101.5,750.5 C 102.833,547.5 102.833,344.5 101.5,141.5C 101.33,140.178 101.663,139.011 102.5,138C 213.737,66.2558 335.071,24.9225 466.5,14C 628.552,4.87044 778.218,42.8704 915.5,128C 920.463,131.724 925.297,135.557 930,139.5C 930.667,353.167 930.667,566.833 930,780.5C 819.088,851.895 707.588,922.728 595.5,993C 593.559,993.743 591.726,993.576 590,992.5C 589.167,844.832 589.333,697.166 590.5,549.5C 665.36,501.208 740.36,452.708 815.5,404C 687.5,403.5 559.5,403.333 431.5,403.5C 431.667,600.5 431.5,797.5 431,994.5C 429.23,995.276 427.397,995.11 425.5,994C 318.148,913.666 210.482,833.833 102.5,754.5C 101.571,753.311 101.238,751.978 101.5,750.5 Z"/></g>
+<g><path style="opacity:0.078" fill="#ad6243" d="M 101.5,141.5 C 102.833,344.5 102.833,547.5 101.5,750.5C 100.167,547.5 100.167,344.5 101.5,141.5 Z"/></g>
 </svg>

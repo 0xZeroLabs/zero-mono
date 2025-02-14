@@ -8,7 +8,7 @@
     "dark": "#DEA584"
   },
   "background": { "decoration": "windows", "color": { "dark": "#0C0A09" } },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -88,8 +88,8 @@
     }
   },
   "logo": {
-    "light": "/logo/logo.png",
-    "dark": "/logo/logo.png"
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg"
   },
   "navbar": {
     "links": [
