@@ -50,6 +50,7 @@ icon: seal-exclamation
   </Step>
   <Step title="Register as an Operator">
     The Othentic CLI provides commands for registering as an operator as well as managing your account:
+    <Info>For Holesky, our AVS Governance address is: `0x87774A9Ae979aB1E77a78D11668B7a3Ee1F8ACe6`</Info>
     ```shell
     othentic-cli operator register
     ```
@@ -57,7 +58,7 @@ icon: seal-exclamation
     ```shell
     othentic-cli operator deposit --strategy stETH --shares 0.01 --convert 0.012
     ```
-    Activate your Operator by depositing into EigenLayer. Deposit 0.01 stETH into EigenLayer pool:
+    Activate your Operator by depositing into EigenLayer. Deposit at least 0.01 stETH into EigenLayer pool:
     ```shell
     othentic-cli operator deposit --strategy stETH --shares 0.01
     ```

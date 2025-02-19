@@ -4,7 +4,89 @@ description: Show The Forge where to look and provide metadata
 icon: brackets-curly
 ---
 
-<Info>
-  Our team is currently working on this feature. It may neither be public nor
-  fully ready. We appreciate your patience
-</Info>
+<Note>This is still a work in progress and it may be subject to change.</Note>
+
+<ParamField body="category" type="string" required>
+  Defines part of the metadata type associated with the IP being registered. For
+  example: registering data from TikTok, the `category` could be set as
+  `Social`.
+</ParamField>
+
+<ParamField query="source" type="string" required>
+  Specifies the data source of the IP. This is often the name of the platform
+  whose `url` is being provided. For example: TikTok.
+</ParamField>
+
+<ParamField body="url" type="url_string" required>
+  URL of the TLS session the data is originated from. This must adhere to the
+  hostname for the source server, it can be found in the **data providers**
+  section at the [dev portal](https://forge-dev.0xzero.org). For example: for
+  TikTok, the hostname could be `api.tiktok.com`.
+</ParamField>
+
+<ParamField body="name" type="string" required>
+  Name of the IP being registered. This should be specified by the user and will
+  be used as the name of both the `SPG_NFT` that will be minted on Story.
+</ParamField>
+
+<ParamField body="address" type="hex_string" required>
+  EVM wallet address of the IP owner. This is who the `SPG_NFT` will be minted
+  to. This address must be a valid EVM wallet address appended with the `0x`
+  prefix.
+</ParamField>
+
+<ParamField body="app_id" type="string" required>
+  Identifier of the application registering the IP. It can be derived from the
+  [dev portal](https://forge-dev.0xzero.org) and is paired alongside the
+  `app_secret` for authenticated access to the network.
+</ParamField>
+
+### Examples
+
+Here are some examples schemas to get you started:
+
+<CodeGroup>
+
+```json X (Twitter)
+{
+  "category": "Social",
+  "source": "TikTok",
+  "url": "api.twitter.com",
+  "name": "Test",
+  "address": "0x0000000000000000000000000000000000000000",
+  "metadata": {
+    "property": {
+      "key": "test",
+      "description": "test desc",
+      "mime": "text/plain",
+      "tags": ["test"],
+      "type": "url"
+    },
+    "owner": "test_owner"
+  },
+  "app_id": "ap3sd1234567890"
+}
+```
+
+```json TikTok
+{
+  "category": "Creator content",
+  "source": "TikTok",
+  "url": "api.tiktok.com",
+  "name": "Test",
+  "address": "0x0000000000000000000000000000000000000000",
+  "metadata": {
+    "property": {
+      "key": "test",
+      "description": "test desc",
+      "mime": "text/plain",
+      "tags": ["test"],
+      "type": "url"
+    },
+    "owner": "test_owner"
+  },
+  "app_id": "ap3sd1234567890"
+}
+```
+
+</CodeGroup>
