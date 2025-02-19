@@ -10,9 +10,9 @@
   "background": { "decoration": "windows", "color": { "dark": "#0C0A09" } },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Guides",
+        "dropdown": "Guides",
         "groups": [
           {
             "group": "Overview",
@@ -28,8 +28,7 @@
                       "protocol-design/understanding-the-avs/abstract",
                       "protocol-design/understanding-the-avs/execution",
                       "protocol-design/understanding-the-avs/validation"
-                    ],
-                    "icon": "gears"
+                    ]
                   },
                   "protocol-design/why-build-an-avs"
                 ],
@@ -65,11 +64,13 @@
               "operators/faqs"
             ]
           }
-        ]
+        ],
+        "icon": "book"
       },
       {
-        "tab": "AVS API Reference",
-        "openapi": "api-reference/openapi.json"
+        "dropdown": "AVS API Reference",
+        "openapi": "api-reference/openapi.json",
+        "icon": "webhook"
       }
     ],
     "global": {
