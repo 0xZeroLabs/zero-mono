@@ -12,82 +12,85 @@
 </template>
 
 <script setup lang="ts">
-import Lenis from '@studio-freight/lenis'
+import Lenis from "@studio-freight/lenis";
 
-let lenis: Lenis | null = null
+let lenis: Lenis | null = null;
 
 onMounted(() => {
-  lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
-  })
-
-  function raf(time: number) {
-    lenis?.raf(time)
-    requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
-})
+  // lenis = new Lenis({
+  //   duration: 1.2,
+  //   // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   smoothWheel: true,
+  //   wheelMultiplier: 1,
+  //   syncTouch: true,
+  //   touchMultiplier: 1,
+  //   infinite: false,
+  //   orientation: "vertical",
+  // });
+  // function raf(time: number) {
+  //   lenis?.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
+  // requestAnimationFrame(raf);
+});
 
 onUnmounted(() => {
   if (lenis) {
-    lenis.destroy()
-    lenis = null
+    lenis.destroy();
+    lenis = null;
   }
-})
+});
 
-let cursor: HTMLElement | null = null
+let cursor: HTMLElement | null = null;
 
 onMounted(() => {
-  cursor = document.getElementById('custom-cursor')
+  cursor = document.getElementById("custom-cursor");
 
   const moveCursor = (e: MouseEvent) => {
-    const { clientX: x, clientY: y } = e
+    const { clientX: x, clientY: y } = e;
     if (cursor) {
-      cursor.style.left = x + 'px'
-      cursor.style.top = y + 'px'
+      cursor.style.left = x + "px";
+      cursor.style.top = y + "px";
     }
-  }
+  };
 
   const handleMouseDown = () => {
-    cursor?.classList.add('cursor-clicked')
-  }
+    cursor?.classList.add("cursor-clicked");
+  };
 
   const handleMouseUp = () => {
-    cursor?.classList.remove('cursor-clicked')
-  }
+    cursor?.classList.remove("cursor-clicked");
+  };
 
-  window.addEventListener('mousemove', moveCursor)
-  window.addEventListener('mousedown', handleMouseDown)
-  window.addEventListener('mouseup', handleMouseUp)
+  window.addEventListener("mousemove", moveCursor);
+  window.addEventListener("mousedown", handleMouseDown);
+  window.addEventListener("mouseup", handleMouseUp);
 
   // Add and remove cursor-hover class
-  document.body.addEventListener('mouseover', (e) => {
-    if (e.target instanceof HTMLElement && e.target.matches('a, button, input, textarea')) {
-      cursor?.classList.add('cursor-hover')
+  document.body.addEventListener("mouseover", (e) => {
+    if (
+      e.target instanceof HTMLElement &&
+      e.target.matches("a, button, input, textarea")
+    ) {
+      cursor?.classList.add("cursor-hover");
     }
-  })
+  });
 
-  document.body.addEventListener('mouseout', (e) => {
-    if (e.target instanceof HTMLElement && e.target.matches('a, button, input, textarea')) {
-      cursor?.classList.remove('cursor-hover')
+  document.body.addEventListener("mouseout", (e) => {
+    if (
+      e.target instanceof HTMLElement &&
+      e.target.matches("a, button, input, textarea")
+    ) {
+      cursor?.classList.remove("cursor-hover");
     }
-  })
+  });
 
   onUnmounted(() => {
-    window.removeEventListener('mousemove', moveCursor)
-    window.removeEventListener('mousedown', handleMouseDown)
-    window.removeEventListener('mouseup', handleMouseUp)
-  })
-})
+    window.removeEventListener("mousemove", moveCursor);
+    window.removeEventListener("mousedown", handleMouseDown);
+    window.removeEventListener("mouseup", handleMouseUp);
+  });
+});
 </script>
 
 <style>
