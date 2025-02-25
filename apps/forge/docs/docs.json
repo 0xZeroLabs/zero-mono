@@ -108,7 +108,8 @@
   "footer": {
     "socials": {
       "x": "https://x.com/ipforge",
-      "github": "https://github.com/0xzerolabs/the-forge"
+      "github": "https://github.com/0xzerolabs/the-forge",
+      "telegram": "https://t.me/ipforge"
     }
   },
   "fonts": {
