@@ -42,4 +42,18 @@
       @apply text-[#001917] text-sm text-center z-10 relative;
     }
   }
+
+  ::-moz-selection,
+  ::selection {
+    @apply text-[#001917] bg-[#F96D4E];
+  }
+
+  .negative {
+    @apply text-[#001917] bg-[#F96D4E];
+  }
+
+  .negative::-moz-selection,
+  .negative::selection {
+    @apply text-[#F96D4E] bg-[#001311];
+  }
 }
