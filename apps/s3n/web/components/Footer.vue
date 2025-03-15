@@ -1,9 +1,11 @@
 <template>
   <div class="w-full px-5">
     <ul class="uppercase text-[#EE6F53] font-semibold">
+      <li>
+        <nuxt-link to="https://github.com/0xZeroLabs/s3n">GitHub</nuxt-link>
+      </li>
       <li><nuxt-link to="https://x.com/s3ndotxyz">x.com</nuxt-link></li>
       <li><nuxt-link to="https://t.me/s3ndotxyz">telegram</nuxt-link></li>
-      <li><nuxt-link to="https://discord.gg/s3ndotxyz">discord</nuxt-link></li>
     </ul>
     <div class="w-full flex justify-between items-center py-4">
       <div class="flex items-center text-[#EE6F53] font-bold">
@@ -15,3 +17,25 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
+</style>
