@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Ultrabold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./fonts/Sora-VariableFont_wght.ttf");
+}
+
+@layer base {
+  :root {
+    --background: 174 97% 5%; /* #001917 */
+  }
+  * {
+    @apply font-Neue;
+  }
+  body {
+    @apply bg-[hsl(var(--background))] py-4;
+  }
+  .btn,
+  input {
+    @apply relative px-4 rounded-xl flex justify-center items-center text-[#001917] font-semibold uppercase text-sm text-center;
+    * {
+      @apply text-[#001917] text-sm text-center z-10 relative;
+    }
+  }
+}
