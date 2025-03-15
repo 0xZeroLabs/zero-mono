@@ -2,7 +2,7 @@
   <div id="custom-cursor">
     <div class="cursor-fill"></div>
   </div>
-  <div class="flex flex-col min-h-full">
+  <div class="flex flex-col justify-evenly min-h-[calc(100vh-32px)]">
     <Navigation />
     <main class="flex-grow">
       <NuxtPage />
