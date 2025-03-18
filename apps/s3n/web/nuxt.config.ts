@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["motion-v/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  modules: [
+    "motion-v/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+    "@nuxt/content",
+  ],
   css: ["~/assets/scss/main.scss"],
   colorMode: {
     preference: "system",

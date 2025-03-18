@@ -1,6 +1,9 @@
+@use "sass:meta";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@include meta.load-css("blog.scss");
 
 @font-face {
   font-family: "Neue";
@@ -30,7 +33,7 @@
     --background: 174 97% 5%; /* #001917 */
   }
   * {
-    @apply font-Neue;
+    @apply font-Neue scroll-smooth;
   }
   body {
     @apply bg-[hsl(var(--background))] py-4;

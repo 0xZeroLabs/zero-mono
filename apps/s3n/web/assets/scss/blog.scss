@@ -1,0 +1,93 @@
+.blog-content {
+  @apply text-white;
+
+  h1 {
+    @apply text-4xl sm:text-5xl font-bold text-[#EE6F53] mt-12 mb-8;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-[#EE6F53] mt-12 mb-6;
+  }
+
+  h3 {
+    @apply text-2xl font-bold text-[#EE6F53] mt-10 mb-4;
+  }
+
+  h4 {
+    @apply text-xl font-bold text-[#EE6F53] mt-8 mb-4;
+  }
+
+  h5 {
+    @apply text-lg font-bold text-[#EE6F53] mt-6 mb-3;
+  }
+
+  h6 {
+    @apply text-base font-bold text-[#EE6F53] mt-6 mb-3;
+  }
+
+  a {
+    @apply text-[#EE6F53] underline decoration-2 underline-offset-2;
+    transition: all 0.3s ease;
+
+    &:hover {
+      @apply text-[#f95b3e];
+    }
+  }
+
+  pre {
+    @apply bg-[#00231f] p-5 rounded-xl my-6 overflow-x-auto shadow-lg border border-[#003d34];
+  }
+
+  code {
+    @apply bg-[#002b26] text-[#EE6F53] px-2 py-1 rounded text-sm;
+  }
+
+  pre code {
+    @apply px-0 py-0 bg-transparent text-base;
+  }
+
+  img {
+    @apply rounded-xl my-8 mx-auto shadow-lg;
+  }
+
+  ul,
+  ol {
+    @apply my-6 pl-6;
+    li {
+      @apply mb-3;
+    }
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  blockquote {
+    @apply border-l-4 border-[#EE6F53] pl-6 py-3 my-8 italic bg-[#00231f] rounded-r-xl p-6 shadow-md;
+  }
+
+  hr {
+    @apply my-12 border-[#003d34];
+  }
+
+  table {
+    @apply w-full border-collapse my-8 rounded-xl overflow-hidden shadow-md;
+    th,
+    td {
+      @apply border-none border-[#00231f] p-3;
+    }
+    th {
+      @apply bg-[#00231f] text-[#EE6F53] font-bold;
+    }
+    tr:nth-child(even) {
+      @apply bg-[#001d19];
+    }
+    tr:hover {
+      @apply bg-[#001f1c];
+    }
+  }
+}
