@@ -84,7 +84,7 @@ const props = defineProps({
 
 const formatDate = (date: string) => {
   if (!date) return "";
-  return new Date(date).toLocaleDateString("en-UK", {
+  return new Date(date).toLocaleDateString("en-GB", {
     year: "numeric",
     month: "long",
     day: "numeric",
