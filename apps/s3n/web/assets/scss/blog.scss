@@ -26,12 +26,32 @@
   }
 
   a {
-    @apply text-[#EE6F53] underline decoration-2 underline-offset-2;
+    @apply text-[#EE6F53] no-underline decoration-2;
     transition: all 0.3s ease;
 
     &:hover {
       @apply text-[#f95b3e];
     }
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.25s ease;
+  }
+
+  a:hover::before {
+    width: 100%;
   }
 
   pre {
@@ -47,7 +67,7 @@
   }
 
   img {
-    @apply rounded-xl my-8 mx-auto shadow-lg;
+    /* @apply rounded-xl my-8 mx-auto shadow-lg; */
   }
 
   ul,
