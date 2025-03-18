@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[calc(100vh-184px)] flex justify-center items-center">
+  <div class="w-full h-[calc(100vh-208px)] flex justify-center items-center">
     <div class="container h-full flex justify-center items-center">
       <h1 class="text-6xl font-bold uppercase text-center text-[#EE6F53]">
         Ship TEE apps at the speed of <span class="negative">light</span> <br />

@@ -2,10 +2,11 @@
   <div class="w-full px-5">
     <ul class="uppercase text-[#EE6F53] font-semibold">
       <li>
-        <nuxt-link to="https://github.com/0xZeroLabs/s3n">GitHub</nuxt-link>
+        <nuxt-link to="https://github.com/0xZeroLabs/s3n">gitHub</nuxt-link>
       </li>
       <li><nuxt-link to="https://x.com/s3ndotxyz">x.com</nuxt-link></li>
       <li><nuxt-link to="https://t.me/s3ndotxyz">telegram</nuxt-link></li>
+      <li><nuxt-link to="/blog">blog</nuxt-link></li>
     </ul>
     <div class="w-full flex justify-between items-center py-4">
       <div class="flex items-center text-[#EE6F53] font-bold">
