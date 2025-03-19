@@ -13,7 +13,7 @@
 
       <div class="flex justify-between items-center mb-8">
         <p class="text-white/80 italic">
-          Insights, research, and updates from the S3N team
+          Insights, research, and updates from the S3N team.
         </p>
       </div>
 
@@ -70,8 +70,8 @@ const posts = computed(() => {
 useSeoMeta({
   title: "Blog",
   ogTitle: "S3N Blog",
-  description: "Latest updates, guides, and insights from the S3N team.",
-  ogDescription: "Latest updates, guides, and insights from the S3N team.",
+  description: "Insights, research, and updates from the S3N team.",
+  ogDescription: "Insights, research, and updates from the S3N team.",
   ogImage: "/blog-hero.png",
   twitterCard: "summary_large_image",
   twitterSite: "@s3ndotxyz",
