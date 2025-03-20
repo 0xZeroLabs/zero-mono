@@ -59,16 +59,26 @@ const handleOAuthAuthentication = async () => {
 
 // take them all to on-boarding page if they're new users
 const handleSubmitEmail = async (email: string) => {
-  const { data, error } = await authClient.signIn.magicLink({
-    email: email,
-    callbackURL: "/",
-  });
+  try {
+    isLoading.value = true;
+    const { data, error } = await authClient.signIn.magicLink({
+      email: email,
+      callbackURL: "/",
+    });
 
-  if (error) {
-    console.error(error);
+    if (error) {
+      console.error(error);
+      // Display error to user
+      return;
+    }
+
+    emailed.value = data?.status as boolean;
+  } catch (error) {
+    console.error("Failed to send magic link:", error);
+    // Display error to user
+  } finally {
+    isLoading.value = false;
   }
-
-  emailed.value = data?.status as boolean;
 };
 
 const goback = () => {
