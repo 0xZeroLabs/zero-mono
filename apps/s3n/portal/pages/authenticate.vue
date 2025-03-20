@@ -52,9 +52,17 @@ const onSubmit = handleSubmit(async (values) => {
 });
 
 const handleOAuthAuthentication = async () => {
-  const data = await authClient.signIn.social({
-    provider: "github",
-  });
+  try {
+    isLoading.value = true;
+    const data = await authClient.signIn.social({
+      provider: "github",
+    });
+  } catch (error) {
+    console.error("GitHub authentication failed:", error);
+    // Consider showing a user-friendly error message
+  } finally {
+    isLoading.value = false;
+  }
 };
 
 // take them all to on-boarding page if they're new users
