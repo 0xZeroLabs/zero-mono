@@ -121,6 +121,15 @@ const goback = () => {
             Continue with GitHub
           </Button>
         </form>
+        <div class="w-full flex justify-center mt-4">
+          <nuxt-link
+            class="flex items-center justify-center w-fit"
+            to="https://www.s3n.xyz"
+          >
+            <p class="mr-2">Brought to you by</p>
+            <img src="@/assets/img/s3n.svg" class="h-[28px] w-fit" alt="S3N" />
+          </nuxt-link>
+        </div>
       </CardContent>
     </Card>
     <Card class="mx-auto max-w-sm" v-else>
