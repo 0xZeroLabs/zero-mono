@@ -1,17 +1,7 @@
 <script setup lang="ts">
-useHead({
-  title: "S3N Dev",
-  meta: [
-    {
-      name: "description",
-      content: "One-click TEE application deployment.",
-    },
-  ],
-});
-
 useSeoMeta({
-  title: "S3N Dev",
-  ogTitle: "S3N Dev",
+  title: "Developer Portal",
+  ogTitle: "Developer Portal",
   description: "One-click TEE application deployment.",
   ogDescription: "One-click TEE application deployment.",
   ogImage: "/hero.png",

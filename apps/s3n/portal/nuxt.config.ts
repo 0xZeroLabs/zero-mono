@@ -80,4 +80,13 @@ export default defineNuxtConfig({
   //   //     inline: ["crypto", "stream", "process", "path", "string_decoder"],
   //   //   },
   // },
+
+  app: {
+    head: {
+      titleTemplate: {
+        tagPriority: "critical",
+        textContent: "%s — S3N",
+      },
+    },
+  },
 });

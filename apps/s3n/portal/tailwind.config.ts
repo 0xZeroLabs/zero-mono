@@ -21,6 +21,7 @@ module.exports = {
         Italiana: ["Italiana"],
         Neue: ["Neue"],
         Sora: ["Sora"],
+        Actay: ["Actay"],
       },
       colors: {
         border: "hsl(var(--border))",

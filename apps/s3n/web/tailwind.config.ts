@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         Neue: ["Neue"],
         Sora: ["Sora"],
+        Actay: ["Actay"],
       },
     },
   },
