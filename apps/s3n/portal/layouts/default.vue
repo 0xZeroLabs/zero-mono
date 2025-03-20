@@ -2,20 +2,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
@@ -25,7 +11,6 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -35,18 +20,12 @@ import {
   SidebarHeader,
   SidebarInset,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   SidebarProvider,
   SidebarRail,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import {
-  AudioWaveform,
   BadgeCheck,
   Bell,
   ChevronsUpDown,
@@ -54,16 +33,26 @@ import {
   LogOut,
   Plus,
   Sparkles,
-  CurlyBraces,
   FileBox,
   BookOpen,
   BadgeHelp,
   Files,
+  Moon,
+  Sun,
 } from "lucide-vue-next";
 
-import { RiGithubLine, RiArrowRightUpLine } from "@remixicon/vue";
+import {
+  RiGithubLine,
+  RiArrowRightUpLine,
+  RiBuilding2Fill,
+} from "@remixicon/vue";
 
 import { authClient } from "~/lib/auth-client";
+
+const toggleScheme = () => {
+  const colorMode = useColorMode();
+  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
+};
 
 const isLoading = ref(true);
 const authenticated = ref(false);
@@ -72,7 +61,7 @@ const session = authClient.useSession();
 watchEffect(() => {
   isLoading.value = session.value.isPending;
   authenticated.value = !!session.value.data?.user;
-  !authenticated.value ? gohome() : null;
+  !authenticated.value ? goauth() : null;
 });
 
 // This is sample data.
@@ -80,29 +69,29 @@ const data = {
   user: {
     name: "Ewan G.Okugbe",
     email: "lordewan@0xzero.org",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "/avatars/profile.jpg",
   },
   teams: [
     {
       name: "ZERO Labs",
-      logo: AudioWaveform,
+      logo: RiBuilding2Fill,
       plan: "Free plan",
     },
   ],
   navMain: [
     {
-      title: "My Applications",
-      url: "/projects",
+      title: "Applications",
+      url: "/applications",
       icon: FileBox,
     },
     {
-      title: "Files",
-      url: "/schemas",
+      title: "Storage",
+      url: "/storage",
       icon: Files,
     },
     {
       title: "Data Oracle",
-      url: "/providers",
+      url: "/oracle",
       icon: Sparkles,
     },
   ],
@@ -139,8 +128,8 @@ function goto(link: string) {
   useRouter().push(link);
 }
 
-function gohome() {
-  useRouter().push("/");
+function goauth() {
+  useRouter().push("/authenticate");
 }
 
 const logout = async () => {
@@ -156,13 +145,13 @@ const logout = async () => {
 
 <template>
   <div
-    v-if="isLoading || !true"
+    v-if="isLoading || !authenticated"
     class="w-full h-screen flex items-center justify-center px-3"
   >
     <div class="loader"></div>
   </div>
-  <SidebarProvider v-else-if="true">
-    <Sidebar collapsible="icon" variant="inset">
+  <SidebarProvider v-else-if="authenticated">
+    <Sidebar collapsible="icon" variant="floating">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -332,7 +321,6 @@ const logout = async () => {
                     Billing
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
-                <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem
                     :class="{
@@ -353,6 +341,18 @@ const logout = async () => {
                     Notifications
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  class="hidden dark:flex"
+                  @click="toggleScheme"
+                >
+                  <Sun />
+                  Light Theme
+                </DropdownMenuItem>
+                <DropdownMenuItem class="dark:hidden" @click="toggleScheme">
+                  <Moon />
+                  Dark Theme
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem @click="logout">
                   <LogOut />
