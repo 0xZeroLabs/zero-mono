@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: {
         tagPriority: "critical",
-        textContent: "%s — S3N",
+        textContent: "%s - S3N",
       },
     },
   },
