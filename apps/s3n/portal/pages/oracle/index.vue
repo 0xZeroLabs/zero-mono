@@ -14,6 +14,16 @@ import { Slash } from "lucide-vue-next";
 function goto(link: string) {
   useRouter().push(link);
 }
+
+useSeoMeta({
+  title: "Data Oracle",
+  ogTitle: "Data Oracle",
+  description: "One-click TEE application deployment.",
+  ogDescription: "One-click TEE application deployment.",
+  ogImage: "/hero.png",
+  twitterCard: "summary_large_image",
+  twitterSite: "@s3ndotxyz",
+});
 </script>
 
 <template>

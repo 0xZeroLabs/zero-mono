@@ -32,7 +32,9 @@ import { Button } from "@/components/ui/button";
       Get started with the confidential compute cloud.
     </p>
     <div class="flex flex-col items-center md:flex-row gap-3 mt-2">
-      <nuxt-link to="/functions"><Button>Deploy Application</Button></nuxt-link>
+      <nuxt-link to="/containers"
+        ><Button>Deploy Application</Button></nuxt-link
+      >
       <nuxt-link to="/storage"
         ><Button variant="secondary">Upload file to storage</Button></nuxt-link
       >
