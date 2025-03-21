@@ -14,6 +14,16 @@ import { Slash } from "lucide-vue-next";
 function goto(link: string) {
   useRouter().push(link);
 }
+
+useSeoMeta({
+  title: "Containers",
+  ogTitle: "Containers",
+  description: "One-click TEE application deployment.",
+  ogDescription: "One-click TEE application deployment.",
+  ogImage: "/hero.png",
+  twitterCard: "summary_large_image",
+  twitterSite: "@s3ndotxyz",
+});
 </script>
 
 <template>
@@ -36,7 +46,7 @@ function goto(link: string) {
           </BreadcrumbItem>
           <BreadcrumbSeparator> </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbPage> Applications </BreadcrumbPage>
+            <BreadcrumbPage> Containers </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
