@@ -20,7 +20,7 @@ const sendMagicLink = (address: string, magicLink: string) => {
             <title>Continue to S3N</title>
             <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
         </head>
-        <body style="background-color: #fff; color: #000; font-family: 'Sora', sans-serif; margin: 0; padding: 20px;">
+        <body style="background-color: #001917; color: #fff; font-family: 'Sora', sans-serif; margin: 0; padding: 20px;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
                 <img
                     src="https://github.com/0xZeroLabs/zero-mono/raw/main/apps/s3n/portal/assets/img/s3n.svg"
@@ -38,9 +38,9 @@ const sendMagicLink = (address: string, magicLink: string) => {
                 </p>
 
                 <a href="${magicLink}"
-                   style="background-color: #dea584; color: white; padding: 12px 24px; text-decoration: none; border-radius: 0.75rem; display: inline-block; margin: 20px 0; transition: background-color 0.2s ease;"
-                   onmouseover="this.style.backgroundColor='#c68b6a'"
-                   onmouseout="this.style.backgroundColor='#dea584'">
+                   style="background-color: #EE6F53; color: white; padding: 12px 24px; text-decoration: none; border-radius: 0.75rem; display: inline-block; margin: 20px 0; transition: background-color 0.2s ease;"
+                   onmouseover="this.style.backgroundColor='#dea584'"
+                   onmouseout="this.style.backgroundColor='#EE6F53'">
                     Sign in to S3N
                 </a>
 
@@ -48,7 +48,7 @@ const sendMagicLink = (address: string, magicLink: string) => {
                     If the button doesn't work, copy and paste this link into your
                     browser:
                 </p>
-                <p style="color: #dea584; word-break: break-all;">${magicLink}</p>
+                <p style="color: #EE6F53; word-break: break-all;">${magicLink}</p>
 
                 <p>If you didn't request this email, you can safely ignore it.</p>
 
@@ -67,7 +67,7 @@ const sendMagicLink = (address: string, magicLink: string) => {
     `;
 
   return resend.emails.send({
-    from: "no-reply <no-reply@0xzero.org>",
+    from: "no-reply <no-reply@s3n.xyz>",
     to: address,
     subject: "Continue to S3N",
     html: magicLinkEmail,
