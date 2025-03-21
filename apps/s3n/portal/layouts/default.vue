@@ -25,10 +25,12 @@ import {
   SidebarProvider,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { Collapsible } from "@/components/ui/collapsible";
 import {
   BadgeCheck,
   Bell,
   ChevronsUpDown,
+  ChevronRight,
   CreditCard,
   LogOut,
   Plus,
@@ -37,6 +39,7 @@ import {
   BookOpen,
   BadgeHelp,
   Files,
+  Folder,
   Moon,
   Sun,
 } from "lucide-vue-next";
@@ -45,6 +48,9 @@ import {
   RiGithubLine,
   RiArrowRightUpLine,
   RiBuilding2Fill,
+  RiEarthLine,
+  RiFunctions,
+  RiGlobalLine,
 } from "@remixicon/vue";
 
 import { authClient } from "~/lib/auth-client";
@@ -80,14 +86,27 @@ const data = {
   ],
   navMain: [
     {
-      title: "Applications",
-      url: "/applications",
-      icon: FileBox,
+      title: "Services",
+      url: "#",
+      icon: RiEarthLine,
+      items: [
+        {
+          title: "Applications",
+          url: "/applications",
+          icon: FileBox,
+        },
+        {
+          title: "Functions",
+          url: "/functions",
+          icon: RiGlobalLine,
+        },
+      ],
+      isActive: true,
     },
     {
       title: "Storage",
       url: "/storage",
-      icon: Files,
+      icon: Folder,
     },
     {
       title: "Data Oracle",
@@ -148,7 +167,15 @@ const logout = async () => {
     v-if="isLoading || !authenticated"
     class="w-full h-screen flex items-center justify-center px-3"
   >
-    <div class="loader"></div>
+    <div class="flex space-x-2 justify-center items-center h-screen">
+      <div
+        class="h-4 w-4 bg-[#729171] rounded-full animate-bounce [animation-delay:-0.3s]"
+      ></div>
+      <div
+        class="h-4 w-4 bg-[#729171] rounded-full animate-bounce [animation-delay:-0.15s]"
+      ></div>
+      <div class="h-4 w-4 bg-[#729171] rounded-full animate-bounce"></div>
+    </div>
   </div>
   <SidebarProvider v-else-if="authenticated">
     <Sidebar collapsible="icon" variant="floating">
@@ -218,8 +245,8 @@ const logout = async () => {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarMenu>
-            <SidebarMenuItem v-for="item in data.navMain">
+          <SidebarMenu v-for="item in data.navMain" :key="item.title">
+            <SidebarMenuItem v-if="!item.items">
               <SidebarMenuButton
                 class="cursor-pointer"
                 :class="{
@@ -236,6 +263,50 @@ const logout = async () => {
                 </div>
               </SidebarMenuButton>
             </SidebarMenuItem>
+            <Collapsible
+              v-else
+              as-child
+              :default-open="
+                item.isActive ||
+                item.items.some((subItem) => isActive(subItem.url))
+              "
+              class="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger as-child>
+                  <SidebarMenuButton :tooltip="item.title">
+                    <component :is="item.icon" v-if="item.icon" />
+                    <span>{{ item.title }}</span>
+                    <ChevronRight
+                      class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+                    />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <SidebarMenuSub>
+                    <SidebarMenuSubItem
+                      v-for="subItem in item.items"
+                      :key="subItem.title"
+                    >
+                      <SidebarMenuButton
+                        class="cursor-pointer"
+                        :class="{
+                          'bg-sidebar-accent text-sidebar-accent-foreground':
+                            isActive(subItem.url),
+                        }"
+                        @click="goto(subItem.url)"
+                        as-child
+                      >
+                        <div>
+                          <component :is="subItem.icon" />
+                          <span class="">{{ subItem.title }}</span>
+                        </div>
+                      </SidebarMenuButton>
+                    </SidebarMenuSubItem>
+                  </SidebarMenuSub>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>

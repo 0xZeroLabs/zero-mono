@@ -22,6 +22,16 @@ const authenticated = ref(false);
 const session = authClient.useSession();
 const emailed = ref(false);
 
+useSeoMeta({
+  title: "Sign in",
+  ogTitle: "Sign in",
+  description: "One-click TEE application deployment.",
+  ogDescription: "One-click TEE application deployment.",
+  ogImage: "/hero.png",
+  twitterCard: "summary_large_image",
+  twitterSite: "@s3ndotxyz",
+});
+
 definePageMeta({
   layout: false,
 });
@@ -99,7 +109,15 @@ const goback = () => {
     v-if="isLoading"
     class="w-full h-screen flex items-center justify-center px-3"
   >
-    <div class="loader"></div>
+    <div class="flex space-x-2 justify-center items-center h-screen">
+      <div
+        class="h-4 w-4 bg-[#729171] rounded-full animate-bounce [animation-delay:-0.3s]"
+      ></div>
+      <div
+        class="h-4 w-4 bg-[#729171] rounded-full animate-bounce [animation-delay:-0.15s]"
+      ></div>
+      <div class="h-4 w-4 bg-[#729171] rounded-full animate-bounce"></div>
+    </div>
   </div>
   <div v-else class="w-full h-screen flex items-center justify-center px-3">
     <Card class="mx-auto max-w-sm" v-if="!emailed">

@@ -36,7 +36,7 @@ function goto(link: string) {
           </BreadcrumbItem>
           <BreadcrumbSeparator> </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbPage> Applications </BreadcrumbPage>
+            <BreadcrumbPage> Functions </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
