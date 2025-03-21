@@ -21,7 +21,7 @@ export const auth = betterAuth({
   plugins: [
     magicLink({
       sendMagicLink: async ({ email, token, url }, request) => {
-        const response = await $fetch<ReadableStream>("/api/waitlist", {
+        const response = await $fetch<ReadableStream>("/api/sendmagiclink", {
           method: "POST",
           body: {
             email: email,

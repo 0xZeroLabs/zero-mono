@@ -17,18 +17,18 @@ const sendMagicLink = (address: string, magicLink: string) => {
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Continue to The Forge Portal</title>
+            <title>Continue to S3N</title>
             <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
         </head>
         <body style="background-color: #fff; color: #000; font-family: 'Sora', sans-serif; margin: 0; padding: 20px;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
                 <img
-                    src="https://github.com/0xZeroLabs/the-forge/raw/main/assets/20250120_084628.png"
-                    alt="The Forge Logo"
+                    src="https://github.com/0xZeroLabs/zero-mono/raw/main/apps/s3n/portal/assets/img/s3n.svg"
+                    alt="S3N Logo"
                     style="max-width: 150px; margin-bottom: 20px; margin-left: auto; margin-right: auto; display: block;"
                 />
 
-                <h2>Continue to The Forge Portal</h2>
+                <h2>Continue to S3N</h2>
 
                 <p>Hello,</p>
 
@@ -41,7 +41,7 @@ const sendMagicLink = (address: string, magicLink: string) => {
                    style="background-color: #dea584; color: white; padding: 12px 24px; text-decoration: none; border-radius: 0.75rem; display: inline-block; margin: 20px 0; transition: background-color 0.2s ease;"
                    onmouseover="this.style.backgroundColor='#c68b6a'"
                    onmouseout="this.style.backgroundColor='#dea584'">
-                    Sign in to The Forge
+                    Sign in to S3N
                 </a>
 
                 <p>
@@ -69,7 +69,7 @@ const sendMagicLink = (address: string, magicLink: string) => {
   return resend.emails.send({
     from: "no-reply <no-reply@0xzero.org>",
     to: address,
-    subject: "Continue to The Forge Portal",
+    subject: "Continue to S3N",
     html: magicLinkEmail,
   });
 };
