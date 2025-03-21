@@ -36,9 +36,9 @@ import {
   Plus,
   Sparkles,
   FileBox,
+  Box,
   BookOpen,
   BadgeHelp,
-  Files,
   Folder,
   Moon,
   Sun,
@@ -49,7 +49,6 @@ import {
   RiArrowRightUpLine,
   RiBuilding2Fill,
   RiEarthLine,
-  RiFunctions,
   RiGlobalLine,
 } from "@remixicon/vue";
 
@@ -91,9 +90,9 @@ const data = {
       icon: RiEarthLine,
       items: [
         {
-          title: "Applications",
-          url: "/applications",
-          icon: FileBox,
+          title: "Containers",
+          url: "/containers",
+          icon: Box,
         },
         {
           title: "Functions",
@@ -101,7 +100,7 @@ const data = {
           icon: RiGlobalLine,
         },
       ],
-      isActive: true,
+      isActive: ref(false),
     },
     {
       title: "Storage",
@@ -160,6 +159,45 @@ const logout = async () => {
     },
   });
 };
+
+// User preferences for menu open states
+const userCollapsedMenus = reactive<Record<string, boolean>>({});
+
+// Watch for route changes to auto-open menus when navigating to child routes
+const route = useRoute();
+watch(
+  () => route.path,
+  () => {
+    data.navMain.forEach((item) => {
+      if (item.items) {
+        const hasActiveChild = item.items.some((subItem) =>
+          isActive(subItem.url),
+        );
+        if (hasActiveChild && !userCollapsedMenus[item.title]) {
+          // Auto-open the menu if a child is active and user hasn't explicitly closed it
+          item.isActive.value = true;
+        }
+      }
+    });
+  },
+  { immediate: true },
+);
+
+function toggleMenu(item: any) {
+  // Toggle the menu state
+  item.isActive.value = !item.isActive.value;
+
+  // Track if user has manually closed a menu with active children
+  if (
+    !item.isActive.value &&
+    item.items &&
+    item.items.some((subItem: any) => isActive(subItem.url))
+  ) {
+    userCollapsedMenus[item.title] = true;
+  } else {
+    userCollapsedMenus[item.title] = false;
+  }
+}
 </script>
 
 <template>
@@ -266,14 +304,11 @@ const logout = async () => {
             <Collapsible
               v-else
               as-child
-              :default-open="
-                item.isActive ||
-                item.items.some((subItem) => isActive(subItem.url))
-              "
+              :open="item.isActive.value"
               class="group/collapsible"
             >
               <SidebarMenuItem>
-                <CollapsibleTrigger as-child>
+                <CollapsibleTrigger as-child @click="toggleMenu(item)">
                   <SidebarMenuButton :tooltip="item.title">
                     <component :is="item.icon" v-if="item.icon" />
                     <span>{{ item.title }}</span>
