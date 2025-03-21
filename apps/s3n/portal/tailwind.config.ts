@@ -16,11 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        SpaceGrotesk: ["Space Grotesk"],
-        SpaceMono: ["Space Mono"],
-        Italiana: ["Italiana"],
         Neue: ["Neue"],
-        Sora: ["Sora"],
         Actay: ["Actay"],
       },
       colors: {
